@@ -2,11 +2,13 @@
 
 * [固定资产管理系统](https://github.com)
 
-* [高校固定资产管理系统高校固定资产管理系统的设计与实现](https://github.com/liujingshi/Fixed-Assets-Management-System)
+* [高校固定资产管理系统的设计与实现](https://github.com/liujingshi/Fixed-Assets-Management-System)
 
 ---
 
+>
 > 文件夹介绍
+>
 
 | 文件夹 | 作用 |
 |:-----|:-----|
