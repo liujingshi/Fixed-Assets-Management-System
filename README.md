@@ -9,8 +9,9 @@
 > 文件夹介绍
 
 | 文件夹 | 作用 |
-|:-----|-----:|
+|:-----|:-----|
 |template|模板文件夹，界面设计，前端html|
 |template/common|公共文件夹，放置公用js/css/font|
 |template/mobile|移动端文件夹，放置移动端html模板|
 |template/pc|PC端文件夹，放置PC端html模板|
+|document|文档文件夹，相关材料，论文等|
