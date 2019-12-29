@@ -14,4 +14,9 @@
 |template/common|公共文件夹，放置公用js/css/font|
 |template/mobile|移动端文件夹，放置移动端html模板|
 |template/pc|PC端文件夹，放置PC端html模板|
+|---|---|
 |document|文档文件夹，相关材料，论文等|
+|document/start|开题文档文件夹，放置开题报告、英文文献等|
+|document/middle|中期文档文件夹，放置中期文档等|
+|document/end|结题文档文件夹，放置论文等|
+|---|---|
