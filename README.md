@@ -20,3 +20,23 @@
 |document/middle|中期文档文件夹，放置中期文档等|
 |document/end|结题文档文件夹，放置论文等|
 |---|---|
+
+* 所用框架
+
+** 前端
+
+*** Bootstrap v3.3.7
+
+*** ECharts v4.5.0
+
+*** jQuery v3.4.1
+
+*** Line Awesome v1.3.0
+
+*** Vue v2.6.11
+
+*** MUI v3.7.2
+
+** 后端
+
+*** ThinkPHP v5.0.24
