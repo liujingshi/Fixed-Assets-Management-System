@@ -1,6 +1,6 @@
 # 固定资产管理系统
 
-* [固定资产管理系统](http://fa.requisiteui.com/pc)
+* [固定资产管理系统](http://fa.requisiteui.com/pc/login.html)
 
 * [高校固定资产管理系统的设计与实现](https://github.com/liujingshi/Fixed-Assets-Management-System)
 
