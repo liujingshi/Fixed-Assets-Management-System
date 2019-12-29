@@ -23,20 +23,20 @@
 
 * 所用框架
 
-** 前端
+    * 前端
 
-*** Bootstrap v3.3.7
+        * Bootstrap v3.3.7
 
-*** ECharts v4.5.0
+        * ECharts v4.5.0
 
-*** jQuery v3.4.1
+        * jQuery v3.4.1
 
-*** Line Awesome v1.3.0
+        * Line Awesome v1.3.0
 
-*** Vue v2.6.11
+        * Vue v2.6.11
 
-*** MUI v3.7.2
+        * MUI v3.7.2
 
-** 后端
+    * 后端
 
-*** ThinkPHP v5.0.24
+        * ThinkPHP v5.0.24
