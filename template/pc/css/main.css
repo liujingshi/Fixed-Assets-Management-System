@@ -81,42 +81,49 @@ html, body {
     flex-direction: column;
 }
 
-.nav-left-content > ul {
+.nav-ul {
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
 }
 
-.nav-left-content > ul > li:first-child {
+.nav-li:first-child {
     width: 100%;
     height: 20px;
 }
 
-.nav-left-content > ul > li { 
+.nav-li { 
     width: 100%;
     background: #2b3647;
 }
 
-.nav-left-content > ul > li > a {
+.nav-li-a {
     color: #a0abbf;
     text-decoration: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
     padding: 12px 5px 12px 15px;
     margin-left: 1px;
 }
 
-.nav-left-content > ul > li > a > i:first-child {
+.nav-li-a > i:first-child {
     font-size: 20px;
     margin-right: 10px;
 }
 
-.nav-left-content > ul > li > a > span {
+.nav-li-a > i:last-child {
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.nav-li-a > span {
     font-size: 14px;
 }
 
-.nav-left-content > ul > li > a:hover {
+.nav-li-a:hover {
     color: white;
     font-weight: bold;
 }
