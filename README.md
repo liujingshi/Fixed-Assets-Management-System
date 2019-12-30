@@ -35,6 +35,8 @@
 
     * [Vue v2.6.11](https://vuejs.org/)
 
+    * [Layer v3.1.1](http://layer.layui.com/)
+
     * [MUI v3.7.2](https://dev.dcloud.net.cn/mui/)
 
   * 后端
@@ -58,3 +60,4 @@
 |open in browser|右键快速在浏览器中打开html文件|
 |Path Intellisense|自动提示文件路径|
 |Vetur|Vue多功能集成插件|
+

@@ -18,6 +18,7 @@
 
     <div class="main">
 
+        <!-- 左侧导航开始 -->
         <div class="main-left hidden-xs">
 
             <div class="nav-left">
@@ -103,16 +104,45 @@
             </div>
 
         </div>
+        <!-- 左侧导航结束 -->
 
         <div class="main-right">
 
-            <div class="nav-top"></div>
+            <!-- 左顶部导航开始 -->
+            <div class="nav-top">
 
+                <ol class="breadcrumb nav-top-left">
+                    <li><a href="#">固定资产管理系统</a></li>
+                    <li><a href="#">资产管理</a></li>
+                    <li class="active">资产入库</li>
+                </ol>
+
+                <a href="#" class="nav-top-right nav-top-right-first">
+                    <i class="las la-envelope"></i>
+                    <span>通知</span>
+                    <span class="badge message-num">3</span>
+                </a>
+                <a href="#" class="nav-top-right">
+                    <i class="las la-user-secret"></i>
+                    <span>百里刘叔</span>
+                </a>
+                <a href="#" class="nav-top-right">
+                    <i class="las la-sign-out-alt"></i>
+                    <span>登出</span>
+                </a>
+
+            </div>
+            <!-- 顶部导航结束 -->
+
+            <!-- 主体内容开始 -->
             <div class="content"></div>
+            <!-- 主体内容结束 -->
 
+            <!-- 底部文字开始 -->
             <div class="nav-bottom">
                 Copyright © 2019 - 2020 百里刘叔 版权所有.
             </div>
+            <!-- 底部文字结束 -->
 
         </div>
 
@@ -121,6 +151,7 @@
 </body>
 
 <script src="../common/jquery/jquery-3.4.1.min.js"></script>
+<script src="../common/layer/layer.js"></script>
 <script src="../common/vue/vue.min.js"></script>
 <script src="../common/vue/axios.min.js"></script>
 <script src="../common/bootstrap/js/bootstrap.min.js"></script>

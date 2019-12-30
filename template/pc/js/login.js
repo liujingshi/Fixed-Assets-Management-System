@@ -20,6 +20,8 @@ var phone = new Vue({
                         e.target.innerHTML = "重新发送(" + tmp + ")";
                     }
                 }, 1000);
+            } else {
+                layer.msg("不要着急");
             }
         },
         do_login: function () {
