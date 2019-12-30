@@ -1,4 +1,3 @@
-
 var send_code = 0;
 var send_time = 10;
 
@@ -8,7 +7,7 @@ var phone = new Vue({
         send: function (e) {
             if (send_code == 0) {
                 send_code = 1;
-                e.target.innerHTML = "重新发送("+send_time+")";
+                e.target.innerHTML = "重新发送(" + send_time + ")";
                 // 发送验证码
                 var tmp = send_time;
                 var time_worker = setInterval(function () {
@@ -18,13 +17,14 @@ var phone = new Vue({
                         e.target.innerHTML = "重新发送";
                         clearInterval(time_worker);
                     } else {
-                        e.target.innerHTML = "重新发送("+tmp+")";
+                        e.target.innerHTML = "重新发送(" + tmp + ")";
                     }
                 }, 1000);
             }
         },
         do_login: function () {
             console.log("登录");
+            document.location.href = "index.html";
         }
     }
 });
