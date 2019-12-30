@@ -3,6 +3,7 @@ var chart_pie_unuse = echarts.init(document.getElementById("chart_pie_unuse"));
 var chart_pie_state = echarts.init(document.getElementById("chart_pie_state"));
 var chart_bar_class = echarts.init(document.getElementById("chart_bar_class"));
 var chart_bar_use = echarts.init(document.getElementById("chart_bar_use"));
+var chart_line_use = echarts.init(document.getElementById("chart_line_use"));
 
 // 在用资产饼状图
 var chart_pie_use_option = {
@@ -235,11 +236,10 @@ var chart_pie_state_option = {
 
 // 资产使用情况柱状图
 var chart_bar_use_option = {
-    // color: ['#3398DB'],
     tooltip: {
         trigger: 'axis',
-        axisPointer: { // 坐标轴指示器，坐标轴触发有效
-            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+        axisPointer: {
+            type: 'shadow'
         }
     },
     grid: {
@@ -266,8 +266,31 @@ var chart_bar_use_option = {
     }]
 };
 
+// 耗材领用情况折线图
+var chart_line_use_option = {
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'line'
+        }
+    },
+    xAxis: {
+        type: 'category',
+        data: ['2019-01', '2019-03', '2019-05', '2019-07', '2019-09', '2019-11']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        name: '耗材领用情况',
+        data: [820, 932, 901, 934, 1290, 1330],
+        type: 'line'
+    }]
+};
+
 chart_pie_use.setOption(chart_pie_use_option);
 chart_pie_unuse.setOption(chart_pie_unuse_option);
 chart_pie_state.setOption(chart_pie_state_option);
 chart_bar_class.setOption(chart_bar_class_option);
 chart_bar_use.setOption(chart_bar_use_option);
+chart_line_use.setOption(chart_line_use_option);
