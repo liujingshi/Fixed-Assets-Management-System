@@ -23,20 +23,38 @@
 
 * 所用框架
 
-    * 前端
+  * 前端
 
-        * [Bootstrap v3.3.7](https://v3.bootcss.com/)
+    * [Bootstrap v3.3.7](https://v3.bootcss.com/)
 
-        * [ECharts v4.5.0](https://www.echartsjs.com/zh/index.html)
+    * [ECharts v4.5.0](https://www.echartsjs.com/zh/index.html)
 
-        * [jQuery v3.4.1](https://jquery.com/)
+    * [jQuery v3.4.1](https://jquery.com/)
 
-        * [Line Awesome v1.3.0](https://icons8.com/line-awesome)
+    * [Line Awesome v1.3.0](https://icons8.com/line-awesome)
 
-        * [Vue v2.6.11](https://vuejs.org/)
+    * [Vue v2.6.11](https://vuejs.org/)
 
-        * [MUI v3.7.2](https://dev.dcloud.net.cn/mui/)
+    * [MUI v3.7.2](https://dev.dcloud.net.cn/mui/)
 
-    * 后端
+  * 后端
 
-        * [ThinkPHP v5.0.24](http://www.thinkphp.cn/)
+    * [ThinkPHP v5.0.24](http://www.thinkphp.cn/)
+
+* Visual Studio Code 插件列表
+
+| 插件名称 | 插件作用 |
+|:----|:----|
+|Auto Close Tag|自动闭合HTML/XML标签|
+|Auto Rename Tag|自动完成另一侧标签的同步修改|
+|Beautify|格式化代码|
+|Bracket Pair Colorizer|给括号加上不同的颜色|
+|HTML CSS Support|智能提示CSS类名以及id|
+|HTML Snippets|智能提示HTML标签，以及标签含义|
+|JavaScript (ES6) code snippets|ES6语法智能提示，以及快速输入|
+|jQuery Code Snippets|jQuery代码智能提示|
+|Markdown Preview Enhanced|实时预览markdown|
+|markdownlint|markdown语法纠错|
+|open in browser|右键快速在浏览器中打开html文件|
+|Path Intellisense|自动提示文件路径|
+|Vetur|Vue多功能集成插件|
