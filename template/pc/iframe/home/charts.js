@@ -127,24 +127,28 @@ var chart_pie_state_option = {
             show: false
         },
         data: [{
-                value: 335,
-                name: '电脑'
+                value: 2144,
+                name: '闲置'
             },
             {
-                value: 310,
-                name: '电视'
+                value: 2354,
+                name: '在用'
             },
             {
-                value: 234,
-                name: '广告牌'
+                value: 1530,
+                name: '借出'
             },
             {
-                value: 135,
-                name: '照相机'
+                value: 120,
+                name: '维修'
             },
             {
-                value: 1548,
-                name: '折叠椅'
+                value: 50,
+                name: '调拨中'
+            },
+            {
+                value: 632,
+                name: '报废'
             }
         ]
     }]
