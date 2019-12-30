@@ -148,12 +148,6 @@ body {
     background: #141b27;
 }
 
-.content {
-    width: 100%;
-    height: 100%;
-    background: #ecf0f5;
-}
-
 .nav-top {
     width: 100%;
     background: #fff;
@@ -196,4 +190,15 @@ body {
 
 .message-num {
     margin-left: 3px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    background: #ecf0f5;
+}
+
+.main-iframe {
+    width: 100%;
+    height: 100%;
 }
