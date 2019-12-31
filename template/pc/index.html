@@ -27,76 +27,35 @@
 
                 <div class="nav-left-content">
 
-                    <ul class="nav-ul">
+                    <ul class="nav-ul" id="nav_left">
+
                         <li class="nav-li-header"></li>
-                        <li class="nav-li">
-                            <a href="index.html" class="nav-li-a nav-active">
-                                <i class="las la-home"></i>
-                                <span>首页</span>
+
+                        <li class="nav-li" v-for="nav in navs">
+                            <a :href="nav.href" :class="{'nav-li-a': true, 'nav-pull': nav.pull, 'nav-active': nav.active}">
+                                <i :class="nav.icon"></i>
+                                <span v-html="nav.title"></span>
+                                <i v-show="nav.pull" class="las la-angle-right pull-icon"></i>
                             </a>
-                        </li>
-                        <li class="nav-li">
-                            <a href="#" class="nav-li-a nav-pull">
-                                <i class="las la-coins"></i>
-                                <span>资产管理</span>
-                                <i class="las la-angle-right pull-icon"></i>
-                            </a>
-                            <ul class="nav-ul nav-ul-son">
-                                <li class="nav-li nav-li-son">
-                                    <a href="#" class="nav-li-a nav-li-a-son">
-                                        <i class="las la-shuttle-van"></i>
-                                        <span>资产入库</span>
+                            <ul v-show="nav.pull" class="nav-ul nav-ul-son">
+                                <li v-for="n in nav.son" class="nav-li nav-li-son">
+                                    <a :href="n.href" :class="{'nav-li-a nav-li-a-son': true, 'nav-pull': n.pull, 'nav-active': n.active}">
+                                        <i :class="n.icon"></i>
+                                        <span v-html="n.title"></span>
+                                        <i v-show="n.pull" class="las la-angle-right pull-icon"></i>
                                     </a>
-                                </li>
-                                <li class="nav-li nav-li-son">
-                                    <a href="#" class="nav-li-a nav-li-a-son">
-                                        <i class="las la-cart-plus"></i>
-                                        <span>领用&退库</span>
-                                    </a>
-                                </li>
-                                <li class="nav-li nav-li-son">
-                                    <a href="#" class="nav-li-a nav-li-a-son">
-                                        <i class="las la-plus-circle"></i>
-                                        <span>借用&归还</span>
-                                    </a>
+                                    <ul v-show="n.pull" class="nav-ul nav-ul-grandson">
+                                        <li v-for="ng in n.son" class="nav-li nav-li-grandson">
+                                            <a :href="ng.href" :class="{'nav-li-a nav-li-a-grandson': true, 'nav-active': ng.active}">
+                                                <i :class="ng.icon"></i>
+                                                <span v-html="ng.title"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-li">
-                            <a href="#" class="nav-li-a nav-pull">
-                                <i class="las la-industry"></i>
-                                <span>耗材管理</span>
-                                <i class="las la-angle-right pull-icon"></i>
-                            </a>
-                            <ul class="nav-ul nav-ul-son">
-                                <li class="nav-li nav-li-son">
-                                    <a href="#" class="nav-li-a nav-li-a-son">
-                                        <i class="las la-cart-arrow-down"></i>
-                                        <span>入库单</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-li">
-                            <a href="#" class="nav-li-a nav-pull">
-                                <i class="las la-comment-dollar"></i>
-                                <span>财务管理</span>
-                                <i class="las la-angle-right pull-icon"></i>
-                            </a>
-                        </li>
-                        <li class="nav-li">
-                            <a href="index.html" class="nav-li-a">
-                                <i class="las la-stamp"></i>
-                                <span>我的审批</span>
-                            </a>
-                        </li>
-                        <li class="nav-li">
-                            <a href="#" class="nav-li-a nav-pull">
-                                <i class="las la-server"></i>
-                                <span>系统管理</span>
-                                <i class="las la-angle-right pull-icon"></i>
-                            </a>
-                        </li>
+                        
                     </ul>
 
                 </div>
@@ -158,6 +117,7 @@
 <script src="../common/vue/axios.min.js"></script>
 <script src="../common/bootstrap/js/bootstrap.min.js"></script>
 <script src="../common/echarts/echarts.min.js"></script>
+<script src="./js/nav.js"></script>
 <script src="./js/main.js"></script>
 
 </html>
