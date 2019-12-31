@@ -34,3 +34,19 @@ $(".nav-pull").click(function () {
         });
     });
 });
+
+$(".nav-li-a").click(function (e) {
+    $(".nav-li-a").removeClass("nav-active");
+    $(this).addClass("nav-active");
+    var name = e.currentTarget.dataset.name;
+    open_iframe(name);
+});
+
+
+function open_iframe(name) {
+    if (name != "") {
+        $(".main-iframe").attr("src", "./iframe/" + name + ".html");
+    } else {
+        layer.msg("404 Not Found!");
+    }
+}
