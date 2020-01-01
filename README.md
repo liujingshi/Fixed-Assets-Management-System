@@ -60,6 +60,12 @@
 |open in browser|右键快速在浏览器中打开html文件|
 |Path Intellisense|自动提示文件路径|
 |Vetur|Vue多功能集成插件|
+|Material Icon Theme|vscode图标主题|
+|filesize|在底部状态栏显示当前文件大小|
+|CSS Peek|追踪CSS定义|
+|Minify|压缩合并JS、CSS文件，生成min文件|
+|Window Colors|每个VSCode窗口都可以独特地自动着色|
+|live server|开启本地服务器|
 
 * 更新日志
 
@@ -68,3 +74,4 @@
 |之前|登录页面，后台框架|
 |2019-12-31 02:04:30|后台首页|
 |2019-12-31 14:33:20|后台左侧多级导航利用Vue输出，更新了用户信息页和消息页面|
+|2020-01-01 13:45:10|新的一年就更新几个vscode插件和二级导航开启关闭动画|

@@ -13,18 +13,18 @@ $(".nav-pull").click(function () {
             var css = cs.split(" ");
             if (css.indexOf("nav-pull") >= 0) {
                 if (this != that) {
-                    $(this).parent().children().eq(1).css("display", "none");
+                    $(this).parent().children().eq(1).slideUp(500);
                     $(this).find(".pull-icon").removeClass("la-angle-down");
                     $(this).find(".pull-icon").addClass("la-angle-right");
                 } else {
                     var $ul = $(this).parent().children().eq(1);
                     if ($ul.css("display") == "none") {
-                        $ul.css("display", "flex");
+                        $ul.slideDown(500);
                         var $pull = $(this).find(".pull-icon");
                         $pull.removeClass("la-angle-right");
                         $pull.addClass("la-angle-down");
                     } else {
-                        $ul.css("display", "none");
+                        $ul.slideUp(500);
                         var $pull = $(this).find(".pull-icon");
                         $pull.removeClass("la-angle-down");
                         $pull.addClass("la-angle-right");
