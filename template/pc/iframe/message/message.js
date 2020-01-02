@@ -1,3 +1,3 @@
 $(".home-panel-close").click(function () {
-    $(this).parent().parent().parent().hide(500);
+    $(this).parent().parent().parent().fadeOut(200);
 });

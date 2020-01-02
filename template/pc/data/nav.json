@@ -1,0 +1,32 @@
+[{
+        "title": "首页",
+        "icon": "",
+        "pull": false,
+        "name": "home",
+        "active": true,
+        "son": []
+    },
+    {
+        "title": "系统管理",
+        "icon": "",
+        "pull": true,
+        "name": "system",
+        "active": false,
+        "son": [{
+            "title": "用户管理",
+            "icon": "",
+            "pull": false,
+            "name": "users",
+            "active": false,
+            "son": []
+        }]
+    },
+    {
+        "title": "",
+        "icon": "",
+        "pull": false,
+        "name": "",
+        "active": false,
+        "son": []
+    }
+]
