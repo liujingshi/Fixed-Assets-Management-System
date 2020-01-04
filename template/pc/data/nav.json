@@ -1,32 +1,36 @@
 [{
-        "title": "首页",
-        "icon": "",
-        "pull": false,
-        "name": "home",
-        "active": true,
-        "son": []
-    },
-    {
-        "title": "系统管理",
-        "icon": "",
-        "pull": true,
-        "name": "system",
-        "active": false,
-        "son": [{
-            "title": "用户管理",
-            "icon": "",
-            "pull": false,
-            "name": "users",
-            "active": false,
-            "son": []
-        }]
-    },
-    {
-        "title": "",
-        "icon": "",
+    "title": "首页",
+    "icon": "fas fa-home",
+    "pull": false,
+    "name": "home",
+    "active": true,
+    "son": []
+}, {
+    "title": "系统管理",
+    "icon": "fab fa-windows",
+    "pull": true,
+    "name": "",
+    "active": false,
+    "son": [{
+        "title": "用户管理",
+        "icon": "fas fa-user",
         "pull": false,
         "name": "",
         "active": false,
         "son": []
-    }
-]
+    }, {
+        "title": "功能测试",
+        "icon": "fas fa-vial",
+        "pull": false,
+        "name": "test",
+        "active": false,
+        "son": []
+    }]
+}, {
+    "title": "",
+    "icon": "",
+    "pull": false,
+    "name": "",
+    "active": false,
+    "son": []
+}]

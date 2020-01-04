@@ -45,8 +45,6 @@ $(".nav-li-a").click(function (e) {
 
 function open_iframe(name) {
     if (name != "") {
-        $(".main-iframe").attr("src", "./iframe/" + name + ".html");
-    } else {
-        layer.msg("404 Not Found!");
+        $(".main-iframe").attr("src", "./app/" + name + "/" + name + ".html");
     }
 }

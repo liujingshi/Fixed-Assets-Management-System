@@ -150,6 +150,10 @@ body {
     text-decoration: none;
 }
 
+.nav-active + ul {
+    display: flex;
+}
+
 .nav-li-a-son:hover,
 .nav-li-a-son:active,
 .nav-li-son-a:focus,

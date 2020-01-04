@@ -35,18 +35,18 @@
                             <a :data-name="nav.name" :class="{'nav-li-a': true, 'nav-pull': nav.pull, 'nav-active': nav.active}" href="javascript:;">
                                 <i :class="nav.icon"></i>
                                 <span v-html="nav.title"></span>
-                                <i v-show="nav.pull" class="las la-angle-right pull-icon"></i>
+                                <i v-show="nav.pull" :class="{'las': true, 'pull-icon': true, 'la-angle-right': nav.active == false, 'la-angle-down': nav.active}"></i>
                             </a>
                             <ul v-show="nav.pull" class="nav-ul nav-ul-son">
                                 <li v-for="n in nav.son" class="nav-li nav-li-son">
-                                    <a :data-name="n.name" :class="{'nav-li-a nav-li-a-son': true, 'nav-pull': n.pull, 'nav-active': n.active}" href="javascript:;">
+                                    <a :data-name="n.name" :class="{'nav-li-a nav-li-a-son': true, 'nav-pull': n.pull, 'nav-active nav-son-active': n.active}" href="javascript:;">
                                         <i :class="n.icon"></i>
                                         <span v-html="n.title"></span>
-                                        <i v-show="n.pull" class="las la-angle-right pull-icon"></i>
+                                        <i v-show="n.pull" class="{'las': true, 'pull-icon': true, 'la-angle-right': n.active == false, 'la-angle-down': n.active}"></i>
                                     </a>
                                     <ul v-show="n.pull" class="nav-ul nav-ul-grandson">
                                         <li v-for="ng in n.son" class="nav-li nav-li-grandson">
-                                            <a :data-name="ng.name" :class="{'nav-li-a nav-li-a-grandson': true, 'nav-active': ng.active}" href="javascript:;">
+                                            <a :data-name="ng.name" :class="{'nav-li-a nav-li-a-grandson': true, 'nav-active nav-son-active': ng.active}" href="javascript:;">
                                                 <i :class="ng.icon"></i>
                                                 <span v-html="ng.title"></span>
                                             </a>
@@ -72,8 +72,8 @@
 
                 <ol class="breadcrumb nav-top-left">
                     <li><a href="javascript:;">固定资产管理系统</a></li>
-                    <li><a href="javascript:;">资产管理</a></li>
-                    <li class="active">资产入库</li>
+                    <li><a href="javascript:;">系统管理</a></li>
+                    <li class="active">功能测试</li>
                 </ol>
 
                 <a href="javascript:open_iframe('message');" class="nav-top-right nav-top-right-first">
@@ -95,7 +95,7 @@
 
             <!-- 主体内容开始 -->
             <div class="content">
-                <iframe class="main-iframe" src="./iframe/home.html" frameborder="0"></iframe>
+                <iframe class="main-iframe" src="./app/test/test.html" frameborder="0"></iframe>
             </div>
             <!-- 主体内容结束 -->
 

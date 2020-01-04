@@ -6,7 +6,7 @@
  */
 
  /* 最外部class */
-.mac-panel {
+.ljs-panel {
     background: #fff;
     /* box-shadow: 0 1px 10px rgba(0, 0, 0, .3); */
     box-shadow: 0 5px 20px rgba(0, 0, 0, .6);
@@ -18,7 +18,7 @@
 }
 
 /* 标题栏class */
-.mac-panel-header {
+.ljs-panel-header {
     width: 100%;
     height: 38px;
     background: linear-gradient(#e5e5e5, #cdcdcd);
@@ -30,7 +30,7 @@
 }
 
 /* 标题栏左侧三个按钮class */
-.mac-panel-header-three-btn {
+.ljs-panel-header-three-btn {
     width: 78px;
     height: 36px;
     border-radius: 5px 0 0 0;
@@ -41,14 +41,14 @@
 }
 
 /* 三个按钮鼠标悬停显示 */
-.mac-panel-header-three-btn:hover {
+.ljs-panel-header-three-btn:hover {
     color: rgba(0, 0, 0, .95);
 }
 
 /* 三个按钮class */
-.mac-panel-header-close,
-.mac-panel-header-min,
-.mac-panel-header-max {
+.ljs-panel-header-close,
+.ljs-panel-header-min,
+.ljs-panel-header-max {
     width: 12px;
     height: 12px;
     border-radius: 12px;
@@ -61,26 +61,26 @@
 }
 
 /* 关闭按钮class */
-.mac-panel-header-close {
+.ljs-panel-header-close {
     background: #ff3f4a;
     border: 1px solid #ef1320;
     margin-left: 12px;
 }
 
 /* 最小化按钮class */
-.mac-panel-header-min {
+.ljs-panel-header-min {
     background: #ffbf00;
     border: 1px solid #e79f13;
 }
 
 /* 最大化按钮class */
-.mac-panel-header-max {
+.ljs-panel-header-max {
     background: #00da43;
     border: 1px solid #12b829;
 }
 
 /* 按钮禁用class */
-.mac-panel-header-btn-disabled {
+.ljs-panel-header-btn-disabled {
     cursor: not-allowed;
     color: rgba(0, 0, 0, 0);
     background: #cfcfcf;
@@ -88,7 +88,7 @@
 }
 
 /* 标题文字class */
-.mac-panel-header-title {
+.ljs-panel-header-title {
     width: 100%;
     height: 36px;
     padding: 0 73px 0 5px;
@@ -104,7 +104,7 @@
 }
 
 /* 弹出层主体内容class */
-.mac-panel-body {
+.ljs-panel-body {
     padding: 12px;
     width: 100%;
     height: 100%;
@@ -112,7 +112,7 @@
 }
 
 /* 最小化区域栏class */
-.mac-panel-min-area {
+.ljs-panel-min-area {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;

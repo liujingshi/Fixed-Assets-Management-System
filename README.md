@@ -47,20 +47,20 @@
 
 * 自制组件
 
-  * MacPopup 模仿Mac风格的弹出层组件
+  * ljsPopup 模仿Mac风格的弹出层组件
 
   ``` javascript
   /**
-   * 直接调用函数macpopup();
+   * 直接调用函数ljspopup();
    * 即可弹出
    */
-  macpopup();
+  ljspopup();
 
   /**
    * 也可以传入具体参数
    * 所有参数均可选
    */
-  macpopup({
+  ljspopup({
     el: "#id", // 内容元素选择器，也可以直接传入html，默认无
     title: "标题", // 标题，默认无
     width: 400, // 宽度（数值），默认自动适应

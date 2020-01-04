@@ -9,7 +9,7 @@
 var popup_data = [];
 
 // 监听关闭按钮
-$(document).on("click", ".mac-panel-header-close", function () {
+$(document).on("click", ".ljs-panel-header-close", function () {
     var $panel = $(this).parent().parent().parent();
     var width = $panel.width();
     var height = $panel.height();
@@ -28,7 +28,7 @@ $(document).on("click", ".mac-panel-header-close", function () {
         left: "+=" + (width + width_out) / 2 + "px"
     }, 150, function () {
         $panel.hide();
-        if ($panel.parent().attr("class") != undefined && $panel.parent().attr("class").indexOf("mac-panel-min-area") >= 0) {
+        if ($panel.parent().attr("class") != undefined && $panel.parent().attr("class").indexOf("ljs-panel-min-area") >= 0) {
             $panel.css("position", "fixed");
             $panel.parent().remove($panel);
             $("body").append($panel);
@@ -37,14 +37,14 @@ $(document).on("click", ".mac-panel-header-close", function () {
 });
 
 // 监听最小化按钮
-$(document).on("click", ".mac-panel-header-min", function () {
+$(document).on("click", ".ljs-panel-header-min", function () {
     if (!is_disabled($(this))) {
-        if (el_exist(".mac-panel-min-area")) {
-            $(".mac-panel-min-area").show();
+        if (el_exist(".ljs-panel-min-area")) {
+            $(".ljs-panel-min-area").show();
         } else {
-            var mac_panel_min_area = document.createElement("div");
-            $(mac_panel_min_area).addClass("mac-panel-min-area");
-            $("body").append(mac_panel_min_area);
+            var ljs_panel_min_area = document.createElement("div");
+            $(ljs_panel_min_area).addClass("ljs-panel-min-area");
+            $("body").append(ljs_panel_min_area);
         }
         var $panel = $(this).parent().parent().parent();
         if ($panel.css("position") == "static") { // 还原
@@ -60,7 +60,7 @@ $(document).on("click", ".mac-panel-header-min", function () {
             var height = $panel.height();
             var width_out = width / 10;
             var height_out = height / 10;
-            var now_number = $(".mac-panel-min-area").children().length;
+            var now_number = $(".ljs-panel-min-area").children().length;
             var max_number = Math.floor(window_width / min_width);
             var c = now_number / max_number;
             var now_line = c < Math.floor(c) ? Math.floor(c) : Math.floor(c) + 1;
@@ -81,8 +81,8 @@ $(document).on("click", ".mac-panel-header-min", function () {
                 left: (window_width - (now_col * min_width - min_width / 2)) + "px"
             }, 150, function () {
                 $panel.css("position", "static");
-                $(".mac-panel-min-area").append($panel);
-                $panel.find(".mac-panel-header-title").css("justify-content", "flex-start");
+                $(".ljs-panel-min-area").append($panel);
+                $panel.find(".ljs-panel-header-title").css("justify-content", "flex-start");
             }).animate({
                 width: min_width + "px",
                 height: min_line_height + "px"
@@ -92,7 +92,7 @@ $(document).on("click", ".mac-panel-header-min", function () {
 });
 
 // 监听最大化按钮
-$(document).on("click", ".mac-panel-header-max", function () {
+$(document).on("click", ".ljs-panel-header-max", function () {
     if (!is_disabled($(this))) {
         var $panel = $(this).parent().parent().parent();
         var window_width = $(window).width();
@@ -137,7 +137,7 @@ function panel_recovery($panel) {
         top: top,
         left: left
     }, 100, function () {
-        $panel.find(".mac-panel-header-title").css("justify-content", "center");
+        $panel.find(".ljs-panel-header-title").css("justify-content", "center");
     }).animate({
         width: "+=" + (width + width_out) + "px",
         height: "+=" + (height + height_out) + "px",
@@ -152,7 +152,7 @@ function panel_recovery($panel) {
 }
 
 // 监听按下
-$(document).on("mousedown", ".mac-panel-header-title", function (e) {
+$(document).on("mousedown", ".ljs-panel-header-title", function (e) {
     var sign = get_sign($(this).parent().parent());
     var index = sign_find(sign);
     if (popup_data[index].can_move && popup_data[index].move) {
@@ -178,7 +178,7 @@ $(document).on("mousedown", ".mac-panel-header-title", function (e) {
 });
 
 // 监听抬起
-$(document).on("mouseup", ".mac-panel-header-title", function () {
+$(document).on("mouseup", ".ljs-panel-header-title", function () {
     $(this).off("mousemove");
 });
 
@@ -234,17 +234,17 @@ function panel_show(data) {
  *   height: 300, 长度
  * }
  */
-function macpopup(data = {}) {
-    var panel_sign = "mac-sign-" + $.md5(JSON.stringify(data));
+function ljspopup(data = {}) {
+    var panel_sign = "ljs-sign-" + $.md5(JSON.stringify(data));
     var index = sign_find(panel_sign);
     if (index < 0) {
         var new_data = {
             el: data.el ? data.el : "",
             title: data.title ? data.title : "",
-            width: data.width ? data.width : -1,
-            height: data.height ? data.height : -1,
-            top: data.top ? data.top : -1,
-            left: data.left ? data.left : -1,
+            width: data.width || data.width == 0 ? data.width : -1,
+            height: data.height || data.height == 0 ? data.height : -1,
+            top: data.top || data.top == 0 ? data.top : -1,
+            left: data.left || data.left == 0 ? data.left : -1,
             min: data.min != undefined ? data.min : true,
             max: data.max != undefined ? data.max : true,
             mask: data.mask != undefined ? data.mask : true,
@@ -252,48 +252,48 @@ function macpopup(data = {}) {
             can_move: true,
             sign: panel_sign
         };
-        var mac_panel = document.createElement("div");
-        var mac_panel_header = document.createElement("div");
-        var mac_panel_header_three_btn = document.createElement("div");
-        var mac_panel_header_close = document.createElement("div");
-        var mac_panel_header_min = document.createElement("div");
-        var mac_panel_header_max = document.createElement("div");
-        var mac_panel_header_title = document.createElement("div");
-        var mac_panel_body = document.createElement("div");
-        $(mac_panel).addClass("mac-panel");
-        $(mac_panel).addClass(panel_sign);
-        $(mac_panel_header).addClass("mac-panel-header");
-        $(mac_panel_header_three_btn).addClass("mac-panel-header-three-btn");
-        $(mac_panel_header_close).addClass("mac-panel-header-close");
-        $(mac_panel_header_min).addClass("mac-panel-header-min");
+        var ljs_panel = document.createElement("div");
+        var ljs_panel_header = document.createElement("div");
+        var ljs_panel_header_three_btn = document.createElement("div");
+        var ljs_panel_header_close = document.createElement("div");
+        var ljs_panel_header_min = document.createElement("div");
+        var ljs_panel_header_max = document.createElement("div");
+        var ljs_panel_header_title = document.createElement("div");
+        var ljs_panel_body = document.createElement("div");
+        $(ljs_panel).addClass("ljs-panel");
+        $(ljs_panel).addClass(panel_sign);
+        $(ljs_panel_header).addClass("ljs-panel-header");
+        $(ljs_panel_header_three_btn).addClass("ljs-panel-header-three-btn");
+        $(ljs_panel_header_close).addClass("ljs-panel-header-close");
+        $(ljs_panel_header_min).addClass("ljs-panel-header-min");
         if (!new_data.min) {
-            $(mac_panel_header_min).addClass("mac-panel-header-btn-disabled");
+            $(ljs_panel_header_min).addClass("ljs-panel-header-btn-disabled");
         }
-        $(mac_panel_header_max).addClass("mac-panel-header-max");
+        $(ljs_panel_header_max).addClass("ljs-panel-header-max");
         if (!new_data.max) {
-            $(mac_panel_header_max).addClass("mac-panel-header-btn-disabled");
+            $(ljs_panel_header_max).addClass("ljs-panel-header-btn-disabled");
         }
-        $(mac_panel_header_title).addClass("mac-panel-header-title");
+        $(ljs_panel_header_title).addClass("ljs-panel-header-title");
         if (!new_data.move) {
-            $(mac_panel_header_title).css("cursor", "default")
+            $(ljs_panel_header_title).css("cursor", "default")
         }
-        $(mac_panel_body).addClass("mac-panel-body");
-        $(mac_panel_header_close).html("×");
-        $(mac_panel_header_min).html("﹣");
-        $(mac_panel_header_max).html("﹢");
-        $(mac_panel_header_title).html(new_data.title);
-        $(mac_panel_body).append($(new_data.el));
-        $(mac_panel_header_three_btn).append(mac_panel_header_close);
-        $(mac_panel_header_three_btn).append(mac_panel_header_min);
-        $(mac_panel_header_three_btn).append(mac_panel_header_max);
-        $(mac_panel_header).append(mac_panel_header_three_btn);
-        $(mac_panel_header).append(mac_panel_header_title);
-        $(mac_panel).append(mac_panel_header);
-        $(mac_panel).append(mac_panel_body);
-        $("body").append(mac_panel);
-        $(mac_panel).find(".mac-panel-body").children().show();
-        new_data.width = new_data.width < 0 ? $(mac_panel).width() : new_data.width;
-        new_data.height = new_data.height < 0 ? $(mac_panel).height() : new_data.height;
+        $(ljs_panel_body).addClass("ljs-panel-body");
+        $(ljs_panel_header_close).html("×");
+        $(ljs_panel_header_min).html("﹣");
+        $(ljs_panel_header_max).html("﹢");
+        $(ljs_panel_header_title).html(new_data.title);
+        $(ljs_panel_body).append($(new_data.el));
+        $(ljs_panel_header_three_btn).append(ljs_panel_header_close);
+        $(ljs_panel_header_three_btn).append(ljs_panel_header_min);
+        $(ljs_panel_header_three_btn).append(ljs_panel_header_max);
+        $(ljs_panel_header).append(ljs_panel_header_three_btn);
+        $(ljs_panel_header).append(ljs_panel_header_title);
+        $(ljs_panel).append(ljs_panel_header);
+        $(ljs_panel).append(ljs_panel_body);
+        $("body").append(ljs_panel);
+        $(ljs_panel).find(".ljs-panel-body").children().show();
+        new_data.width = new_data.width < 0 ? $(ljs_panel).width() : new_data.width;
+        new_data.height = new_data.height < 0 ? $(ljs_panel).height() : new_data.height;
         popup_data.push(new_data);
         panel_show(new_data);
     } else {
@@ -305,7 +305,7 @@ function macpopup(data = {}) {
 function is_disabled($element) {
     var classes = $element.attr("class");
     var class_rows = classes.split(" ");
-    if (class_rows.indexOf("mac-panel-header-btn-disabled") < 0) {
+    if (class_rows.indexOf("ljs-panel-header-btn-disabled") < 0) {
         return false
     } else {
         return true;
@@ -336,11 +336,11 @@ function get_sign($element) {
     var classes = $element.attr("class");
     var class_rows = classes.split(" ");
     for (var i in class_rows) {
-        if (class_rows[i].indexOf("mac-sign-") >= 0) {
+        if (class_rows[i].indexOf("ljs-sign-") >= 0) {
             return class_rows[i];
         }
     }
-    return "mac-sign-not-found";
+    return "ljs-sign-not-found";
 }
 
 
