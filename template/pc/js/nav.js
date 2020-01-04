@@ -15,7 +15,7 @@ var nav_left_data = [{
         "title": "用户管理",
         "icon": "las la-user",
         "pull": false,
-        "name": "",
+        "name": "users",
         "active": false,
         "son": []
     }, {
