@@ -1,29 +1,49 @@
 [{
     "title": "首页",
-    "icon": "fas fa-home",
+    "icon": "las la-home",
     "pull": false,
     "name": "home",
     "active": true,
+    "up": "",
     "son": []
 }, {
-    "title": "系统管理",
-    "icon": "fab fa-windows",
+    "title": "资产管理",
+    "icon": "las la-coins",
     "pull": true,
-    "name": "",
+    "name": "asset",
     "active": false,
+    "up": "",
+    "son": [ {
+        "title": "资产入库",
+        "icon": "las la-sign-in-alt",
+        "pull": false,
+        "name": "assetinsert",
+        "active": false,
+        "up": "asset",
+        "son": []
+    }]
+}, {
+    "title": "系统管理",
+    "icon": "lab la-windows",
+    "pull": true,
+    "name": "system",
+    "active": false,
+    "up": "",
     "son": [{
         "title": "用户管理",
-        "icon": "fas fa-user",
+        "icon": "las la-user",
         "pull": false,
-        "name": "",
+        "name": "users",
         "active": false,
+        "up": "system",
         "son": []
     }, {
         "title": "功能测试",
-        "icon": "fas fa-vial",
+        "icon": "las la-vial",
         "pull": false,
         "name": "test",
         "active": false,
+        "up": "system",
         "son": []
     }]
 }, {
@@ -32,5 +52,6 @@
     "pull": false,
     "name": "",
     "active": false,
+    "up": "",
     "son": []
 }]
