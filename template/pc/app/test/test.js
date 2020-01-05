@@ -24,27 +24,48 @@ function test() {
     });
 }
 
-$('#table').bootstrapTable({
-    pagination: true,
-    search: true,
-    locale: "en",
+$('#table1').bootstrapTable({
+    locale: "zh-cn",
+    url: "data1.json",
     columns: [{
-        field: 'id',
-        title: 'Item ID'
-    }, {
         field: 'name',
-        title: 'Item Name'
+        title: '名称'
     }, {
-        field: 'price',
-        title: 'Item Price'
+        field: 'tag',
+        title: '标签'
+    }, {
+        field: 'type',
+        title: '类型'
+    }, {
+        field: "default",
+        title: "默认"
+    }, {
+        field: "description",
+        title: "描述"
     }],
-    data: [{
-        id: 1,
-        name: 'Item 1',
-        price: '$1'
+    classes: "table table-striped table-bordered",
+    theadClasses: "thead-light"
+})
+
+$('#table2').bootstrapTable({
+    locale: "zh-cn",
+    url: "data2.json",
+    columns: [{
+        field: 'name',
+        title: '名称'
     }, {
-        id: 2,
-        name: 'Item 2',
-        price: '$2'
-    }]
+        field: 'tag',
+        title: '标签'
+    }, {
+        field: 'type',
+        title: '类型'
+    }, {
+        field: "default",
+        title: "默认"
+    }, {
+        field: "description",
+        title: "描述"
+    }],
+    classes: "table table-striped table-bordered",
+    theadClasses: "thead-light"
 })

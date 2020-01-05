@@ -13,13 +13,85 @@
     "name": "asset",
     "active": false,
     "up": "",
-    "son": [ {
+    "son": [{
         "title": "资产入库",
         "icon": "las la-sign-in-alt",
         "pull": false,
         "name": "assetinsert",
         "active": false,
         "up": "asset",
+        "son": []
+    }, {
+        "title": "领用退库",
+        "name": "assetuse",
+        "icon": "las la-sign-out-alt",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "借用归还",
+        "name": "assetborrow",
+        "icon": "las la-reply-all",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "资产调拨",
+        "name": "assettransfer",
+        "icon": "las la-share-square",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "实物信息更变",
+        "name": "assetotherchange",
+        "icon": "las la-edit",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "维保信息更变",
+        "name": "assetmaintenancechange",
+        "icon": "las la-pen-square",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "财务信息更变",
+        "name": "assetfinance",
+        "icon": "las la-pencil-alt",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "维修信息登记",
+        "name": "assetrepair",
+        "icon": "las la-keyboard",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "清理报废",
+        "name": "assetclear",
+        "icon": "las la-trash-alt",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "盘点管理",
+        "name": "assetcheck",
+        "icon": "las la-calculator",
+        "up": "asset",
+        "pull": false,
+        "active": false,
         "son": []
     }]
 }, {

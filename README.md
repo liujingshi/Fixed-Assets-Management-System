@@ -27,7 +27,7 @@
 
   * 前端
 
-    * [Bootstrap v3.3.7](https://v3.bootcss.com/)
+    * [Bootstrap v4.3.1](https://v4.bootcss.com/)
 
     * [ECharts v4.5.0](https://www.echartsjs.com/zh/index.html)
 

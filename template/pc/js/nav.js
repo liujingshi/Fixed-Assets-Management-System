@@ -21,6 +21,78 @@ var nav_left_data = [{
         "active": true,
         "up": "asset",
         "son": []
+    }, {
+        "title": "领用退库",
+        "name": "assetuse",
+        "icon": "las la-sign-out-alt",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "借用归还",
+        "name": "assetborrow",
+        "icon": "las la-reply-all",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "资产调拨",
+        "name": "assettransfer",
+        "icon": "las la-share-square",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "实物信息更变",
+        "name": "assetotherchange",
+        "icon": "las la-edit",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "维保信息更变",
+        "name": "assetmaintenancechange",
+        "icon": "las la-pen-square",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "财务信息更变",
+        "name": "assetfinance",
+        "icon": "las la-pencil-alt",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "维修信息登记",
+        "name": "assetrepair",
+        "icon": "las la-keyboard",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "清理报废",
+        "name": "assetclear",
+        "icon": "las la-trash-alt",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
+    }, {
+        "title": "盘点管理",
+        "name": "assetcheck",
+        "icon": "las la-calculator",
+        "up": "asset",
+        "pull": false,
+        "active": false,
+        "son": []
     }]
 }, {
     "title": "系统管理",
@@ -111,9 +183,9 @@ function find_data_by_name(name) {
                 } else {
                     for (var k in data1.son) {
                         var data2 = data1.son[k];
-                            if (data2.name == name) {
-                                return data1;
-                            }
+                        if (data2.name == name) {
+                            return data1;
+                        }
                     }
                 }
             }
@@ -151,7 +223,12 @@ function update_navs(name) {
 function open_iframe(name) {
     if (name != "") {
         var data = find_data_by_name(name);
-        $(".main-iframe").attr("src", "./app/" + name + "/" + name + ".html?icon=" + data.icon + "&title=" + data.title);
+        if (data) {
+            $(".main-iframe").attr("src", "./app/" + name + "/" + name + ".html?icon=" + data.icon + "&title=" + data.title);
+        } else {
+            $(".main-iframe").attr("src", "./app/" + name + "/" + name + ".html");
+        }
+        
     }
     update_navs(name);
 }
@@ -167,4 +244,3 @@ function goto_active(data) {
 }
 
 goto_active(nav_left_data);
-
