@@ -3,7 +3,7 @@ var nav_left_data = [{
     "icon": "las la-home",
     "pull": false,
     "name": "home",
-    "active": true,
+    "active": false,
     "up": "",
     "son": []
 }, {
@@ -18,7 +18,7 @@ var nav_left_data = [{
         "icon": "las la-sign-in-alt",
         "pull": false,
         "name": "assetinsert",
-        "active": false,
+        "active": true,
         "up": "asset",
         "son": []
     }]
@@ -98,6 +98,29 @@ function find_data_by_name_to_do_something(data, name, found_do_something, not_f
     }
 }
 
+function find_data_by_name(name) {
+    for (var i in nav_left_data) {
+        var data = nav_left_data[i];
+        if (data.name == name) {
+            return data;
+        } else {
+            for (var j in data.son) {
+                var data1 = data.son[j];
+                if (data1.name == name) {
+                    return data1;
+                } else {
+                    for (var k in data1.son) {
+                        var data2 = data1.son[k];
+                            if (data2.name == name) {
+                                return data1;
+                            }
+                    }
+                }
+            }
+        }
+    }
+}
+
 var nav_left = new Vue({
     el: "#nav_left",
     data: {
@@ -127,7 +150,8 @@ function update_navs(name) {
 
 function open_iframe(name) {
     if (name != "") {
-        $(".main-iframe").attr("src", "./app/" + name + "/" + name + ".html");
+        var data = find_data_by_name(name);
+        $(".main-iframe").attr("src", "./app/" + name + "/" + name + ".html?icon=" + data.icon + "&title=" + data.title);
     }
     update_navs(name);
 }

@@ -15,7 +15,25 @@
 </head>
 
 <body>
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="home-panel">
+                    <div class="home-panel-header" id="header_title">
+                        <i :class="icon"></i>
+                        <span v-html="title"></span>
+                    </div>
+                    <div class="home-panel-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn btn-default">弹出</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script src="../../../common/jquery/jquery-3.4.1.min.js"></script>
@@ -26,6 +44,7 @@
 <script src="../../../common/bootstrap/js/bootstrap-table.min.js"></script>
 <script src="../../../common/bootstrap/js/bootstrap-table-locale-all.min.js"></script>
 <script src="../common/ljspopup.js"></script>
+<script src="../common/common.js"></script>
 <script src="./assetinsert.js"></script>
 
 </html>
