@@ -22,14 +22,25 @@
 				</div>
 			</div>
 			<div class="menu-content">
-				<div class="menu-item">
-					<i class="las la-home"></i>
-					<span>首页</span>
+				<div v-for="d in data" :webview="d.name" class="menu-item">
+					<i :class="d.icon"></i>
+					<span v-html="d.title"></span>
 				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="setting">
+				<i class="las la-cog"></i>
+				<span>设置</span>
+			</div>
+			<div class="weather">
+				<i><b>-10°</b></i>
+				<span>铁西</span>
 			</div>
 		</div>
 	</body>
 	<script src="../common/mui/js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../common/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../common/common.js" type="text/javascript" charset="utf-8"></script>
 	<script src="./menu.js" type="text/javascript" charset="utf-8"></script>
 </html>

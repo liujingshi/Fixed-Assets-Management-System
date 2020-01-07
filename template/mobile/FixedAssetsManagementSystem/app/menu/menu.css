@@ -16,15 +16,15 @@ html, body {
 	display: flex;
 	flex-direction: row;
 	padding: 20px;
-	background: rgba(255, 255, 255, .8);
+	background: rgba(255, 255, 255, .6);
 	height: 180px;
 	align-items: center;
 }
 
 .menu-user-header {
-	width: 100px;
-	height: 100px;
-	border-radius: 100px;
+	width: 80px;
+	height: 80px;
+	border-radius: 80px;
 	background: url(../../images/userheader.png) no-repeat;
 	background-size: 100% 100%;
 	border: 2px solid #fff;
@@ -41,13 +41,13 @@ html, body {
 	display: flex;
 	align-items: center;
 	padding: 10px 0;
-	font-size: 24px;
+	font-size: 20px;
 }
 
 .menu-user-phone {
 	display: flex;
 	align-items: center;
-	font-size: 18px;
+	font-size: 16px;
 	color: #515151;
 	padding: 10px 0;
 }
@@ -57,7 +57,7 @@ html, body {
 	z-index: 9999;
 	top: 10px;
 	right: 10px;
-	font-size: 34px;
+	font-size: 32px;
 }
 
 .menu-content {
@@ -65,13 +65,57 @@ html, body {
 	display: flex;
 	flex-direction: column;
 	color: #fff;
+	padding: 10px;
 }
 
 .menu-item {
 	padding: 10px 0;
+	display: flex;
+	align-items: center;
 }
 
 .menu-item>i {
-	margin: 0 20px;
+	margin: 0 10px;
+	font-size: 26px;
 }
 
+.menu-item>span {
+	font-size: 20px;
+}
+
+.footer {
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+	left: 0;
+	bottom: 0;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+}
+
+.setting, .weather {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 10px;
+	align-items: center;
+}
+
+.setting {
+	margin-left: 10px;
+}
+
+.setting>i {
+	font-size: 26px;
+}
+
+.weather>i {
+	font-size: 26px;
+}
+
+.setting>span, .weather>span {
+	font-size: 12px;
+}
+
+.weather>span {
+	margin-top: 4px;}
