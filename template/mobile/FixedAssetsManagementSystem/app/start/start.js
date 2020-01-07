@@ -1,6 +1,29 @@
 mui.ready(function() {
-	mui.init({});
+	var webviews = ["home"]
+	var homeWebview = "home"
+	mui.init({})
 	mui.plusReady(function() {
-		mui.alert("固定资产管理系统", "Made in 刘叔", "刘叔最帅");
-	});
-});
+		setTimeout(function() {
+			mui.preload({
+				url: '../menu/menu.html',
+				id: 'menu',
+				styles: {
+					left: '-100%',
+					width: '100%',
+					zindex: 9997
+				}
+			})
+			app.init()
+			for (var i in webviews) {
+				mui.preload({
+					url: '../' + webviews[i] + '/' + webviews[i] + '.html',
+					id: webviews[i]
+				})
+			}
+			setTimeout(function () {
+				plus.webview.getWebviewById(homeWebview).show()
+				plus.webview.currentWebview().hide()
+			}, 300)
+		}, 300)
+	})
+})
