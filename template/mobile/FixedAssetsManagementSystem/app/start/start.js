@@ -1,5 +1,5 @@
 mui.ready(function() {
-	var webviews = ["home", "approve", "asset", "assetcheck", "hc", "system"]
+	var webviews = ["scan", "home", "approve", "asset", "assetcheck", "hc", "system"]
 	var homeWebview = "home"
 	mui.init({})
 	mui.plusReady(function() {

@@ -6,8 +6,12 @@ mui.ready(function () {
 			app.showMenu()
 		})
 		mui(".footer").on("tap", "button", function () {
-			var bc = new plus.barcode.Barcode('scan')
-			bc.start()
+			app.scan()
 		})
+		window.addEventListener("scanOver", scanOver)
 	})
+	function scanOver(event) {
+		var data = event.detail
+		mui.alert(data.code, "扫描结果", "确定", function(){}, "div")
+	}
 })

@@ -33,6 +33,15 @@ var app = {
 				menu.hide()
 			}, 200)	
 		}
+	},
+	
+	scan: function () {
+		var scan = plus.webview.getWebviewById("scan")
+		scan.show('slide-in-left', 200)
+		setTimeout(function () {
+			mui.fire(scan, 'scan', {openerID: plus.webview.currentWebview().id})
+		}, 250)
+		
 	}
 
 }
