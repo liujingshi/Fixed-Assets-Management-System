@@ -1,5 +1,5 @@
 var send_code = 0;
-var send_time = 10;
+var send_time = 9;
 
 var phone = new Vue({
     el: "#phone",

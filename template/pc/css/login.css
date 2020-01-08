@@ -9,6 +9,7 @@ html, body {
 .page-title {
     text-align: center;
     line-height: 150px;
+    width: 100%;
 }
 
 .tab {

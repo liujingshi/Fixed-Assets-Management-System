@@ -211,7 +211,7 @@ body {
 
 .content {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 90px);
     background: #ecf0f5;
 }
 

@@ -3,7 +3,7 @@ var nav_left_data = [{
     "icon": "las la-home",
     "pull": false,
     "name": "home",
-    "active": false,
+    "active": true,
     "up": "",
     "son": []
 }, {
@@ -18,7 +18,7 @@ var nav_left_data = [{
         "icon": "las la-sign-in-alt",
         "pull": false,
         "name": "assetinsert",
-        "active": true,
+        "active": false,
         "up": "asset",
         "son": []
     }, {
