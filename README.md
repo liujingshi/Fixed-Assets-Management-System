@@ -22,6 +22,7 @@
 |document/middle|中期文档文件夹，放置中期文档等|
 |document/end|结题文档文件夹，放置论文等|
 |---|---|
+|www|PC端ThinkPHP目录|
 
 * 所用框架
 
