@@ -1,0 +1,4153 @@
+---------------------------------------------------------------
+[ 2020-03-28T09:19:53+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.236138s] [吞吐率：4.23req/s] [内存消耗：324.71kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010222s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:20:26+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.029103s] [吞吐率：34.36req/s] [内存消耗：126.75kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001911s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:20:29+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.033176s] [吞吐率：30.14req/s] [内存消耗：126.14kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012313s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:20:30+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.018316s] [吞吐率：54.60req/s] [内存消耗：126.14kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001944s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:20:31+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.029069s] [吞吐率：34.40req/s] [内存消耗：126.14kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012645s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:20:31+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.028552s] [吞吐率：35.02req/s] [内存消耗：126.14kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011512s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:20:32+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.031928s] [吞吐率：31.32req/s] [内存消耗：126.14kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011305s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:20:33+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.028186s] [吞吐率：35.48req/s] [内存消耗：126.14kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011768s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:20:33+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.027287s] [吞吐率：36.65req/s] [内存消耗：126.14kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010926s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:21:00+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.024095s] [吞吐率：41.50req/s] [内存消耗：126.75kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001983s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:21:00+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.018321s] [吞吐率：54.58req/s] [内存消耗：126.14kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001956s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:21:01+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.028625s] [吞吐率：34.93req/s] [内存消耗：126.14kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012294s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:21:01+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.018253s] [吞吐率：54.79req/s] [内存消耗：126.14kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001902s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:21:02+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.018060s] [吞吐率：55.37req/s] [内存消耗：126.14kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001895s ] mysql:host=127.0.0.1;dbname=;charset=utf8
+[ error ] [10501]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:21:41+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.044593s] [吞吐率：22.42req/s] [内存消耗：185.73kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011515s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012554s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.002169s ]
+---------------------------------------------------------------
+[ 2020-03-28T09:21:48+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.043822s] [吞吐率：22.82req/s] [内存消耗：184.52kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012184s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012623s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` [ RunTime:0.001321s ]
+---------------------------------------------------------------
+[ 2020-03-28T09:21:49+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.039261s] [吞吐率：25.47req/s] [内存消耗：183.42kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012310s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012836s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` [ RunTime:0.000901s ]
+---------------------------------------------------------------
+[ 2020-03-28T09:21:50+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.028242s] [吞吐率：35.41req/s] [内存消耗：182.81kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001995s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012687s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` [ RunTime:0.000881s ]
+---------------------------------------------------------------
+[ 2020-03-28T09:21:50+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.038584s] [吞吐率：25.92req/s] [内存消耗：182.81kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012276s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012752s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` [ RunTime:0.000889s ]
+---------------------------------------------------------------
+[ 2020-03-28T09:21:50+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.028293s] [吞吐率：35.34req/s] [内存消耗：182.81kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002091s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012622s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` [ RunTime:0.000898s ]
+---------------------------------------------------------------
+[ 2020-03-28T09:22:07+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.054657s] [吞吐率：18.30req/s] [内存消耗：185.05kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011364s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.020573s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` [ RunTime:0.000818s ]
+---------------------------------------------------------------
+[ 2020-03-28T09:23:31+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.049432s] [吞吐率：20.23req/s] [内存消耗：183.68kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011013s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_m` [ RunTime:0.012820s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_m` [ RunTime:0.000984s ]
+---------------------------------------------------------------
+[ 2020-03-28T09:23:32+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.039476s] [吞吐率：25.33req/s] [内存消耗：182.58kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012580s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_m` [ RunTime:0.012673s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_m` [ RunTime:0.001074s ]
+---------------------------------------------------------------
+[ 2020-03-28T09:23:33+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.040043s] [吞吐率：24.97req/s] [内存消耗：181.97kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012732s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_m` [ RunTime:0.013909s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_m` [ RunTime:0.000843s ]
+---------------------------------------------------------------
+[ 2020-03-28T09:23:33+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.040588s] [吞吐率：24.64req/s] [内存消耗：181.97kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012045s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_m` [ RunTime:0.012811s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_m` [ RunTime:0.001492s ]
+---------------------------------------------------------------
+[ 2020-03-28T09:23:46+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.036821s] [吞吐率：27.16req/s] [内存消耗：173.04kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002153s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_m` [ RunTime:0.012472s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'adsf' in 'where clause'[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\db\Connection.php:385]
+---------------------------------------------------------------
+[ 2020-03-28T09:40:03+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.042341s] [吞吐率：23.62req/s] [内存消耗：58.13kb] [文件加载：36]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected '}'[E:\code\git\Fixed-Assets-Management-System\www\application\common\model\Department.php:22]
+---------------------------------------------------------------
+[ 2020-03-28T09:40:22+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.021150s] [吞吐率：47.28req/s] [内存消耗：57.71kb] [文件加载：36]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected '}', expecting ';'[E:\code\git\Fixed-Assets-Management-System\www\application\common\model\Department.php:26]
+---------------------------------------------------------------
+[ 2020-03-28T09:40:32+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.035055s] [吞吐率：28.53req/s] [内存消耗：183.28kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002408s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_department` [ RunTime:0.012870s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` [ RunTime:0.000962s ]
+---------------------------------------------------------------
+[ 2020-03-28T09:41:36+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.021690s] [吞吐率：46.10req/s] [内存消耗：78.15kb] [文件加载：44]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: mainkeyValue[E:\code\git\Fixed-Assets-Management-System\www\application\common\model\Department.php:25]
+---------------------------------------------------------------
+[ 2020-03-28T09:42:38+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.024951s] [吞吐率：40.08req/s] [内存消耗：77.41kb] [文件加载：44]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: mainkeyValue[E:\code\git\Fixed-Assets-Management-System\www\application\common\model\Department.php:25]
+---------------------------------------------------------------
+[ 2020-03-28T09:42:48+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.035560s] [吞吐率：28.12req/s] [内存消耗：76.88kb] [文件加载：44]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: mainkeyValue[E:\code\git\Fixed-Assets-Management-System\www\application\common\model\Department.php:25]
+---------------------------------------------------------------
+[ 2020-03-28T09:42:49+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.022865s] [吞吐率：43.73req/s] [内存消耗：76.88kb] [文件加载：44]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: mainkeyValue[E:\code\git\Fixed-Assets-Management-System\www\application\common\model\Department.php:25]
+---------------------------------------------------------------
+[ 2020-03-28T09:42:49+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.014096s] [吞吐率：70.94req/s] [内存消耗：76.88kb] [文件加载：44]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: mainkeyValue[E:\code\git\Fixed-Assets-Management-System\www\application\common\model\Department.php:25]
+---------------------------------------------------------------
+[ 2020-03-28T09:43:03+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.033278s] [吞吐率：30.05req/s] [内存消耗：191.59kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002134s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_department` [ RunTime:0.012723s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `dep_id` = 1 [ RunTime:0.000898s ]
+---------------------------------------------------------------
+[ 2020-03-28T10:28:54+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.020721s] [吞吐率：48.26req/s] [内存消耗：57.27kb] [文件加载：35]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected '}', expecting ';'[E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php:12]
+---------------------------------------------------------------
+[ 2020-03-28T10:29:04+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.021735s] [吞吐率：46.01req/s] [内存消耗：58.89kb] [文件加载：36]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected '{', expecting '('[E:\code\git\Fixed-Assets-Management-System\www\application\common\model\User.php:43]
+---------------------------------------------------------------
+[ 2020-03-28T10:30:27+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.017006s] [吞吐率：58.80req/s] [内存消耗：58.26kb] [文件加载：36]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected '$e' (T_VARIABLE), expecting identifier (T_STRING) or namespace (T_NAMESPACE) or \\ (T_NS_SEPARATOR)[E:\code\git\Fixed-Assets-Management-System\www\application\common\model\User.php:43]
+---------------------------------------------------------------
+[ 2020-03-28T10:31:33+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.038645s] [吞吐率：25.88req/s] [内存消耗：108.79kb] [文件加载：37]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [64]Namespace declaration statement has to be the very first statement or after any declare call in the script[E:\code\git\Fixed-Assets-Management-System\www\application\common\model\User.php:4]
+---------------------------------------------------------------
+[ 2020-03-28T10:33:33+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.040011s] [吞吐率：24.99req/s] [内存消耗：183.76kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002469s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012911s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` [ RunTime:0.000877s ]
+---------------------------------------------------------------
+[ 2020-03-28T10:34:32+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.056046s] [吞吐率：17.84req/s] [内存消耗：183.38kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013018s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.016335s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` LIMIT 0,1 [ RunTime:0.001143s ]
+---------------------------------------------------------------
+[ 2020-03-28T10:35:53+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.048028s] [吞吐率：20.82req/s] [内存消耗：185.77kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011393s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012833s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000968s ]
+---------------------------------------------------------------
+[ 2020-03-28T10:35:54+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.028630s] [吞吐率：34.93req/s] [内存消耗：185.16kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002075s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012509s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000948s ]
+---------------------------------------------------------------
+[ 2020-03-28T10:36:31+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.057737s] [吞吐率：17.32req/s] [内存消耗：173.84kb] [文件加载：45]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011739s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.019405s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001097s ]
+[ error ] [8]未定义数组索引: p_id[E:\code\git\Fixed-Assets-Management-System\www\application\common\model\User.php:40]
+---------------------------------------------------------------
+[ 2020-03-28T10:40:23+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.053312s] [吞吐率：18.76req/s] [内存消耗：186.27kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012998s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.015421s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000957s ]
+---------------------------------------------------------------
+[ 2020-03-28T10:40:32+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.021248s] [吞吐率：47.06req/s] [内存消耗：57.93kb] [文件加载：37]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Call to undefined method app\common\model\User::getP_phone()[E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php:12]
+---------------------------------------------------------------
+[ 2020-03-28T10:40:48+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.044947s] [吞吐率：22.25req/s] [内存消耗：185.77kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012717s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013122s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000876s ]
+---------------------------------------------------------------
+[ 2020-03-28T10:41:09+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.080256s] [吞吐率：12.46req/s] [内存消耗：190.73kb] [文件加载：44]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012020s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012787s ]
+[ sql ] [ SQL ] UPDATE `fams_user`  SET `u_phone`='123456'  WHERE  `u_id` = 1 [ RunTime:0.001750s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001460s ]
+---------------------------------------------------------------
+[ 2020-03-28T10:41:23+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.050672s] [吞吐率：19.73req/s] [内存消耗：189.93kb] [文件加载：44]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011241s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.016492s ]
+[ sql ] [ SQL ] UPDATE `fams_user`  SET `u_phone`='15541850199'  WHERE  `u_id` = 1 [ RunTime:0.001268s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000973s ]
+---------------------------------------------------------------
+[ 2020-03-28T11:03:21+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.091492s] [吞吐率：10.93req/s] [内存消耗：89.48kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:03:30+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.026296s] [吞吐率：38.03req/s] [内存消耗：71.94kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\Template.php:1074]
+---------------------------------------------------------------
+[ 2020-03-28T11:03:43+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.019017s] [吞吐率：52.58req/s] [内存消耗：70.79kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\Template.php:1074]
+---------------------------------------------------------------
+[ 2020-03-28T11:03:44+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.014971s] [吞吐率：66.80req/s] [内存消耗：70.79kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\Template.php:1074]
+---------------------------------------------------------------
+[ 2020-03-28T11:03:44+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.014743s] [吞吐率：67.83req/s] [内存消耗：70.79kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\Template.php:1074]
+---------------------------------------------------------------
+[ 2020-03-28T11:03:45+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.014733s] [吞吐率：67.88req/s] [内存消耗：70.79kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\Template.php:1074]
+---------------------------------------------------------------
+[ 2020-03-28T11:03:45+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.014800s] [吞吐率：67.57req/s] [内存消耗：70.79kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\Template.php:1074]
+---------------------------------------------------------------
+[ 2020-03-28T11:03:45+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.014722s] [吞吐率：67.93req/s] [内存消耗：70.79kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\Template.php:1074]
+---------------------------------------------------------------
+[ 2020-03-28T11:04:47+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.018742s] [吞吐率：53.36req/s] [内存消耗：70.78kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\Template.php:1074]
+---------------------------------------------------------------
+[ 2020-03-28T11:04:52+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.018720s] [吞吐率：53.42req/s] [内存消耗：70.79kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\Template.php:1074]
+---------------------------------------------------------------
+[ 2020-03-28T11:04:53+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.014680s] [吞吐率：68.12req/s] [内存消耗：70.79kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\Template.php:1074]
+---------------------------------------------------------------
+[ 2020-03-28T11:04:53+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.014796s] [吞吐率：67.59req/s] [内存消耗：70.79kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\Template.php:1074]
+---------------------------------------------------------------
+[ 2020-03-28T11:04:53+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.014661s] [吞吐率：68.21req/s] [内存消耗：70.79kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\Template.php:1074]
+---------------------------------------------------------------
+[ 2020-03-28T11:04:53+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.014697s] [吞吐率：68.04req/s] [内存消耗：70.79kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\Template.php:1074]
+---------------------------------------------------------------
+[ 2020-03-28T11:05:19+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.018590s] [吞吐率：53.79req/s] [内存消耗：70.78kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:[E:\code\git\Fixed-Assets-Management-System\www\thinkphp\library\think\Template.php:1074]
+---------------------------------------------------------------
+[ 2020-03-28T11:05:56+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.025053s] [吞吐率：39.92req/s] [内存消耗：95.02kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:05:56+08:00 ] 0.0.0.0 GET www.ljs.com/static/images/logo.jpg
+[运行时间：0.024397s] [吞吐率：40.99req/s] [内存消耗：56.46kb] [文件加载：35]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'logo.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/static/css/main.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:09:11+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.025948s] [吞吐率：38.54req/s] [内存消耗：102.44kb] [文件加载：41]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:11:31+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.026892s] [吞吐率：37.19req/s] [内存消耗：103.27kb] [文件加载：42]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:11:32+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.058641s] [吞吐率：17.05req/s] [内存消耗：74.64kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:11:35+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.018370s] [吞吐率：54.44req/s] [内存消耗：82.94kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:11:35+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.026841s] [吞吐率：37.26req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:11:36+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.012117s] [吞吐率：82.53req/s] [内存消耗：82.50kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:11:36+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.018991s] [吞吐率：52.66req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:11:37+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.011719s] [吞吐率：85.33req/s] [内存消耗：82.50kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:11:37+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.021294s] [吞吐率：46.96req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:11:37+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.011720s] [吞吐率：85.32req/s] [内存消耗：82.50kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:11:37+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.017545s] [吞吐率：57.00req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:12:08+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.025235s] [吞吐率：39.63req/s] [内存消耗：102.52kb] [文件加载：42]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:12:08+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.019558s] [吞吐率：51.13req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:43+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.015846s] [吞吐率：63.11req/s] [内存消耗：82.94kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:43+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.021735s] [吞吐率：46.01req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:43+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.018989s] [吞吐率：52.66req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:44+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.016861s] [吞吐率：59.31req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:45+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.016876s] [吞吐率：59.26req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:46+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.020922s] [吞吐率：47.80req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:46+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.017713s] [吞吐率：56.46req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:47+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.017889s] [吞吐率：55.90req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:48+08:00 ] 0.0.0.0 GET www.ljs.com/
+[运行时间：0.014343s] [吞吐率：69.72req/s] [内存消耗：82.88kb] [文件加载：39]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:50+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.024699s] [吞吐率：40.49req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:50+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.013576s] [吞吐率：73.66req/s] [内存消耗：82.50kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:50+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.017697s] [吞吐率：56.51req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:50+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.017318s] [吞吐率：57.74req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:51+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.016918s] [吞吐率：59.11req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:13:53+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.020044s] [吞吐率：49.89req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:14:18+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.015503s] [吞吐率：64.50req/s] [内存消耗：82.50kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:14:18+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.017702s] [吞吐率：56.49req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:28:39+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.020285s] [吞吐率：49.30req/s] [内存消耗：57.48kb] [文件加载：35]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected ':', expecting ']'[E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php:17]
+---------------------------------------------------------------
+[ 2020-03-28T11:28:52+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.021156s] [吞吐率：47.27req/s] [内存消耗：85.70kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:28:52+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.030832s] [吞吐率：32.43req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:28:52+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.023209s] [吞吐率：43.09req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:29:02+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.018460s] [吞吐率：54.17req/s] [内存消耗：83.11kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:29:02+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.018004s] [吞吐率：55.54req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:29:02+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.017407s] [吞吐率：57.45req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:29:03+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.016799s] [吞吐率：59.53req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:29:15+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.015613s] [吞吐率：64.05req/s] [内存消耗：82.50kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:29:15+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.017057s] [吞吐率：58.63req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:29:22+08:00 ] 0.0.0.0 POST www.ljs.com/login/index/checkCaptcha
+[运行时间：0.025538s] [吞吐率：39.16req/s] [内存消耗：75.30kb] [文件加载：36]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'index',
+    2 => 'checkCaptcha',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'captcha' => '123',
+)
+[ info ] [ RUN ] app\login\controller\Index->checkCaptcha[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:29:22+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.016956s] [吞吐率：58.98req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:29:25+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.019858s] [吞吐率：50.36req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:29:26+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.017670s] [吞吐率：56.59req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:29:28+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.020002s] [吞吐率：50.00req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:29:29+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.016833s] [吞吐率：59.41req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:29:35+08:00 ] 0.0.0.0 POST www.ljs.com/login/index/checkCaptcha
+[运行时间：0.014259s] [吞吐率：70.13req/s] [内存消耗：73.59kb] [文件加载：36]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'index',
+    2 => 'checkCaptcha',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'captcha' => 'qpnth',
+)
+[ info ] [ RUN ] app\login\controller\Index->checkCaptcha[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:30:09+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.015541s] [吞吐率：64.35req/s] [内存消耗：82.50kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:30:10+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.025574s] [吞吐率：39.10req/s] [内存消耗：73.34kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:30:11+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.016658s] [吞吐率：60.03req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:30:12+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.021026s] [吞吐率：47.56req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:30:13+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.017498s] [吞吐率：57.15req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:30:15+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.020143s] [吞吐率：49.64req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:30:17+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.016946s] [吞吐率：59.01req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:30:17+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.017686s] [吞吐率：56.54req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:30:18+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.019813s] [吞吐率：50.47req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:30:19+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.017475s] [吞吐率：57.22req/s] [内存消耗：73.49kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:30:26+08:00 ] 0.0.0.0 POST www.ljs.com/login/index/checkCaptcha
+[运行时间：0.014237s] [吞吐率：70.24req/s] [内存消耗：73.59kb] [文件加载：36]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'index',
+    2 => 'checkCaptcha',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'captcha' => '6ghpx',
+)
+[ info ] [ RUN ] app\login\controller\Index->checkCaptcha[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:33:10+08:00 ] 0.0.0.0 GET www.ljs.com/login
+[运行时间：0.020894s] [吞吐率：47.86req/s] [内存消耗：82.50kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Index->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Index.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-03-28T11:33:10+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.021671s] [吞吐率：46.14req/s] [内存消耗：73.34kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=a5b5t7o5e0vup9adg4jc0j0toe',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
