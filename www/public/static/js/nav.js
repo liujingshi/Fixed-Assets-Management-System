@@ -3,97 +3,9 @@ var nav_left_data = [{
     "icon": "las la-home",
     "pull": false,
     "name": "home",
-    "active": true,
-    "up": "",
-    "son": []
-}, {
-    "title": "资产管理",
-    "icon": "las la-coins",
-    "pull": true,
-    "name": "asset",
     "active": false,
     "up": "",
-    "son": [{
-        "title": "资产入库",
-        "icon": "las la-sign-in-alt",
-        "pull": false,
-        "name": "assetinsert",
-        "active": false,
-        "up": "asset",
-        "son": []
-    }, {
-        "title": "领用退库",
-        "name": "assetuse",
-        "icon": "las la-sign-out-alt",
-        "up": "asset",
-        "pull": false,
-        "active": false,
-        "son": []
-    }, {
-        "title": "借用归还",
-        "name": "assetborrow",
-        "icon": "las la-reply-all",
-        "up": "asset",
-        "pull": false,
-        "active": false,
-        "son": []
-    }, {
-        "title": "资产调拨",
-        "name": "assettransfer",
-        "icon": "las la-share-square",
-        "up": "asset",
-        "pull": false,
-        "active": false,
-        "son": []
-    }, {
-        "title": "实物信息更变",
-        "name": "assetotherchange",
-        "icon": "las la-edit",
-        "up": "asset",
-        "pull": false,
-        "active": false,
-        "son": []
-    }, {
-        "title": "维保信息更变",
-        "name": "assetmaintenancechange",
-        "icon": "las la-pen-square",
-        "up": "asset",
-        "pull": false,
-        "active": false,
-        "son": []
-    }, {
-        "title": "财务信息更变",
-        "name": "assetfinance",
-        "icon": "las la-pencil-alt",
-        "up": "asset",
-        "pull": false,
-        "active": false,
-        "son": []
-    }, {
-        "title": "维修信息登记",
-        "name": "assetrepair",
-        "icon": "las la-keyboard",
-        "up": "asset",
-        "pull": false,
-        "active": false,
-        "son": []
-    }, {
-        "title": "清理报废",
-        "name": "assetclear",
-        "icon": "las la-trash-alt",
-        "up": "asset",
-        "pull": false,
-        "active": false,
-        "son": []
-    }, {
-        "title": "盘点管理",
-        "name": "assetcheck",
-        "icon": "las la-calculator",
-        "up": "asset",
-        "pull": false,
-        "active": false,
-        "son": []
-    }]
+    "son": []
 }, {
     "title": "系统管理",
     "icon": "lab la-windows",
@@ -102,21 +14,37 @@ var nav_left_data = [{
     "active": false,
     "up": "",
     "son": [{
-        "title": "用户管理",
-        "icon": "las la-user",
-        "pull": false,
-        "name": "users",
+        "title": "组织架构",
+        "icon": "las la-building",
+        "pull": true,
+        "name": "organize",
         "active": false,
         "up": "system",
-        "son": []
-    }, {
-        "title": "功能测试",
-        "icon": "las la-vial",
-        "pull": false,
-        "name": "test",
-        "active": false,
-        "up": "system",
-        "son": []
+        "son": [{
+            "title": "部门管理",
+            "icon": "las la-city",
+            "pull": false,
+            "name": "department",
+            "active": false,
+            "up": "organize",
+            "son": []
+        }, {
+            "title": "职位管理",
+            "icon": "las la-chalkboard-teacher",
+            "pull": false,
+            "name": "position",
+            "active": false,
+            "up": "organize",
+            "son": []
+        }, {
+            "title": "人员管理",
+            "icon": "las la-user-graduate",
+            "pull": false,
+            "name": "person",
+            "active": false,
+            "up": "organize",
+            "son": []
+        }]
     }]
 }];
 
@@ -124,21 +52,21 @@ var nav_html = `
 <ul class="nav-ul" id="nav_left">
     <li class="nav-li-header"></li>
     <li class="nav-li" v-for="nav in navs">
-        <a :data-name="nav.name" @click="goto" :class="{'nav-li-a': true, 'nav-active': nav.active}" href="javascript:;">
+        <a :data-name="nav.name" @click="goto" :class="{'nav-li-a': true, 'nav-active': nav.active}" :href="nav.pull == true ? 'javascript:;' : '/app/' + nav.name">
             <i :class="nav.icon"></i>
             <span v-html="nav.title"></span>
             <i v-show="nav.pull" :class="{'las': true, 'la-angle-right': nav.active == false, 'la-angle-down': nav.active}"></i>
         </a>
         <ul v-show="nav.pull" class="nav-ul nav-ul-son">
             <li v-for="n in nav.son" class="nav-li nav-li-son">
-                <a :data-name="n.name" @click="goto" :class="{'nav-li-a nav-li-a-son': true, 'nav-active nav-son-active': n.active}" href="javascript:;">
+                <a :data-name="n.name" @click="goto" :class="{'nav-li-a nav-li-a-son': true, 'nav-active nav-son-active': n.active}" :href="n.pull == true ? 'javascript:;' : '/app/' + n.name">
                     <i :class="n.icon"></i>
                     <span v-html="n.title"></span>
-                    <i v-show="n.pull" class="{'las': true, 'la-angle-right': n.active == false, 'la-angle-down': n.active}"></i>
+                    <i v-show="n.pull" :class="{'las': true, 'la-angle-right': n.active == false, 'la-angle-down': n.active}"></i>
                 </a>
                 <ul v-show="n.pull" class="nav-ul nav-ul-grandson">
                     <li v-for="ng in n.son" class="nav-li nav-li-grandson">
-                        <a :data-name="ng.name" @click="goto" :class="{'nav-li-a nav-li-a-grandson': true, 'nav-active nav-son-active': ng.active}" href="javascript:;">
+                        <a :data-name="ng.name" @click="goto" :class="{'nav-li-a nav-li-a-grandson': true, 'nav-active nav-son-active': ng.active}" :href="'/app/' + ng.name">
                             <i :class="ng.icon"></i>
                             <span v-html="ng.title"></span>
                         </a>
@@ -200,7 +128,7 @@ var nav_left = new Vue({
     },
     methods: {
         goto: function (e) {
-            open_iframe(e.currentTarget.dataset.name);
+            update_navs(e.currentTarget.dataset.name);
         }
     }
 });
@@ -219,28 +147,3 @@ function update_navs(name) {
         data.active = false;
     });
 }
-
-function open_iframe(name) {
-    if (name != "") {
-        var data = find_data_by_name(name);
-        if (data) {
-            $(".main-iframe").attr("src", "./app/" + name + "/" + name + ".html?icon=" + data.icon + "&title=" + data.title);
-        } else {
-            $(".main-iframe").attr("src", "./app/" + name + "/" + name + ".html");
-        }
-        
-    }
-    update_navs(name);
-}
-
-function goto_active(data) {
-    for (var i in data) {
-        if (data[i].pull) {
-            goto_active(data[i].son);
-        } else if (data[i].active) {
-            open_iframe(data[i].name);
-        }
-    }
-}
-
-goto_active(nav_left_data);

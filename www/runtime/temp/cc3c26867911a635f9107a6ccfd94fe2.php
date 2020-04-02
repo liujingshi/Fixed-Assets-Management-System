@@ -1,18 +1,19 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:101:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/page\view\assetinsert\index.html";i:1585806852;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1585806468;}*/ ?>
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-cn">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>{[block name="title"]}{[/block]}高校固定资产管理系统</title>
+    <title>高校固定资产管理系统</title>
 
-    <link rel="stylesheet" href="__STATIC__/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="__STATIC__/line-awesome/css/line-awesome.min.css">
-    <link rel="stylesheet" href="__CSS__/main.css">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
 
-    {[block name="css"]}{[/block]}
+    
 
 </head>
 
@@ -53,7 +54,7 @@
                     <i class="las la-user-secret"></i>
                     <span>百里刘叔</span>
                 </a>
-                <a href="/app/home/logout" class="nav-top-right">
+                <a href="login.html" class="nav-top-right">
                     <i class="las la-sign-out-alt"></i>
                     <span>登出</span>
                 </a>
@@ -64,7 +65,7 @@
             <!-- 主体内容开始 -->
             <div class="content">
                 <!-- <iframe class="main-iframe" src="" frameborder="0"></iframe> -->
-                {[block name="content"]}{[/block]}
+                
             </div>
             <!-- 主体内容结束 -->
 
@@ -80,15 +81,19 @@
 
 </body>
 
-<script src="__STATIC__/jquery/jquery-3.4.1.min.js"></script>
-<script src="__STATIC__/layer/layer.js"></script>
-<script src="__STATIC__/vue/vue.min.js"></script>
-<script src="__STATIC__/vue/axios.min.js"></script>
-<script src="__STATIC__/bootstrap/js/bootstrap.min.js"></script>
-<script src="__STATIC__/echarts/echarts.min.js"></script>
-<script src="__JS__/nav.js"></script>
-<script src="__JS__/main.js"></script>
+<script src="/static/jquery/jquery-3.4.1.min.js"></script>
+<script src="/static/layer/layer.js"></script>
+<script src="/static/vue/vue.min.js"></script>
+<script src="/static/vue/axios.min.js"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/echarts/echarts.min.js"></script>
+<script src="/static/js/nav.js"></script>
+<script src="/static/js/main.js"></script>
 
-{[block name="js"]}{[/block]}
+
+<script>
+    update_navs('assetinsert');
+</script>
+
 
 </html>

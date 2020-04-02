@@ -203,9 +203,9 @@ for table in res:
 '''.format(fieldNameCap, fieldName, classNameCap)
 
     fileContent = '''<?php
-namespace app\common\model;
+namespace app\\common\\model;
 
-use think\Db;
+use think\\Db;
 
 class {0} {{
 
@@ -246,7 +246,7 @@ class {0} {{
 }}
 '''.format(classNameCap, className, field[0]['Field'], getterAndSetter)
 
-    nF = open("{0}.php".format(classNameCap), 'w')
+    nF = open("www/application/common/model/{0}.php".format(classNameCap), 'w', encoding='UTF-8')
     nF.write(fileContent)
     nF.close()
 

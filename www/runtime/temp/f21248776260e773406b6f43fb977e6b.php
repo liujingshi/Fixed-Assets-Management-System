@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:96:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html";i:1585364753;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1585364163;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:96:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/index\view\index\index.html";i:1585806686;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1585806468;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 
@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="/static/css/main.css">
+
+    
 
 </head>
 
@@ -87,5 +89,11 @@
 <script src="/static/echarts/echarts.min.js"></script>
 <script src="/static/js/nav.js"></script>
 <script src="/static/js/main.js"></script>
+
+
+<script>
+    update_navs('home');
+</script>
+
 
 </html>

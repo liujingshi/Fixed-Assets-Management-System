@@ -1,0 +1,49 @@
+[{
+    "title": "首页",
+    "icon": "las la-home",
+    "pull": false,
+    "name": "home",
+    "active": false,
+    "up": "",
+    "son": []
+}, {
+    "title": "系统管理",
+    "icon": "lab la-windows",
+    "pull": true,
+    "name": "system",
+    "active": false,
+    "up": "",
+    "son": [{
+        "title": "组织架构",
+        "icon": "las la-building",
+        "pull": true,
+        "name": "organize",
+        "active": false,
+        "up": "system",
+        "son": [{
+            "title": "部门管理",
+            "icon": "las la-city",
+            "pull": false,
+            "name": "department",
+            "active": false,
+            "up": "organize",
+            "son": []
+        }, {
+            "title": "职位管理",
+            "icon": "las la-chalkboard-teacher",
+            "pull": false,
+            "name": "position",
+            "active": false,
+            "up": "organize",
+            "son": []
+        }, {
+            "title": "人员管理",
+            "icon": "las la-user-graduate",
+            "pull": false,
+            "name": "person",
+            "active": false,
+            "up": "organize",
+            "son": []
+        }]
+    }]
+}]

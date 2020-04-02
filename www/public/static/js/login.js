@@ -14,7 +14,7 @@ var phone = new Vue({
                     if (captcha == "") {
                         layer.msg("请输入验证码");
                     } else {
-                        $.post("/login/index/checkCaptcha", {
+                        $.post("/login/home/checkCaptcha", {
                             captcha: captcha
                         }, function (data) {
                             if (data.code == 1) {
@@ -46,8 +46,7 @@ var phone = new Vue({
             }
         },
         do_login: function () {
-            console.log("登录");
-            document.location.href = "/";
+            document.location.href = "/login/home/login/phone/" + $("#username").val();
         }
     }
 });

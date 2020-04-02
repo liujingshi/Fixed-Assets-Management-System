@@ -3,14 +3,14 @@ namespace app\common\model;
 
 use think\Request;
 
-class Rst {
+class Param {
 
     public static function get($key) {
         $request = Request::instance();
         $param = $request->param();
-        try {
-            return $param[$key];
-        } catch (Exception $e) {
+        if (array_key_exists($key, $param)) {
+            return trim($param[$key]);
+        } else {
             return "";
         }
     }
