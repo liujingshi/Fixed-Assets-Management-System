@@ -29,7 +29,7 @@ class {0} extends Controller {{
 
 def createViewFileContent(name):
     content = """{{[extend name="common@base" /]}}
-{{[block name="title]}}{{[/block]}}
+{{[block name="title"]}}{{[/block]}}
 {{[block name="css"]}}{{[/block]}}
 {{[block name="content"]}}{{[/block]}}
 {{[block name="js"]}}

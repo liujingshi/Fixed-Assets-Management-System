@@ -34,6 +34,10 @@ class Person {
        }
     }
 
+    public function delete() {
+        Db::name(Person::$className)->delete($this->mainKeyValue);
+    }
+
     public function update($dic) {
         Db::name(Person::$className)->where(Person::$mainKey, $this->mainKeyValue)->update($dic);
     }

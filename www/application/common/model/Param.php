@@ -15,4 +15,10 @@ class Param {
         }
     }
 
+    public static function getAll() {
+        $request = Request::instance();
+        $param = $request->param();
+        return $param;
+    }
+
 }

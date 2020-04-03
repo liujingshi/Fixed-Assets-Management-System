@@ -34,6 +34,10 @@ class Position {
        }
     }
 
+    public function delete() {
+        Db::name(Position::$className)->delete($this->mainKeyValue);
+    }
+
     public function update($dic) {
         Db::name(Position::$className)->where(Position::$mainKey, $this->mainKeyValue)->update($dic);
     }

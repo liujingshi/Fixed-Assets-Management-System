@@ -10,39 +10,39 @@
     "title": "系统管理",
     "icon": "lab la-windows",
     "pull": true,
-    "name": "system",
+    "name": "systemManage",
     "active": false,
     "up": "",
     "son": [{
         "title": "组织架构",
         "icon": "las la-building",
         "pull": true,
-        "name": "organize",
+        "name": "organizeManage",
         "active": false,
-        "up": "system",
+        "up": "systemManage",
         "son": [{
             "title": "部门管理",
             "icon": "las la-city",
             "pull": false,
-            "name": "department",
+            "name": "departmentManage",
             "active": false,
-            "up": "organize",
+            "up": "organizeManage",
             "son": []
         }, {
             "title": "职位管理",
             "icon": "las la-chalkboard-teacher",
             "pull": false,
-            "name": "position",
+            "name": "positionManage",
             "active": false,
-            "up": "organize",
+            "up": "organizeManage",
             "son": []
         }, {
             "title": "人员管理",
             "icon": "las la-user-graduate",
             "pull": false,
-            "name": "person",
+            "name": "personManage",
             "active": false,
-            "up": "organize",
+            "up": "organizeManage",
             "son": []
         }]
     }]

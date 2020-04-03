@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:93:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\home\index.html";i:1585812828;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1585819108;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:93:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\home\index.html";i:1585900865;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1585894895;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -11,6 +11,10 @@
 
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/gijgo/css/gijgo.min.css">
+    <link rel="stylesheet" href="/static/common/common.css">
+    <link rel="stylesheet" href="/static/common/ljspopup.css">
     <link rel="stylesheet" href="/static/css/main.css">
 
     
@@ -82,11 +86,14 @@
 </body>
 
 <script src="/static/jquery/jquery-3.4.1.min.js"></script>
-<script src="/static/layer/layer.js"></script>
 <script src="/static/vue/vue.min.js"></script>
 <script src="/static/vue/axios.min.js"></script>
 <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 <script src="/static/echarts/echarts.min.js"></script>
+<script src="/static/layui/layui.js"></script>
+<script src="/static/gijgo/js/gijgo.min.js"></script>
+<script src="/static/common/ljspopup.js"></script>
+<script src="/static/common/common.js"></script>
 <script src="/static/js/nav.js"></script>
 <script src="/static/js/main.js"></script>
 

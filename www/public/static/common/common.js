@@ -1,4 +1,5 @@
-function get_url() {
+
+function get_url() {  // 得到URL参数
     var url = document.location.href;
     var urls = url.split("?");
     if (urls.length > 1) {
@@ -11,4 +12,28 @@ function get_url() {
         return data;
     }
     return false;
+}
+
+function alertError(msg) {  // 错误提醒
+    if (msg == "depNoError") {
+        layer.alert("部门编号已存在", {
+            icon: 2,
+            title: "错误"
+        });
+    } else if (msg == "upDepIdError") {
+        layer.alert("上级部门不可以是本部门或总系统", {
+            icon: 2,
+            title: "错误"
+        });
+    } else if (msg == "nullError") {
+        layer.alert("关键项不能为空", {
+            icon: 2,
+            title: "错误"
+        });
+    } else {
+        layer.alert("未知错误", {
+            icon: 2,
+            title: "错误"
+        });
+    }
 }

@@ -17,6 +17,14 @@ class Department {
         return Db::name(self::$className)->limit(($page-1)*$limit, $limit)->select();
     }
 
+    public static function getByUp_dep_id($upDepId) {
+        return Db::name(self::$className)->where("up_dep_id", $upDepId)->select();
+    }
+
+    public static function checkDep_no($depNo) {
+        return Db::name(self::$className)->where("dep_no", $depNo)->find();
+    }
+
     public static function insert($dic) {
         Db::name(self::$className)->insert($dic);
     }
@@ -32,6 +40,10 @@ class Department {
        } catch (Exception $e) {
            return [];
        }
+    }
+
+    public function delete() {
+        Db::name(Department::$className)->delete($this->mainKeyValue);
     }
 
     public function update($dic) {
@@ -93,6 +105,5 @@ class Department {
     public function setDep_remark($value) {
         Db::name(Department::$className)->where(Department::$mainKey, $this->mainKeyValue)->update(["dep_remark" => $value]);
     }
-
 
 }

@@ -24,4 +24,25 @@ class Utils {
         Session::set(Constant::USERLOGINSTATUSSESSIONKEY, Constant::USERLOGOUT);
     }
 
+    public static function returnCode($code) {
+        return [
+            "code" => $code
+        ];
+    }
+
+    public static function returnMsg($code, $msg) {
+        return [
+            "code" => $code,
+            "msg" => $msg
+        ];
+    }
+
+    public static function returnObj($code, $msg, $obj) {
+        return [
+            "code" => $code,
+            "msg" => $msg,
+            "obj" => $obj
+        ];
+    }
+
 }

@@ -1,5 +1,6 @@
 
 import pymysql
+from os import path
 
 class SQLgo(object):
     def __init__(self, ip=None, user=None, password=None, db=None, port=None):
@@ -158,51 +159,9 @@ class SQLgo(object):
         return result
 
 
-# f = SQLgo(ip="127.0.0.1", user="root", password="", port="3306", db="fams")
-conn = pymysql.connect(
-    host="127.0.0.1",
-    user="root",password="",
-    database="fams",
-    charset="utf8")
-cursor = conn.cursor()
-cursor.execute("show tables")
-result = cursor.fetchall()
-res = [c for i in result for c in i]
-for table in res:
-    className = table[5:]
-    classNameCap = className.capitalize()
-    try:
-        with SQLgo(
-                ip="127.0.0.1",
-                user="root",
-                password="",
-                port="3306",
-                db="fams"
-        ) as f:
-            field = f.gen_alter(table_name=table)
-    except Exception as e:
-        print(e)
-    getterAndSetter = ""
-    for i in range(1, len(field)):
-        fieldName = field[i]['Field']
-        fieldNameCap = fieldName.capitalize()
-        getterAndSetter += '''
-    public function get{0}() {{
-        $res = Db::name({2}::$className)->where({2}::$mainKey, $this->mainKeyValue)->select();
-        try {{
-            return $res[0]["{1}"];
-        }} catch (Exception $e) {{
-            return "";
-        }}
-    }}
-
-    public function set{0}($value) {{
-        Db::name({2}::$className)->where({2}::$mainKey, $this->mainKeyValue)->update(["{1}" => $value]);
-    }}
-
-'''.format(fieldNameCap, fieldName, classNameCap)
-
-    fileContent = '''<?php
+def createStaticContent(name, field, getterAndSetter):
+    nameCap = name.capitalize()
+    staticContent = '''<?php
 namespace app\\common\\model;
 
 use think\\Db;
@@ -238,15 +197,76 @@ class {0} {{
        }}
     }}
 
+    public function delete() {{
+        Db::name({0}::$className)->delete($this->mainKeyValue);
+    }}
+
     public function update($dic) {{
         Db::name({0}::$className)->where({0}::$mainKey, $this->mainKeyValue)->update($dic);
     }}
 
     {3}
 }}
-'''.format(classNameCap, className, field[0]['Field'], getterAndSetter)
+'''.format(nameCap, name, field, getterAndSetter)
+    return staticContent
 
-    nF = open("www/application/common/model/{0}.php".format(classNameCap), 'w', encoding='UTF-8')
-    nF.write(fileContent)
-    nF.close()
+
+def createGetterAndSetter(field, nameCap):
+    getterAndSetter = ""
+    for i in range(1, len(field)):
+        fieldName = field[i]['Field']
+        fieldNameCap = fieldName.capitalize()
+        getterAndSetter += '''
+    public function get{0}() {{
+        $res = Db::name({2}::$className)->where({2}::$mainKey, $this->mainKeyValue)->select();
+        try {{
+            return $res[0]["{1}"];
+        }} catch (Exception $e) {{
+            return "";
+        }}
+    }}
+
+    public function set{0}($value) {{
+        Db::name({2}::$className)->where({2}::$mainKey, $this->mainKeyValue)->update(["{1}" => $value]);
+    }}
+
+'''.format(fieldNameCap, fieldName, nameCap)
+    return getterAndSetter
+
+
+def main():
+    beanPath = "www/application/common/model/"
+    conn = pymysql.connect(
+    host="127.0.0.1",
+    user="root",password="",
+    database="fams",
+    charset="utf8")
+    cursor = conn.cursor()
+    cursor.execute("show tables")
+    result = cursor.fetchall()
+    res = [c for i in result for c in i]
+    for table in res:
+        className = table[5:]
+        classNameCap = className.capitalize()
+        fileName = "{0}{1}.php".format(beanPath, classNameCap)
+        if not path.exists(fileName):
+            try:
+                with SQLgo(
+                        ip="127.0.0.1",
+                        user="root",
+                        password="",
+                        port="3306",
+                        db="fams"
+                ) as f:
+                    field = f.gen_alter(table_name=table)
+            except Exception as e:
+                print(e)
+            getterAndSetter = createGetterAndSetter(field, classNameCap)
+            fileContent = createStaticContent(className, field[0]['Field'], getterAndSetter)
+            nF = open(fileName, 'w', encoding='UTF-8')
+            nF.write(fileContent)
+            nF.close()
+
+if __name__ == "__main__":
+    main()
 
