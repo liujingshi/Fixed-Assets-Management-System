@@ -11,7 +11,7 @@
  Target Server Version : 100410
  File Encoding         : 65001
 
- Date: 03/04/2020 22:21:33
+ Date: 04/04/2020 21:20:36
 */
 
 SET NAMES utf8mb4;
@@ -29,7 +29,7 @@ CREATE TABLE `fams_department`  (
   `dep_remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`dep_id`) USING BTREE,
   UNIQUE INDEX `only`(`dep_no`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 16 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 23 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fams_department
@@ -39,6 +39,11 @@ INSERT INTO `fams_department` VALUES (2, 'SVIP_9527', '高校固定资产管理�
 INSERT INTO `fams_department` VALUES (3, 'SCHOOL', '沈阳工业大学', 2, '学校总部门');
 INSERT INTO `fams_department` VALUES (5, 'ACTION', '社会实践部', 7, '');
 INSERT INTO `fams_department` VALUES (7, 'STUDENT', '学生会', 3, '学生会专用部门');
+INSERT INTO `fams_department` VALUES (21, 'BM005', '部门005', 16, '');
+INSERT INTO `fams_department` VALUES (16, 'BMROOT', '测试总部门', 2, '');
+INSERT INTO `fams_department` VALUES (17, 'BM001', '部门001', 16, '');
+INSERT INTO `fams_department` VALUES (18, 'BM002', '部门002', 16, '');
+INSERT INTO `fams_department` VALUES (19, 'BM003', '部门003', 16, '');
 
 -- ----------------------------
 -- Table structure for fams_person
@@ -50,18 +55,24 @@ CREATE TABLE `fams_person`  (
   `dep_id` int(11) NOT NULL COMMENT '部门主键 与department的dep_id关联',
   `pos_id` int(11) NOT NULL COMMENT '职位主键 与position的pos_id关联',
   `p_name` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '姓名',
-  `p_sex` char(2) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '性别 只能是男或女',
-  `p_birthday` datetime(6) NOT NULL COMMENT '出生日期',
-  `p_ic` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '身份证号',
-  `p_email` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '邮箱',
+  `p_sex` char(2) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '性别 只能是男或女',
+  `p_ic` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '身份证号',
+  `p_email` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '邮箱',
   PRIMARY KEY (`p_id`) USING BTREE,
   UNIQUE INDEX `only`(`p_no`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fams_person
 -- ----------------------------
-INSERT INTO `fams_person` VALUES (1, 'SVIP_9527', 1, 1, '超级管理员9527', '男', '2020-03-28 08:43:21.000000', '888666202003289999', 'ljs@ljscode.com');
+INSERT INTO `fams_person` VALUES (1, 'SVIP_9527', 2, 1, '超级管理员9527', '男', '888666202003289999', 'ljs@ljscode.com');
+INSERT INTO `fams_person` VALUES (5, '100002', 17, 6, '人员002', '男', '', '');
+INSERT INTO `fams_person` VALUES (4, '100001', 17, 6, '人员001', '男', '', '');
+INSERT INTO `fams_person` VALUES (6, '100003', 17, 7, '人员003', '女', '589654785698547412', '164546515@163.com');
+INSERT INTO `fams_person` VALUES (7, '100004', 17, 13, '人员004', '男', '', '');
+INSERT INTO `fams_person` VALUES (8, '100005', 21, 13, '人员005', '男', '', '7854548@qq.com');
+INSERT INTO `fams_person` VALUES (9, '100006', 21, 23, '人员006', '男', '', '');
+INSERT INTO `fams_person` VALUES (10, '100007', 16, 23, '人员007', '男', '', '');
 
 -- ----------------------------
 -- Table structure for fams_position
@@ -74,12 +85,24 @@ CREATE TABLE `fams_position`  (
   `pos_remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`pos_id`) USING BTREE,
   UNIQUE INDEX `only`(`pos_no`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 24 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fams_position
 -- ----------------------------
 INSERT INTO `fams_position` VALUES (1, 'SVIP_9527', '系统管理员', '系统管理员专用职位 不可删除');
+INSERT INTO `fams_position` VALUES (23, 'zw000', '101010', '');
+INSERT INTO `fams_position` VALUES (6, 'ZW005', '职位005', '');
+INSERT INTO `fams_position` VALUES (7, 'ZW006', '职位006', '安达分公司');
+INSERT INTO `fams_position` VALUES (11, 'ZW008', '职位008', '');
+INSERT INTO `fams_position` VALUES (12, 'ZW009', '职位009', '');
+INSERT INTO `fams_position` VALUES (13, 'ZW010', '职位010', '');
+INSERT INTO `fams_position` VALUES (14, 'ZW011', '职位011', '');
+INSERT INTO `fams_position` VALUES (22, 'ZZW018', '职位018', '');
+INSERT INTO `fams_position` VALUES (21, 'ZW018', '职位018', '');
+INSERT INTO `fams_position` VALUES (20, 'ZW017', '职位017', '');
+INSERT INTO `fams_position` VALUES (18, 'ZW015', '职位015', '');
+INSERT INTO `fams_position` VALUES (19, 'ZW016', '职位016', '');
 
 -- ----------------------------
 -- Table structure for fams_user

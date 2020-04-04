@@ -74,6 +74,15 @@
     move: true, // true|false，是否可以移动，默认是
   });
 
+  /**
+   * 手动关闭
+   */
+  obj = ljspopup({  // 弹出
+    el: "Hello"
+  });
+
+  closeLjspopup(obj);  // 关闭
+
 * Visual Studio Code 插件列表
 
 | 插件名称 | 插件作用 |
@@ -115,3 +124,4 @@
 |2020-04-02 17:24:30|好久没push了 一直在本地|
 |2020-04-02 17:25:40|更新了数据库操作类和Controller，一个页面一个Controller，一个表一个class，通过python代码自动创建文件|
 |2020-04-03 22:18:20|更新了部门管理，增删改查，无限级treeview|
+|2020-04-04 21:23:50|更新了职位管理，人员管理，ljspopup的关闭方法|

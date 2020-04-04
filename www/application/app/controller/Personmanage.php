@@ -23,7 +23,7 @@ class Personmanage extends Controller {
     public function selectP() {
         if (Utils::userAlreadyLogin()) {
             $persons = Person::getAll();
-            $personsByPage = Person::getByPage(Param::get("limit"), Param::get("page"));
+            $personsByPage = Person::getByPageText(Param::get("limit"), Param::get("page"));
             $result = [
                 "code" => 0,
                 "msg" => "",
@@ -37,7 +37,7 @@ class Personmanage extends Controller {
     }
 
     /**
-     * 添加部门
+     * 添加人员
      */
     public function insertP() {
         if (Utils::userAlreadyLogin()) {
@@ -53,7 +53,7 @@ class Personmanage extends Controller {
     }
 
     /**
-     * 修改部门
+     * 修改人员
      */
     public function updateP() {
         if (Utils::userAlreadyLogin()) {
@@ -70,7 +70,7 @@ class Personmanage extends Controller {
     }
 
     /**
-     * 批量删除部门
+     * 批量删除人员
      */
     public function deletePs() {
         if (Utils::userAlreadyLogin()) {
@@ -88,7 +88,7 @@ class Personmanage extends Controller {
     }
 
     /**
-     * 删除部门
+     * 删除人员
      */
     public function deleteP() {
         if (Utils::userAlreadyLogin()) {
@@ -110,8 +110,12 @@ class Personmanage extends Controller {
     private function getFields() {
         $result = [
             "p_no" => Param::get("pNo"),
+            "dep_id" => Param::get("depId"),
+            "pos_id" => Param::get("posId"),
             "p_name" => Param::get("pName"),
-            "p_remark" => Param::get("pRemark")
+            "p_sex" => Param::get("pSex"),
+            "p_email" => Param::get("pEmail"),
+            "p_ic" => Param::get("pIc")
         ];
         return $result;
     }
@@ -125,6 +129,9 @@ class Personmanage extends Controller {
         if ($pId != "" && $pId < 2) {
             return Utils::returnMsg(0, "pRootError");
         }
+        if (Param::get("depId") < 2) {
+            return Utils::returnMsg(0, "pUpDepIdError");
+        }
         if (Person::checkP_no($pNo)) {
             if ($pId == "") {
                 return Utils::returnMsg(0, "pNoError");
@@ -136,7 +143,7 @@ class Personmanage extends Controller {
             }
             
         }
-        if (Param::get("pNo") == "" || Param::get("pName") == "") {
+        if (Param::get("pNo") == "" || Param::get("pName") == "" || Param::get("depId") == "" || Param::get("posId") == "") {
             return Utils::returnMsg(0, "nullError");
         }
         return Utils::returnCode(1);

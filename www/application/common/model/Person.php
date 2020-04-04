@@ -13,8 +13,28 @@ class Person {
         return Db::name(self::$className)->select();
     }
 
+    public static function getAllText() {
+        $sql = "select * from fams_person p, fams_department dep, fams_position pos ";
+        $sql .= "where p.dep_id = dep.dep_id and p.pos_id = pos.pos_id ";
+        $sql .= "order by p.p_id";
+        return Db::query($sql);
+    }
+
     public static function getByPage($limit, $page) {
         return Db::name(self::$className)->limit(($page-1)*$limit, $limit)->select();
+    }
+
+    public static function getByPageText($limit, $page) {
+        $limitS = ($page-1)*$limit;
+        $sql = "select * from fams_person p, fams_department dep, fams_position pos ";
+        $sql .= "where p.dep_id = dep.dep_id and p.pos_id = pos.pos_id ";
+        $sql .= "order by p.p_id ";
+        $sql .= "limit {$limitS}, {$limit}";
+        return Db::query($sql);
+    }
+
+    public static function checkP_no($pNo) {
+        return Db::name(self::$className)->where("p_no", $pNo)->find();
     }
 
     public static function insert($dic) {

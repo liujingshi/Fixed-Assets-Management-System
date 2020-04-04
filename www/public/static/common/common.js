@@ -20,23 +20,38 @@ function alertError(msg) {  // 错误提醒
             icon: 2,
             title: "错误"
         });
-    } else if (msg == "posNoError") {
-        layer.alert("职位编号已存在", {
-            icon: 2,
-            title: "错误"
-        });
     } else if (msg == "upDepIdError") {
         layer.alert("上级部门不可以是本部门或总系统", {
             icon: 2,
             title: "错误"
         });
-    }else if (msg == "depRootError") {
+    } else if (msg == "pUpDepIdError") {
+        layer.alert("所属部门不可以是总系统", {
+            icon: 2,
+            title: "错误"
+        });
+    } else if (msg == "depRootError") {
         layer.alert("系统总部门不可修改或删除", {
+            icon: 2,
+            title: "错误"
+        });
+    } else if (msg == "posNoError") {
+        layer.alert("职位编号已存在", {
             icon: 2,
             title: "错误"
         });
     } else if (msg == "posRootError") {
         layer.alert("系统管理员不可修改或删除", {
+            icon: 2,
+            title: "错误"
+        });
+    } else if (msg == "pNoError") {
+        layer.alert("人员工号已存在", {
+            icon: 2,
+            title: "错误"
+        });
+    } else if (msg == "pRootError") {
+        layer.alert("超级管理员不可修改或删除", {
             icon: 2,
             title: "错误"
         });

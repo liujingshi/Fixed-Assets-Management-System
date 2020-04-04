@@ -37,7 +37,18 @@ class Positionmanage extends Controller {
     }
 
     /**
-     * 添加部门
+     * 得到所有职业
+     */
+    public function positionsData() {
+        if (Utils::userAlreadyLogin()) {
+            return json_encode(Position::getAll());
+        } else {
+            $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
+        }
+    }
+
+    /**
+     * 添加职位
      */
     public function insertPos() {
         if (Utils::userAlreadyLogin()) {
@@ -53,7 +64,7 @@ class Positionmanage extends Controller {
     }
 
     /**
-     * 修改部门
+     * 修改职位
      */
     public function updatePos() {
         if (Utils::userAlreadyLogin()) {
@@ -70,7 +81,7 @@ class Positionmanage extends Controller {
     }
 
     /**
-     * 批量删除部门
+     * 批量删除职位
      */
     public function deletePoses() {
         if (Utils::userAlreadyLogin()) {
@@ -88,7 +99,7 @@ class Positionmanage extends Controller {
     }
 
     /**
-     * 删除部门
+     * 删除职位
      */
     public function deletePos() {
         if (Utils::userAlreadyLogin()) {
