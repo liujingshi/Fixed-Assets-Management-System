@@ -10,7 +10,10 @@ var popup_data = [];
 
 // 监听关闭按钮
 $(document).on("click", ".ljs-panel-header-close", function () {
-    var $panel = $(this).parent().parent().parent();
+    closeLjspopup($(this).parent().parent().parent());
+});
+
+function closeLjspopup($panel) {
     var width = $panel.width();
     var height = $panel.height();
     var width_out = width / 10;
@@ -34,7 +37,7 @@ $(document).on("click", ".ljs-panel-header-close", function () {
             $("body").append($panel);
         }
     });
-});
+}
 
 // 监听最小化按钮
 $(document).on("click", ".ljs-panel-header-min", function () {
@@ -220,6 +223,7 @@ function panel_show(data) {
             left: "+=" + width_out / 2 + "px"
         }, 100);
     }
+    return $panel;
 }
 
 
@@ -295,9 +299,9 @@ function ljspopup(data = {}) {
         new_data.width = new_data.width < 0 ? $(ljs_panel).width() : new_data.width;
         new_data.height = new_data.height < 0 ? $(ljs_panel).height() : new_data.height;
         popup_data.push(new_data);
-        panel_show(new_data);
+        return panel_show(new_data);
     } else {
-        panel_show(popup_data[index]);
+        return panel_show(popup_data[index]);
     }
 }
 

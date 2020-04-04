@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:93:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\home\index.html";i:1585980836;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1585980709;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:101:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\personmanage\index.html";i:1585993741;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1585980709;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>高校固定资产管理系统</title>
+    <title>人员管理 - 高校固定资产管理系统</title>
 
     <link rel="stylesheet" href="/static/line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="/static/layui/css/layui.css">
@@ -71,6 +71,59 @@
             <div class="content">
                 <!-- <iframe class="main-iframe" src="" frameborder="0"></iframe> -->
                 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="home-panel">
+                <div class="home-panel-header">
+                    <i class="las la-user-graduate"></i>
+                    <span>人员管理</span>
+                </div>
+                <div class="home-panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table id="table" lay-filter="table"></table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-warning alert-dismissible fade show" style="display: none;" role="alert">
+                                <strong>小提示：</strong> 双击数据行进行编辑
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup" style="display: none;">
+    <form id="position_details_form" onsubmit="return false">
+        <input type="hidden" v-model="posId">
+        <div class="form-group">
+            <label>职位编号<b style="color: red;">*</b></label>
+            <input type="text" class="form-control" v-model="posNo">
+            <small class="form-text text-muted">职位编号是职位的唯一标识，可以使用英文和数字的结合，也可以使纯英文和存数字，当然，下划线也是可以的，但是尽量不要使用中文。</small>
+        </div>
+        <div class="form-group">
+            <label>职位名称<b style="color: red;">*</b></label>
+            <input type="text" class="form-control" v-model="posName">
+            <small class="form-text text-muted">职位名称就是职位的名字，这里就可以使用中文了。</small>
+        </div>
+        <div class="form-group">
+            <label>备注</label>
+            <input type="text" class="form-control" v-model="posRemark">
+            <small class="form-text text-muted">这里是备注，可以不写，也可以写一些东西，比如职位的作用。</small>
+        </div>
+        <button class="btn btn-success" @click="updatePos" v-show="editPos">保存修改</button>
+        <button class="btn btn-danger" @click="deletePos" v-show="editPos">删除该职业</button>
+        <button class="btn btn-primary" @click="insertPos" v-show="addPos">确认添加</button>
+    </form>
+</div>
+
             </div>
             <!-- 主体内容结束 -->
 
@@ -100,10 +153,10 @@
 
 
 <script>
-    var pageName = 'home';
+    var pageName = 'personManage';
     var pageUrl = "/app/" + pageName + "/";
     update_navs(pageName);
-    setLocal([], "首页");
+    setLocal(["系统管理", "组织架构"], "人员管理");
 </script>
 
 

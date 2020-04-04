@@ -1,10 +1,275 @@
 {[extend name="common@base" /]}
-{[block name="title"]}{[/block]}
+{[block name="title"]}人员管理 - {[/block]}
 {[block name="css"]}{[/block]}
-{[block name="content"]}{[/block]}
+{[block name="content"]}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="home-panel">
+                <div class="home-panel-header">
+                    <i class="las la-user-graduate"></i>
+                    <span>人员管理</span>
+                </div>
+                <div class="home-panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table id="table" lay-filter="table"></table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-warning alert-dismissible fade show" style="display: none;" role="alert">
+                                <strong>小提示：</strong> 双击数据行进行编辑
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup" style="display: none;">
+    <form id="person_details_form" onsubmit="return false">
+        <input type="hidden" v-model="pId">
+        <div class="form-group">
+            <label>所属部门<b style="color: red;">*</b></label>
+            <select class="form-control" v-model="depId">
+                <option v-for="dep in deps" :value="dep.dep_id"
+                    v-html="dep.dep_name"></option>
+            </select>
+            <small
+                class="form-text text-muted">人员所属部门，只可以在已有部门里面选择。</small>
+        </div>
+        <div class="form-group">
+            <label>职业<b style="color: red;">*</b></label>
+            <select class="form-control" v-model="posId">
+                <option v-for="pos in poss" :value="pos.pos_id"
+                    v-html="pos.pos_name"></option>
+            </select>
+            <small
+                class="form-text text-muted">人员职业，只可以在已有职业里面选择。</small>
+        </div>
+        <div class="form-group">
+            <label>人员工号<b style="color: red;">*</b></label>
+            <input type="text" class="form-control" v-model="pNo">
+            <small class="form-text text-muted">人员工号是人员的唯一标识，比如，学生的学号，教师的工号。</small>
+        </div>
+        <div class="form-group">
+            <label>人员姓名<b style="color: red;">*</b></label>
+            <input type="text" class="form-control" v-model="pName">
+        </div>
+        <div class="form-group">
+            <label>性别</label>
+            <select class="form-control" v-model="pSex">
+                <option value="男">男</option>
+                <option value="女">女</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>邮箱</label>
+            <input type="text" class="form-control" v-model="pEmail">
+        </div>
+        <div class="form-group">
+            <label>身份证号</label>
+            <input type="text" class="form-control" v-model="pIc">
+        </div>
+        <button class="btn btn-success" @click="updateP" v-show="editP">保存修改</button>
+        <button class="btn btn-danger" @click="deleteP" v-show="editP">删除该人员</button>
+        <button class="btn btn-primary" @click="insertP" v-show="addP">确认添加</button>
+    </form>
+</div>
+{[/block]}
 {[block name="js"]}
+<script type="text/html" id="tableToolbar">
+    <div class="layui-btn-container">
+        <button class="layui-btn btn btn-info" lay-event="insertP">添加新人员</button>
+        <button class="layui-btn btn btn-danger" lay-event="deletePs">删除选中人员</button>
+    </div>
+</script>
 <script>
-    update_navs('personManage');
+    var pageName = 'personManage';
+    var pageUrl = "/app/" + pageName + "/";
+    update_navs(pageName);
+    setLocal(["系统管理", "组织架构"], "人员管理");
+    var layer, table, popupObj;
+    var firstClick = true;
+    layui.use(['layer', 'table'], function () { // 加载layui
+        layer = layui.layer;
+        table = layui.table;
+
+        table.render({ // 创建表格
+            elem: '#table',
+            height: 'full-260',
+            url: pageUrl + 'selectP',
+            page: true,
+            toolbar: '#tableToolbar',
+            limit: 10,
+            cols: [
+                [ // 表头
+                    {
+                        type: "checkbox",
+                        width: "5%"
+                    },
+                    {
+                        field: 'pos_no',
+                        title: '职位编号',
+                        width: "20%"
+                    }, {
+                        field: 'pos_name',
+                        title: '职位名称',
+                        width: "20%"
+                    }, {
+                        field: 'pos_remark',
+                        title: '备注',
+                        width: "55%"
+                    }
+                ]
+            ]
+        });
+
+        table.on('toolbar(table)', function (obj) { // 表头事件监听
+            var checkStatus = table.checkStatus(obj.config.id);
+            switch (obj.event) {
+                case 'insertP':
+                    clearFormData();
+                    personDetailsFormVueObj.addP = true;
+                    ljspopup({
+                        el: "#popup",
+                        title: "职位管理"
+                    });
+                    break;
+                case 'deletePs':
+                    var checkStatus = table.checkStatus('table')
+                        ,data = checkStatus.data;
+                    layer.confirm('确定要删除选中的这'+data.length+'个职位吗？', {
+                        title: "提醒",
+                        btn: ['确定', '取消'],
+                    }, function (index) {
+                        pRequest("deletePs", {data: JSON.stringify(data)}, "职位删除成功");
+                        layer.close(index);
+                    }, function (index) {
+                        layer.close(index);
+                    });
+                    break;
+            };
+        });
+
+        table.on('row(table)', function (obj) { //监听行单击事件
+            if (firstClick) {
+                firstClick = false;
+                $('.alert').attr("style", "");
+            }
+        });
+
+        table.on('rowDouble(table)', function (obj) { //监听行双击事件
+            var data = obj.data;
+            clearFormData();
+            personDetailsFormVueObj.pId = data.p_id;
+            personDetailsFormVueObj.pNo = data.p_no;
+            personDetailsFormVueObj.pName = data.p_name;
+            personDetailsFormVueObj.pRemark = data.p_remark;
+            personDetailsFormVueObj.editP = true;
+            popupObj = ljspopup({
+                el: "#popup",
+                title: "职位管理"
+            });
+        });
+    });
+
+    var personDetailsFormVueObj = new Vue({ // vue对象创建
+        el: "#person_details_form",
+        data: {
+            pId: "",
+            pNo: "",
+            pName: "",
+            pRemark: "",
+            editP: true,
+            addP: true,
+        },
+        methods: {
+            insertP: function (event) { // 添加职位
+                var data = getFormData();
+                if (data.pNo == "" || data.pName == "") {
+                    alertError("nullError");
+                } else {
+                    pRequest("insertP", data, "职位添加成功");
+                }
+            },
+            updateP: function (event) { // 修改职位
+                var data = getFormData();
+                if (data.pNo == "" || data.pName == "") {
+                    alertError("nullError");
+                } else {
+                    pRequest("updateP", data, "职位修改成功");
+                }
+            },
+            deleteP: function (event) { // 删除职位
+                layer.confirm('确定要删除该职位吗？', {
+                    title: "提醒",
+                    btn: ['确定', '取消'],
+                }, function (index) {
+                    var pId = personDetailsFormVueObj.pId;
+                    if (pId == "") {
+                        alertError("Error");
+                    } else if (pId < 2) {
+                        alertError("pRootError");
+                    } else {
+                        pRequest("deleteP", {
+                            pId: pId
+                        }, "职位删除成功");
+                    }
+                    layer.close(index);
+                }, function (index) {
+                    layer.close(index);
+                });
+            }
+        }
+    });
+
+    function pRequest(path, data, msg) { // 通用request请求
+        axios
+            .post(pageUrl + path, data)
+            .then(function (response) {
+                var resData = response.data;
+                if (resData.code == 1) {
+                    layer.alert(msg, {
+                        icon: 1,
+                        title: "成功"
+                    });
+                    table.reload("table");
+                    if (path == "deleteP") {
+                        closeLjspopup(popupObj);
+                    }
+                } else {
+                    alertError(resData.msg);
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
+    function getFormData() { // 获取表单数据
+        var data = {
+            pId: personDetailsFormVueObj.pId,
+            pNo: personDetailsFormVueObj.pNo,
+            pName: personDetailsFormVueObj.pName,
+            pRemark: personDetailsFormVueObj.pRemark,
+        };
+        return data;
+    }
+
+    function clearFormData() { // 清空表单数据
+        personDetailsFormVueObj.pId = "";
+        personDetailsFormVueObj.pNo = "";
+        personDetailsFormVueObj.pName = "";
+        personDetailsFormVueObj.pRemark = "";
+        personDetailsFormVueObj.editP = false;
+        personDetailsFormVueObj.addP = false;
+    }
 </script>
 {[/block]}
 

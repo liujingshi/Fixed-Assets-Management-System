@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:105:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\departmentmanage\index.html";i:1585922164;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1585894895;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:105:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\departmentmanage\index.html";i:1585987433;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1585980709;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -9,9 +9,9 @@
 
     <title>部门管理 - 高校固定资产管理系统</title>
 
-    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="/static/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/gijgo/css/gijgo.min.css">
     <link rel="stylesheet" href="/static/common/common.css">
     <link rel="stylesheet" href="/static/common/ljspopup.css">
@@ -47,8 +47,9 @@
             <div class="nav-top">
 
                 <ol class="breadcrumb nav-top-left" id="local">
-                    <li><a href="index.html">固定资产管理系统</a></li>
-                    <li><a v-for="item in local" v-html="item.title" :href="'javascript:open_iframe(\''+item.name+'\');'"></a></li>
+                    <li class="breadcrumb-item"><a href="/app/home/index">固定资产管理系统</a></li>
+                    <li class="breadcrumb-item" v-for="item in local" v-html="item"></li>
+                    <li class="breadcrumb-item active" aria-current="page" v-html="nowName"></li>
                 </ol>
 
                 <a href="javascript:open_iframe('message');" class="nav-top-right nav-top-right-first">
@@ -188,6 +189,7 @@
     var pageName = "departmentManage";
     var pageUrl = "/app/" + pageName + "/";
     update_navs(pageName);
+    setLocal(["系统管理", "组织架构"], "部门管理");
     var layer;
     layui.use(['layer'], function () { // 加载layui
         layer = layui.layer;
@@ -247,6 +249,8 @@
                     var depId = departmentDetailsFormVueObj.depId;
                     if (depId == "") {
                         alertError("Error");
+                    } else if (depId < 3) {
+                        alertError("depRootError");
                     } else {
                         depRequest("deleteDep", {
                             depId: depId
@@ -275,8 +279,10 @@
                     });
                     treeview.reload();
                     loadSelect();
-                    clearFormData();
-                    departmentDetailsFormVueObj.formShow = false;
+                    if (path == "deleteDep") {
+                        clearFormData();
+                        departmentDetailsFormVueObj.formShow = false;
+                    }
                 } else {
                     alertError(resData.msg);
                 }

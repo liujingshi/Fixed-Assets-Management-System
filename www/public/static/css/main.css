@@ -213,6 +213,7 @@ body {
     width: 100%;
     height: calc(100% - 90px);
     background: #ecf0f5;
+    overflow-y: auto;
 }
 
 .main-iframe {

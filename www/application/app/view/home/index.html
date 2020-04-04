@@ -4,7 +4,10 @@
 {[block name="content"]}{[/block]}
 {[block name="js"]}
 <script>
-    update_navs('home');
+    var pageName = 'home';
+    var pageUrl = "/app/" + pageName + "/";
+    update_navs(pageName);
+    setLocal([], "首页");
 </script>
 {[/block]}
 

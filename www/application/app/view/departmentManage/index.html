@@ -93,6 +93,7 @@
     var pageName = "departmentManage";
     var pageUrl = "/app/" + pageName + "/";
     update_navs(pageName);
+    setLocal(["系统管理", "组织架构"], "部门管理");
     var layer;
     layui.use(['layer'], function () { // 加载layui
         layer = layui.layer;
@@ -152,6 +153,8 @@
                     var depId = departmentDetailsFormVueObj.depId;
                     if (depId == "") {
                         alertError("Error");
+                    } else if (depId < 3) {
+                        alertError("depRootError");
                     } else {
                         depRequest("deleteDep", {
                             depId: depId
@@ -180,8 +183,10 @@
                     });
                     treeview.reload();
                     loadSelect();
-                    clearFormData();
-                    departmentDetailsFormVueObj.formShow = false;
+                    if (path == "deleteDep") {
+                        clearFormData();
+                        departmentDetailsFormVueObj.formShow = false;
+                    }
                 } else {
                     alertError(resData.msg);
                 }

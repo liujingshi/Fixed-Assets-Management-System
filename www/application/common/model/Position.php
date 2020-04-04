@@ -17,6 +17,10 @@ class Position {
         return Db::name(self::$className)->limit(($page-1)*$limit, $limit)->select();
     }
 
+    public static function checkPos_no($posNo) {
+        return Db::name(self::$className)->where("pos_no", $posNo)->find();
+    }
+
     public static function insert($dic) {
         Db::name(self::$className)->insert($dic);
     }

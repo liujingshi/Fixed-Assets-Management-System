@@ -65,6 +65,9 @@ class Departmentmanage extends Controller {
         $upDepId = Param::get("upDepId");
         $depNo = Param::get("depNo");
         $depId = Param::get("depId");
+        if ($depId != "" && $depId < 3) {
+            return Utils::returnMsg(0, "depRootError");
+        }
         if ($upDepId < 2 || $upDepId == $depId) {
             return Utils::returnMsg(0, "upDepIdError");
         }
@@ -137,6 +140,9 @@ class Departmentmanage extends Controller {
     public function deleteDep() {
         if (Utils::userAlreadyLogin()) {
             $depId = Param::get("depId");
+            if ($depId != "" && $depId < 3) {
+                return Utils::returnMsg(0, "depRootError");
+            }
             $dep = new Department($depId);
             $dep->delete();
             $this->deleteDepSon($depId);
