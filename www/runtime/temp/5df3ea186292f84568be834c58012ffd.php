@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:105:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\departmentmanage\index.html";i:1585987433;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:105:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\departmentmanage\index.html";i:1586077616;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -186,7 +186,7 @@
 
 
 <script>
-    var pageName = "departmentManage";
+    var pageName = "departmentmanage";
     var pageUrl = "/app/" + pageName + "/";
     update_navs(pageName);
     setLocal(["系统管理", "组织架构"], "部门管理");

@@ -10,48 +10,48 @@ var nav_left_data = [{
     "title": "系统管理",
     "icon": "lab la-windows",
     "pull": true,
-    "name": "systemManage",
+    "name": "systemmanage",
     "active": false,
     "up": "",
     "son": [{
         "title": "组织架构",
         "icon": "las la-building",
         "pull": true,
-        "name": "organizeManage",
+        "name": "organizemanage",
         "active": false,
-        "up": "systemManage",
+        "up": "systemmanage",
         "son": [{
             "title": "部门管理",
             "icon": "las la-city",
             "pull": false,
-            "name": "departmentManage",
+            "name": "departmentmanage",
             "active": false,
-            "up": "organizeManage",
+            "up": "organizemanage",
             "son": []
         }, {
             "title": "职位管理",
             "icon": "las la-chalkboard-teacher",
             "pull": false,
-            "name": "positionManage",
+            "name": "positionmanage",
             "active": false,
-            "up": "organizeManage",
+            "up": "organizemanage",
             "son": []
         }, {
             "title": "人员管理",
             "icon": "las la-user-graduate",
             "pull": false,
-            "name": "personManage",
+            "name": "personmanage",
             "active": false,
-            "up": "organizeManage",
+            "up": "organizemanage",
             "son": []
         }]
     }, {
         "title": "用户管理",
         "icon": "las la-user",
         "pull": false,
-        "name": "userManage",
+        "name": "usermanage",
         "active": false,
-        "up": "systemManage",
+        "up": "systemmanage",
         "son": []
     }]
 }];

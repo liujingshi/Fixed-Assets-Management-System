@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:99:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\usermanage\index.html";i:1586070052;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:99:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\usermanage\index.html";i:1586077656;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -185,7 +185,7 @@
     <i class="{{d.u_head}}"></i>
 </script>
 <script>
-    var pageName = "userManage";
+    var pageName = "usermanage";
     var pageUrl = "/app/" + pageName + "/";
     update_navs(pageName);
     setLocal(["系统管理"], "用户管理");

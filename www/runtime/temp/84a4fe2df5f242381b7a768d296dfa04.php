@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:101:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\personmanage\index.html";i:1586005969;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:101:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\personmanage\index.html";i:1586077638;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -183,7 +183,7 @@
     </div>
 </script>
 <script>
-    var pageName = 'personManage';
+    var pageName = 'personmanage';
     var pageUrl = "/app/" + pageName + "/";
     update_navs(pageName);
     setLocal(["系统管理", "组织架构"], "人员管理");
