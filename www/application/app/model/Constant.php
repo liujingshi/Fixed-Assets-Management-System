@@ -18,6 +18,9 @@ class Constant {
     // 用户未登录时提示的文字
     public const PLEASELOGIN = "请先登录";
 
+    // 无权限时提示的文字
+    public const POWERERROR = "权限不足";
+
     // 登录页面path
     public const LOGINPATH = "/login/home/index";
 

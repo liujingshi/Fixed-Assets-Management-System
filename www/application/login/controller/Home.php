@@ -29,12 +29,17 @@ class Home extends Controller
 
     public function login() {
         $phone = Param::get("phone");
-        if (preg_match("/^1[34578]\d{9}$/", $phone)) {
+        if (preg_match("/^1[3456789]\d{9}$/", $phone)) {
             $uId = User::getU_idByU_phone($phone);
             if ($uId > 0) {
-                Session::set(Constant::USERLOGINSTATUS, Constant::USERLOGIN);
-                Session::set(Constant::USERID, $uId);
-                $this->success("登陆成功", Constant::HOMEPATH);
+                $user = new User($uId);
+                if ($user->getPower_no() == "VISIT") {
+                    $this->error(Constant::POWERERROR, Constant::LOGINPATH);
+                } else {
+                    Session::set(Constant::USERLOGINSTATUS, Constant::USERLOGIN);
+                    Session::set(Constant::USERID, $uId);
+                    $this->success("登陆成功", Constant::HOMEPATH);
+                }
             } else {
                 $this->error("用户不存在", Constant::LOGINPATH);
             }

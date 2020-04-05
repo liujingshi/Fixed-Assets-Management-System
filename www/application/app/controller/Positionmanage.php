@@ -18,14 +18,20 @@ class Positionmanage extends Controller {
     }
 
     private function powerTrue() {
-        return true;
+        $userinfo = Utils::getUserinfo();
+        $power = $userinfo['powerNo'];
+        if ($power == "SVIP") {
+            return true;
+        }
+        $this->error(Constant::POWERERROR);
+        return false;
     }
 
     /**
      * table接口
      */
     public function selectPos() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $positions = Position::getAll();
             $positionsByPage = Position::getByPage(Param::get("limit"), Param::get("page"));
             $result = [
@@ -44,7 +50,7 @@ class Positionmanage extends Controller {
      * 得到所有职位
      */
     public function positionsData() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             return json_encode(Position::getAll());
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -55,7 +61,7 @@ class Positionmanage extends Controller {
      * 添加职位
      */
     public function insertPos() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $co = $this->checkOnlyAndNull();
             if ($co['code'] == 0) {
                 return json_encode($co);
@@ -71,7 +77,7 @@ class Positionmanage extends Controller {
      * 修改职位
      */
     public function updatePos() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $co = $this->checkOnlyAndNull();
             if ($co['code'] == 0) {
                 return json_encode($co);
@@ -88,7 +94,7 @@ class Positionmanage extends Controller {
      * 批量删除职位
      */
     public function deletePoses() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $datas = json_decode(Param::get("data"), true);
             foreach ($datas as $data) {
                 if ($data['pos_id'] != "" && $data['pos_id'] > 1) {
@@ -106,7 +112,7 @@ class Positionmanage extends Controller {
      * 删除职位
      */
     public function deletePos() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $posId = Param::get("posId");
             if ($posId != "" && $posId < 2) {
                 return Utils::returnMsg(0, "posRootError");

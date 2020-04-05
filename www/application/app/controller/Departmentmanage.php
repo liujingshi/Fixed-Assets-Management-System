@@ -18,7 +18,13 @@ class Departmentmanage extends Controller {
     }
 
     private function powerTrue() {
-        return true;
+        $userinfo = Utils::getUserinfo();
+        $power = $userinfo['powerNo'];
+        if ($power == "SVIP") {
+            return true;
+        }
+        $this->error(Constant::POWERERROR);
+        return false;
     }
 
     /**
@@ -26,7 +32,7 @@ class Departmentmanage extends Controller {
      * 用于前端treeview显示
      */
     public function departmentsJsonData() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             return $this->getDepartmentsJsonData(1);
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -55,7 +61,7 @@ class Departmentmanage extends Controller {
      * 得到所有部门
      */
     public function departmentsData() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             return json_encode(Department::getAll());
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -109,7 +115,7 @@ class Departmentmanage extends Controller {
      * 添加部门
      */
     public function insertDep() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $co = $this->checkOnlyAndNull();
             if ($co['code'] == 0) {
                 return json_encode($co);
@@ -125,7 +131,7 @@ class Departmentmanage extends Controller {
      * 更新部门
      */
     public function updateDep() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $co = $this->checkOnlyAndNull();
             if ($co['code'] == 0) {
                 return json_encode($co);
@@ -142,7 +148,7 @@ class Departmentmanage extends Controller {
      * 删除部门
      */
     public function deleteDep() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $depId = Param::get("depId");
             if ($depId != "" && $depId < 3) {
                 return Utils::returnMsg(0, "depRootError");

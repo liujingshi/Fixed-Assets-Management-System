@@ -19,14 +19,20 @@ class Usermanage extends Controller {
     }
 
     private function powerTrue() {
-        return true;
+        $userinfo = Utils::getUserinfo();
+        $power = $userinfo['powerNo'];
+        if ($power == "SVIP") {
+            return true;
+        }
+        $this->error(Constant::POWERERROR);
+        return false;
     }
 
     /**
      * table接口
      */
     public function selectU() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $users = User::getAll();
             $usersByPage = User::getByPageText(Param::get("limit"), Param::get("page"));
             $result = [
@@ -45,7 +51,7 @@ class Usermanage extends Controller {
      * 得到所有权限
      */
     public function powersData() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             return json_encode(User_power::getAll());
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -56,7 +62,7 @@ class Usermanage extends Controller {
      * 添加用户
      */
     public function insertU() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $co = $this->checkOnlyAndNull();
             if ($co['code'] == 0) {
                 return json_encode($co);
@@ -72,7 +78,7 @@ class Usermanage extends Controller {
      * 修改用户
      */
     public function updateU() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $co = $this->checkOnlyAndNull();
             if ($co['code'] == 0) {
                 return json_encode($co);
@@ -89,7 +95,7 @@ class Usermanage extends Controller {
      * 批量删除用户
      */
     public function deleteUs() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $datas = json_decode(Param::get("data"), true);
             foreach ($datas as $data) {
                 if ($data['u_id'] != "" && $data['u_id'] > 1) {
@@ -107,7 +113,7 @@ class Usermanage extends Controller {
      * 删除用户
      */
     public function deleteU() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $uId = Param::get("uId");
             if ($uId != "" && $uId < 2) {
                 return Utils::returnMsg(0, "uRootError");
@@ -143,7 +149,7 @@ class Usermanage extends Controller {
         if ($uId != "" && $uId < 2) {
             return Utils::returnMsg(0, "uRootError");
         }
-        if (!preg_match("/^1[34578]\d{9}$/", $uPhone)) {
+        if (!preg_match("/^1[3456789]\d{9}$/", $uPhone)) {
             return Utils::returnMsg(0, "uPhoneError");
         }
         if (User::checkU_phone($uPhone)) {

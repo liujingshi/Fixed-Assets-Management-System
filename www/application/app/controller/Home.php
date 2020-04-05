@@ -16,6 +16,12 @@ class Home extends Controller {
     }
 
     private function powerTrue() {
+        $userinfo = Utils::getUserinfo();
+        $power = $userinfo['powerNo'];
+        if ($power == "VISIT") {
+            $this->error(Constant::POWERERROR, Constant::LOGINPATH);
+            return false;
+        }
         return true;
     }
 

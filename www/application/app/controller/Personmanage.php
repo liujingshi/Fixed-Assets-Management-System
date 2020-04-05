@@ -18,14 +18,20 @@ class Personmanage extends Controller {
     }
 
     private function powerTrue() {
-        return true;
+        $userinfo = Utils::getUserinfo();
+        $power = $userinfo['powerNo'];
+        if ($power == "SVIP") {
+            return true;
+        }
+        $this->error(Constant::POWERERROR);
+        return false;
     }
 
     /**
      * table接口
      */
     public function selectP() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $persons = Person::getAll();
             $personsByPage = Person::getByPageText(Param::get("limit"), Param::get("page"));
             $result = [
@@ -44,7 +50,7 @@ class Personmanage extends Controller {
      * 得到所有人员
      */
     public function personsData() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             return json_encode(Person::getAll());
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -55,7 +61,7 @@ class Personmanage extends Controller {
      * 添加人员
      */
     public function insertP() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $co = $this->checkOnlyAndNull();
             if ($co['code'] == 0) {
                 return json_encode($co);
@@ -71,7 +77,7 @@ class Personmanage extends Controller {
      * 修改人员
      */
     public function updateP() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $co = $this->checkOnlyAndNull();
             if ($co['code'] == 0) {
                 return json_encode($co);
@@ -88,7 +94,7 @@ class Personmanage extends Controller {
      * 批量删除人员
      */
     public function deletePs() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $datas = json_decode(Param::get("data"), true);
             foreach ($datas as $data) {
                 if ($data['p_id'] != "" && $data['p_id'] > 1) {
@@ -106,7 +112,7 @@ class Personmanage extends Controller {
      * 删除人员
      */
     public function deleteP() {
-        if (Utils::userAlreadyLogin()) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $pId = Param::get("pId");
             if ($pId != "" && $pId < 2) {
                 return Utils::returnMsg(0, "pRootError");
