@@ -4,10 +4,10 @@ namespace app\app\model;
 class Constant {
 
     // 用户登录状态session的key
-    public const USERLOGINSTATUSSESSIONKEY = "USERLOGINSTATUS";
+    public const USERLOGINSTATUS = "USERLOGINSTATUS";
 
-    // 用户登录状态cookie的key
-    public const USERLOGINSTATUSCOOKIEKEY = "USERLOGINSTATUS";
+    // 用户id session的key
+    public const USERID = "USERID";
 
     // 用户已经登录状态
     public const USERLOGIN = "LOGIN";

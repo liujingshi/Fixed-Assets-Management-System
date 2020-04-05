@@ -10,15 +10,15 @@ class Department {
     private $mainKeyValue = "";
 
     public static function getAll() {
-        return Db::name(self::$className)->select();
+        return Db::name(self::$className)->order(self::$mainKey)->select();
     }
 
     public static function getByPage($limit, $page) {
-        return Db::name(self::$className)->limit(($page-1)*$limit, $limit)->select();
+        return Db::name(self::$className)->order(self::$mainKey)->page($page, $limit)->select();
     }
 
     public static function getByUp_dep_id($upDepId) {
-        return Db::name(self::$className)->where("up_dep_id", $upDepId)->select();
+        return Db::name(self::$className)->where("up_dep_id", $upDepId)->order(self::$mainKey)->select();
     }
 
     public static function checkDep_no($depNo) {

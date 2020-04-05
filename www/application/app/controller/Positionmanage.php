@@ -10,11 +10,15 @@ use app\common\model\Position;
 class Positionmanage extends Controller {
 
     public function index() {
-        if (Utils::userAlreadyLogin()) {
-            return view();
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
+            return view('index', Utils::getUserinfo());
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
         }
+    }
+
+    private function powerTrue() {
+        return true;
     }
 
     /**
@@ -37,7 +41,7 @@ class Positionmanage extends Controller {
     }
 
     /**
-     * 得到所有职业
+     * 得到所有职位
      */
     public function positionsData() {
         if (Utils::userAlreadyLogin()) {
@@ -72,8 +76,8 @@ class Positionmanage extends Controller {
             if ($co['code'] == 0) {
                 return json_encode($co);
             }
-            $dep = new Position(Param::get("posId"));
-            $dep->update($this->getFields());
+            $pos = new Position(Param::get("posId"));
+            $pos->update($this->getFields());
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);

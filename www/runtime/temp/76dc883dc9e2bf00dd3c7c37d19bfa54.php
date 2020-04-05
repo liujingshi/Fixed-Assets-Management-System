@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:103:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\positionmanage\index.html";i:1585992274;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1585980709;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:103:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\positionmanage\index.html";i:1585992274;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -52,14 +52,14 @@
                     <li class="breadcrumb-item active" aria-current="page" v-html="nowName"></li>
                 </ol>
 
-                <a href="javascript:open_iframe('message');" class="nav-top-right nav-top-right-first">
+                <a href="javascript:;" class="nav-top-right nav-top-right-first">
                     <i class="las la-envelope"></i>
                     <span>通知</span>
                     <span class="badge message-num">6</span>
                 </a>
-                <a href="javascript:open_iframe('user');" class="nav-top-right">
-                    <i class="las la-user-secret"></i>
-                    <span>百里刘叔</span>
+                <a href="javascript:;" class="nav-top-right">
+                    <i class="<?php echo $uHead; ?>"></i>
+                    <span><?php echo $uName; ?></span>
                 </a>
                 <a href="/app/home/logout" class="nav-top-right">
                     <i class="las la-sign-out-alt"></i>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:101:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\personmanage\index.html";i:1586005969;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:99:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\usermanage\index.html";i:1586070052;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>人员管理 - 高校固定资产管理系统</title>
+    <title>用户管理 - 高校固定资产管理系统</title>
 
     <link rel="stylesheet" href="/static/line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="/static/layui/css/layui.css">
@@ -76,8 +76,8 @@
         <div class="col-md-12">
             <div class="home-panel">
                 <div class="home-panel-header">
-                    <i class="las la-user-graduate"></i>
-                    <span>人员管理</span>
+                    <i class="las la-user"></i>
+                    <span>用户管理</span>
                 </div>
                 <div class="home-panel-body">
                     <div class="row">
@@ -102,49 +102,48 @@
     </div>
 </div>
 <div id="popup" style="display: none;">
-    <form id="person_details_form" onsubmit="return false">
-        <input type="hidden" v-model="pId">
+    <form id="user_details_form" onsubmit="return false">
+        <input type="hidden" v-model="uId">
         <div class="form-group">
-            <label>所属部门<b style="color: red;">*</b></label>
-            <select class="form-control" v-model="depId">
-                <option v-for="dep in deps" :value="dep.dep_id" v-html="dep.dep_name"></option>
+            <label>工号（姓名）<b style="color: red;">*</b></label>
+            <select class="form-control" v-model="pId">
+                <option v-for="p in ps" :value="p.p_id" v-html="p.p_no + '('+p.p_name+')'"></option>
             </select>
-            <small class="form-text text-muted">人员所属部门，只可以在已有部门里面选择。</small>
+            <small class="form-text text-muted">用户的工号，只可以在已有人员里面选择。</small>
         </div>
         <div class="form-group">
-            <label>职业<b style="color: red;">*</b></label>
-            <select class="form-control" v-model="posId">
-                <option v-for="pos in poses" :value="pos.pos_id" v-html="pos.pos_name"></option>
+            <label>手机号<b style="color: red;">*</b></label>
+            <input type="text" class="form-control" v-model="uPhone">
+        </div>
+        <div class="form-group">
+            <label>权限<b style="color: red;">*</b></label>
+            <select class="form-control" v-model="powerNo">
+                <option v-for="power in powers" :value="power.power_no" v-html="power.power_name"></option>
             </select>
-            <small class="form-text text-muted">人员职业，只可以在已有职业里面选择。</small>
+            <small class="form-text text-muted">系统管理员可以管理一切，普通管理员可以管理一切资产，普通用户只可以使用资产，游客只能查看移动端。</small>
         </div>
         <div class="form-group">
-            <label>人员工号<b style="color: red;">*</b></label>
-            <input type="text" class="form-control" v-model="pNo">
-            <small class="form-text text-muted">人员工号是人员的唯一标识，比如，学生的学号，教师的工号。</small>
-        </div>
-        <div class="form-group">
-            <label>人员姓名<b style="color: red;">*</b></label>
-            <input type="text" class="form-control" v-model="pName">
-        </div>
-        <div class="form-group">
-            <label>性别</label>
-            <select class="form-control" v-model="pSex">
-                <option value="男">男</option>
-                <option value="女">女</option>
+            <label>头像：<i :class="uHead"></i></label>
+            <select class="form-control" v-model="uHead">
+                <option value="las la-user-secret">头像1</option>
+                <option value="las la-user-graduate">头像2</option>
+                <option value="las la-user-astronaut">头像3</option>
+                <option value="las la-user-ninja">头像4</option>
+                <option value="las la-user-cog">头像5</option>
+                <option value="las la-user-lock">头像6</option>
+                <option value="las la-user-clock">头像7</option>
+                <option value="las la-user-tag">头像8</option>
+                <option value="lab la-teamspeak">头像9</option>
             </select>
         </div>
         <div class="form-group">
-            <label>邮箱</label>
-            <input type="text" class="form-control" v-model="pEmail">
+            <label>积分</label>
+            <input type="number" class="form-control" v-model="uMoney">
+            <small class="form-text text-muted">积分是一个神秘的东西。</small>
         </div>
-        <div class="form-group">
-            <label>身份证号</label>
-            <input type="text" class="form-control" v-model="pIc">
-        </div>
-        <button class="btn btn-success" @click="updateP" v-show="editP">保存修改</button>
-        <button class="btn btn-danger" @click="deleteP" v-show="editP">删除该人员</button>
-        <button class="btn btn-primary" @click="insertP" v-show="addP">确认添加</button>
+        <button class="btn btn-success" @click="updateU" v-show="editU">保存修改</button>
+        <button class="btn btn-danger" @click="deleteU" v-show="editU">删除该用户</button>
+        <button class="btn btn-primary" @click="insertU" v-show="addU">确认添加</button>
     </form>
 </div>
 
@@ -178,15 +177,18 @@
 
 <script type="text/html" id="tableToolbar">
     <div class="layui-btn-container">
-        <button class="layui-btn btn btn-info" lay-event="insertP">添加新人员</button>
-        <button class="layui-btn btn btn-danger" lay-event="deletePs">删除选中人员</button>
+        <button class="layui-btn btn btn-info" lay-event="insertU">添加新用户</button>
+        <button class="layui-btn btn btn-danger" lay-event="deleteUs">删除选中用户</button>
     </div>
 </script>
+<script type="text/html" id="uHeadTpl">
+    <i class="{{d.u_head}}"></i>
+</script>
 <script>
-    var pageName = 'personManage';
+    var pageName = "userManage";
     var pageUrl = "/app/" + pageName + "/";
     update_navs(pageName);
-    setLocal(["系统管理", "组织架构"], "人员管理");
+    setLocal(["系统管理"], "用户管理");
     var layer, table, popupObj;
     var firstClick = true;
     layui.use(['layer', 'table'], function () { // 加载layui
@@ -196,7 +198,7 @@
         table.render({ // 创建表格
             elem: '#table',
             height: 'full-260',
-            url: pageUrl + 'selectP',
+            url: pageUrl + 'selectU',
             page: true,
             toolbar: '#tableToolbar',
             limit: 10,
@@ -206,33 +208,34 @@
                         type: "checkbox",
                         width: "5%"
                     }, {
-                        field: 'dep_name',
-                        title: '所属部门',
-                        width: "20%"
-                    }, {
-                        field: 'pos_name',
-                        title: '职位',
-                        width: "10%"
-                    }, {
                         field: 'p_no',
-                        title: '人员工号',
-                        width: "20%"
+                        title: '工号',
+                        width: "15%"
                     }, {
                         field: 'p_name',
                         title: '姓名',
-                        width: "10%"
+                        width: "15%"
                     }, {
-                        field: 'p_sex',
-                        title: '性别',
+                        field: 'u_phone',
+                        title: '手机号',
+                        width: "20%"
+                    }, {
+                        field: 'u_openid',
+                        title: 'openid',
+                        width: "20%"
+                    }, {
+                        field: 'power_name',
+                        title: '权限',
+                        width: "15%"
+                    }, {
+                        field: 'u_head',
+                        title: '头像',
+                        templet: '#uHeadTpl',
                         width: "5%"
                     }, {
-                        field: 'p_email',
-                        title: '邮箱',
-                        width: "15%"
-                    }, {
-                        field: 'p_ic',
-                        title: '身份证号',
-                        width: "15%"
+                        field: 'u_money',
+                        title: '积分',
+                        width: "5%"
                     }
                 ]
             ]
@@ -241,24 +244,25 @@
         table.on('toolbar(table)', function (obj) { // 表头事件监听
             var checkStatus = table.checkStatus(obj.config.id);
             switch (obj.event) {
-                case 'insertP':
+                case 'insertU':
                     clearFormData();
-                    personDetailsFormVueObj.addP = true;
+                    userDetailsFormVueObj.addU = true;
+                    userDetailsFormVueObj.powerNo = "VISIT";
                     ljspopup({
                         el: "#popup",
-                        title: "人员管理"
+                        title: "用户管理"
                     });
                     break;
-                case 'deletePs':
+                case 'deleteUs':
                     var checkStatus = table.checkStatus('table'),
                         data = checkStatus.data;
-                    layer.confirm('确定要删除选中的这' + data.length + '个人员吗？', {
+                    layer.confirm('确定要删除选中的这' + data.length + '个用户吗？', {
                         title: "提醒",
                         btn: ['确定', '取消'],
                     }, function (index) {
-                        pRequest("deletePs", {
+                        uRequest("deleteUs", {
                             data: JSON.stringify(data)
-                        }, "人员删除成功");
+                        }, "用户删除成功");
                         layer.close(index);
                     }, function (index) {
                         layer.close(index);
@@ -277,71 +281,67 @@
         table.on('rowDouble(table)', function (obj) { //监听行双击事件
             var data = obj.data;
             clearFormData();
-            personDetailsFormVueObj.pId = data.p_id;
-            personDetailsFormVueObj.depId = data.dep_id;
-            personDetailsFormVueObj.posId = data.pos_id;
-            personDetailsFormVueObj.pNo = data.p_no;
-            personDetailsFormVueObj.pName = data.p_name;
-            personDetailsFormVueObj.pSex = data.p_sex;
-            personDetailsFormVueObj.pEmail = data.p_email;
-            personDetailsFormVueObj.pIc = data.p_ic;
-            personDetailsFormVueObj.editP = true;
+            userDetailsFormVueObj.uId = data.u_id;
+            userDetailsFormVueObj.pId = data.p_id;
+            userDetailsFormVueObj.uPhone = data.u_phone;
+            userDetailsFormVueObj.powerNo = data.power_no;
+            userDetailsFormVueObj.uHead = data.u_head;
+            userDetailsFormVueObj.uMoney = data.u_money;
+            userDetailsFormVueObj.editU = true;
             popupObj = ljspopup({
                 el: "#popup",
-                title: "人员管理"
+                title: "用户管理"
             });
         });
     });
 
-    var personDetailsFormVueObj = new Vue({ // vue对象创建
-        el: "#person_details_form",
+    var userDetailsFormVueObj = new Vue({ // vue对象创建
+        el: "#user_details_form",
         data: {
+            uId: "",
             pId: "",
-            depId: "",
-            posId: "",
-            pNo: "",
-            pName: "",
-            pSex: "",
-            pEmail: "",
-            pIc: "",
-            editP: true,
-            addP: true,
-            deps: [],
-            poses: []
+            uPhone: "",
+            powerNo: "",
+            uHead: "",
+            uMoney: "",
+            editU: true,
+            addU: true,
+            ps: [],
+            powers: []
         },
         methods: {
-            insertP: function (event) { // 添加人员
+            insertU: function (event) { // 添加用户
                 var data = getFormData();
-                if (data.pNo == "" || data.pName == "" || data.depId == "" || data.posId == "") {
+                if (data.pId == "" || data.powerNo == "") {
                     alertError("nullError");
-                } else if (data.depId < 2) {
-                    alertError("pUpDepIdError");
+                } else if (!(/^1[3456789]\d{9}$/.test(data.uPhone))) {
+                    alertError("uPhoneError");
                 } else {
-                    pRequest("insertP", data, "人员添加成功");
+                    uRequest("insertU", data, "用户添加成功");
                 }
             },
-            updateP: function (event) { // 修改人员
+            updateU: function (event) { // 修改用户
                 var data = getFormData();
-                if (data.pNo == "" || data.pName == "" || data.depId == "" || data.posId == "") {
+                if (data.uPhone == "" || data.pId == "" || data.powerNo == "") {
                     alertError("nullError");
                 } else {
-                    pRequest("updateP", data, "人员修改成功");
+                    uRequest("updateU", data, "用户修改成功");
                 }
             },
-            deleteP: function (event) { // 删除人员
-                layer.confirm('确定要删除该人员吗？', {
+            deleteU: function (event) { // 删除用户
+                layer.confirm('确定要删除该用户吗？', {
                     title: "提醒",
                     btn: ['确定', '取消'],
                 }, function (index) {
-                    var pId = personDetailsFormVueObj.pId;
-                    if (pId == "") {
+                    var uId = userDetailsFormVueObj.uId;
+                    if (uId == "") {
                         alertError("Error");
-                    } else if (pId < 2) {
-                        alertError("pRootError");
+                    } else if (uId < 2) {
+                        alertError("uRootError");
                     } else {
-                        pRequest("deleteP", {
-                            pId: pId
-                        }, "人员删除成功");
+                        uRequest("deleteU", {
+                            uId: uId
+                        }, "用户删除成功");
                     }
                     layer.close(index);
                 }, function (index) {
@@ -351,21 +351,21 @@
         },
         mounted() { // ajax请求数据 用于select框
             axios
-                .post("/app/departmentManage/departmentsData")
-                .then(response => (this.deps = response.data))
+                .post("/app/personManage/personsData")
+                .then((response) => (this.ps = response.data))
                 .catch(function (error) {
                     console.log(error);
                 });
             axios
-                .post("/app/positionManage/positionsData")
-                .then(response => (this.poses = response.data))
+                .post("/app/userManage/powersData")
+                .then((response) => (this.powers = response.data))
                 .catch(function (error) {
                     console.log(error);
                 });
         }
     });
 
-    function pRequest(path, data, msg) { // 通用request请求
+    function uRequest(path, data, msg) { // 通用request请求
         axios
             .post(pageUrl + path, data)
             .then(function (response) {
@@ -376,7 +376,7 @@
                         title: "成功"
                     });
                     table.reload("table");
-                    if (path == "deleteP") {
+                    if (path == "deleteU") {
                         closeLjspopup(popupObj);
                     }
                 } else {
@@ -390,29 +390,25 @@
 
     function getFormData() { // 获取表单数据
         var data = {
-            pId: personDetailsFormVueObj.pId,
-            depId: personDetailsFormVueObj.depId,
-            posId: personDetailsFormVueObj.posId,
-            pNo: personDetailsFormVueObj.pNo,
-            pName: personDetailsFormVueObj.pName,
-            pSex: personDetailsFormVueObj.pSex,
-            pEmail: personDetailsFormVueObj.pEmail,
-            pIc: personDetailsFormVueObj.pIc
+            uId: userDetailsFormVueObj.uId,
+            pId: userDetailsFormVueObj.pId,
+            uPhone: userDetailsFormVueObj.uPhone,
+            powerNo: userDetailsFormVueObj.powerNo,
+            uHead: userDetailsFormVueObj.uHead,
+            uMoney: userDetailsFormVueObj.uMoney
         };
         return data;
     }
 
     function clearFormData() { // 清空表单数据
-        personDetailsFormVueObj.pId = "";
-        personDetailsFormVueObj.depId = "";
-        personDetailsFormVueObj.posId = "";
-        personDetailsFormVueObj.pNo = "";
-        personDetailsFormVueObj.pName = "";
-        personDetailsFormVueObj.pSex = "";
-        personDetailsFormVueObj.pEmail = "";
-        personDetailsFormVueObj.pIc = "";
-        personDetailsFormVueObj.editP = false;
-        personDetailsFormVueObj.addP = false;
+        userDetailsFormVueObj.uId = "";
+        userDetailsFormVueObj.pId = "";
+        userDetailsFormVueObj.uPhone = "";
+        userDetailsFormVueObj.powerNo = "";
+        userDetailsFormVueObj.uHead = "";
+        userDetailsFormVueObj.uMoney = "";
+        userDetailsFormVueObj.editU = false;
+        userDetailsFormVueObj.addU = false;
     }
 </script>
 

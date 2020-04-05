@@ -45,6 +45,14 @@ var nav_left_data = [{
             "up": "organizeManage",
             "son": []
         }]
+    }, {
+        "title": "用户管理",
+        "icon": "las la-user",
+        "pull": false,
+        "name": "userManage",
+        "active": false,
+        "up": "systemManage",
+        "son": []
     }]
 }];
 

@@ -55,6 +55,16 @@ function alertError(msg) {  // 错误提醒
             icon: 2,
             title: "错误"
         });
+    } else if (msg == "uPhoneError") {
+        layer.alert("手机号码不正确或已存在", {
+            icon: 2,
+            title: "错误"
+        });
+    } else if (msg == "uRootError") {
+        layer.alert("超级管理员用户不可修改或删除", {
+            icon: 2,
+            title: "错误"
+        });
     } else if (msg == "nullError") {
         layer.alert("关键项不能为空", {
             icon: 2,

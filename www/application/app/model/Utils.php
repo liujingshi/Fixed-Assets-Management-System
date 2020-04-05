@@ -4,24 +4,46 @@ namespace app\app\model;
 use think\Session;
 use think\Cookie;
 use app\app\model\Constant;
+use app\common\model\User;
+use app\common\model\Person;
 
 class Utils {
 
+    /**
+     * 判断用户是否已经登录
+     */
     public static function userAlreadyLogin() {
-        if (Session::has(Constant::USERLOGINSTATUSSESSIONKEY) && Session::get(Constant::USERLOGINSTATUSSESSIONKEY) == Constant::USERLOGIN) {
-            Cookie::set(Constant::USERLOGINSTATUSCOOKIEKEY, Constant::USERLOGIN, 300);
-            return true;
-        } else if (Cookie::has(Constant::USERLOGINSTATUSCOOKIEKEY) && Cookie::get(Constant::USERLOGINSTATUSCOOKIEKEY) == Constant::USERLOGIN) {
-            Session::set(Constant::USERLOGINSTATUSSESSIONKEY, Constant::USERLOGIN);
+        if (Session::has(Constant::USERLOGINSTATUS) && Session::get(Constant::USERLOGINSTATUS) == Constant::USERLOGIN) {
             return true;
         } else {
             return false;
         }
     }
 
+    /**
+     * 登出
+     */
     public static function logout() {
-        Cookie::set(Constant::USERLOGINSTATUSCOOKIEKEY, Constant::USERLOGOUT, -1);
-        Session::set(Constant::USERLOGINSTATUSSESSIONKEY, Constant::USERLOGOUT);
+        Session::set(Constant::USERLOGINSTATUS, Constant::USERLOGOUT);
+    }
+
+    /**
+     * 获取已登录的用户信息
+     */
+    public static function getUserinfo() {
+        $user = new User(Session::get(Constant::USERID));
+        $pId = $user->getP_id();
+        $uName = $user->getU_phone();
+        if ($pId > 0) {
+            $person = new Person($pId);
+            $uName = $person->getP_name();
+        }
+        $userinfo = [
+            "uName" => $uName,
+            "uHead" => $user->getU_head(),
+            "powerNo" => $user->getPower_no()
+        ];
+        return $userinfo;
     }
 
     public static function returnCode($code) {

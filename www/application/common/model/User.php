@@ -10,11 +10,40 @@ class User {
     private $mainKeyValue = "";
 
     public static function getAll() {
-        return Db::name(self::$className)->select();
+        return Db::name(self::$className)->order(self::$mainKey)->select();
+    }
+
+    public static function getAllText() {
+        $sql = "select * from fams_user u, fams_user_power power, fams_person p ";
+        $sql .= "where u.power_no = power.power_no and u.p_id = p.p_id ";
+        $sql .= "order by u.u_id";
+        return Db::query($sql);
     }
 
     public static function getByPage($limit, $page) {
-        return Db::name(self::$className)->limit(($page-1)*$limit, $limit)->select();
+        return Db::name(self::$className)->order(self::$mainKey)->page($page, $limit)->select();
+    }
+
+    public static function getByPageText($limit, $page) {
+        $limitS = ($page-1)*$limit;
+        $sql = "select * from fams_user u, fams_user_power power, fams_person p ";
+        $sql .= "where u.power_no = power.power_no and u.p_id = p.p_id ";
+        $sql .= "order by u.u_id ";
+        $sql .= "limit {$limitS}, {$limit}";
+        return Db::query($sql);
+    }
+
+    public static function checkU_phone($uPhone) {
+        return Db::name(self::$className)->where("u_phone", $uPhone)->find();
+    }
+
+    public static function getU_idByU_phone($uPhone) {
+        $rst = Db::name(self::$className)->where("u_phone", $uPhone)->select();
+        if (count($rst) > 0) {
+            return $rst[0]['u_id'];
+        } else {
+            return 0;
+        }
     }
 
     public static function insert($dic) {
@@ -71,31 +100,31 @@ class User {
     }
 
 
-    public function getU_type() {
+    public function getU_openid() {
         $res = Db::name(User::$className)->where(User::$mainKey, $this->mainKeyValue)->select();
         try {
-            return $res[0]["u_type"];
+            return $res[0]["u_openid"];
         } catch (Exception $e) {
             return "";
         }
     }
 
-    public function setU_type($value) {
-        Db::name(User::$className)->where(User::$mainKey, $this->mainKeyValue)->update(["u_type" => $value]);
+    public function setU_openid($value) {
+        Db::name(User::$className)->where(User::$mainKey, $this->mainKeyValue)->update(["u_openid" => $value]);
     }
 
 
-    public function getU_password() {
+    public function getPower_no() {
         $res = Db::name(User::$className)->where(User::$mainKey, $this->mainKeyValue)->select();
         try {
-            return $res[0]["u_password"];
+            return $res[0]["power_no"];
         } catch (Exception $e) {
             return "";
         }
     }
 
-    public function setU_password($value) {
-        Db::name(User::$className)->where(User::$mainKey, $this->mainKeyValue)->update(["u_password" => $value]);
+    public function setPower_no($value) {
+        Db::name(User::$className)->where(User::$mainKey, $this->mainKeyValue)->update(["power_no" => $value]);
     }
 
 

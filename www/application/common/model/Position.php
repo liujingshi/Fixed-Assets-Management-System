@@ -10,11 +10,11 @@ class Position {
     private $mainKeyValue = "";
 
     public static function getAll() {
-        return Db::name(self::$className)->select();
+        return Db::name(self::$className)->order(self::$mainKey)->select();
     }
 
     public static function getByPage($limit, $page) {
-        return Db::name(self::$className)->limit(($page-1)*$limit, $limit)->select();
+        return Db::name(self::$className)->order(self::$mainKey)->page($page, $limit)->select();
     }
 
     public static function checkPos_no($posNo) {

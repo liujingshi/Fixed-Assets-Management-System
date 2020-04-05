@@ -5,9 +5,10 @@ use think\Controller;
 use app\app\model\Utils;
 use app\app\model\Constant;
 use app\common\model\Param;
-use app\common\model\Person;
+use app\common\model\User;
+use app\common\model\User_power;
 
-class Personmanage extends Controller {
+class Usermanage extends Controller {
 
     public function index() {
         if (Utils::userAlreadyLogin() && $this->powerTrue()) {
@@ -24,15 +25,15 @@ class Personmanage extends Controller {
     /**
      * table接口
      */
-    public function selectP() {
+    public function selectU() {
         if (Utils::userAlreadyLogin()) {
-            $persons = Person::getAll();
-            $personsByPage = Person::getByPageText(Param::get("limit"), Param::get("page"));
+            $users = User::getAll();
+            $usersByPage = User::getByPageText(Param::get("limit"), Param::get("page"));
             $result = [
                 "code" => 0,
                 "msg" => "",
-                "count" => count($persons),
-                "data" => $personsByPage
+                "count" => count($users),
+                "data" => $usersByPage
             ];
             return $result;
         } else {
@@ -41,26 +42,26 @@ class Personmanage extends Controller {
     }
 
     /**
-     * 得到所有人员
+     * 得到所有权限
      */
-    public function personsData() {
+    public function powersData() {
         if (Utils::userAlreadyLogin()) {
-            return json_encode(Person::getAll());
+            return json_encode(User_power::getAll());
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
         }
     }
 
     /**
-     * 添加人员
+     * 添加用户
      */
-    public function insertP() {
+    public function insertU() {
         if (Utils::userAlreadyLogin()) {
             $co = $this->checkOnlyAndNull();
             if ($co['code'] == 0) {
                 return json_encode($co);
             }
-            Person::insert($this->getFields());
+            User::insert($this->getFields());
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -68,16 +69,16 @@ class Personmanage extends Controller {
     }
 
     /**
-     * 修改人员
+     * 修改用户
      */
-    public function updateP() {
+    public function updateU() {
         if (Utils::userAlreadyLogin()) {
             $co = $this->checkOnlyAndNull();
             if ($co['code'] == 0) {
                 return json_encode($co);
             }
-            $p = new Person(Param::get("pId"));
-            $p->update($this->getFields());
+            $u = new User(Param::get("uId"));
+            $u->update($this->getFields());
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -85,14 +86,14 @@ class Personmanage extends Controller {
     }
 
     /**
-     * 批量删除人员
+     * 批量删除用户
      */
-    public function deletePs() {
+    public function deleteUs() {
         if (Utils::userAlreadyLogin()) {
             $datas = json_decode(Param::get("data"), true);
             foreach ($datas as $data) {
-                if ($data['p_id'] != "" && $data['p_id'] > 1) {
-                    $p = new Person($data['p_id']);
+                if ($data['u_id'] != "" && $data['u_id'] > 1) {
+                    $p = new User($data['u_id']);
                     $p->delete();
                 }
             }
@@ -103,16 +104,16 @@ class Personmanage extends Controller {
     }
 
     /**
-     * 删除人员
+     * 删除用户
      */
-    public function deleteP() {
+    public function deleteU() {
         if (Utils::userAlreadyLogin()) {
-            $pId = Param::get("pId");
-            if ($pId != "" && $pId < 2) {
-                return Utils::returnMsg(0, "pRootError");
+            $uId = Param::get("uId");
+            if ($uId != "" && $uId < 2) {
+                return Utils::returnMsg(0, "uRootError");
             }
-            $p = new Person($pId);
-            $p->delete();
+            $u = new User($uId);
+            $u->delete();
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -124,13 +125,11 @@ class Personmanage extends Controller {
      */
     private function getFields() {
         $result = [
-            "p_no" => Param::get("pNo"),
-            "dep_id" => Param::get("depId"),
-            "pos_id" => Param::get("posId"),
-            "p_name" => Param::get("pName"),
-            "p_sex" => Param::get("pSex"),
-            "p_email" => Param::get("pEmail"),
-            "p_ic" => Param::get("pIc")
+            "p_id" => Param::get("pId"),
+            "u_phone" => Param::get("uPhone"),
+            "power_no" => Param::get("powerNo"),
+            "u_head" => Param::get("uHead"),
+            "u_money" => Param::get("uMoney")
         ];
         return $result;
     }
@@ -139,26 +138,25 @@ class Personmanage extends Controller {
      * 检查唯一字段
      */
     private function checkOnlyAndNull() {
-        $pNo = Param::get("pNo");
-        $pId = Param::get("pId");
-        if ($pId != "" && $pId < 2) {
-            return Utils::returnMsg(0, "pRootError");
+        $uPhone = Param::get("uPhone");
+        $uId = Param::get("uId");
+        if ($uId != "" && $uId < 2) {
+            return Utils::returnMsg(0, "uRootError");
         }
-        if (Param::get("depId") < 2) {
-            return Utils::returnMsg(0, "pUpDepIdError");
+        if (!preg_match("/^1[34578]\d{9}$/", $uPhone)) {
+            return Utils::returnMsg(0, "uPhoneError");
         }
-        if (Person::checkP_no($pNo)) {
-            if ($pId == "") {
-                return Utils::returnMsg(0, "pNoError");
+        if (User::checkU_phone($uPhone)) {
+            if ($uId == "") {
+                return Utils::returnMsg(0, "uPhoneError");
             } else {
-                $p = new Person($pId);
-                if ($p->getP_no() != $pNo) {
-                    return Utils::returnMsg(0, "pNoError");
+                $u = new User($uId);
+                if ($u->getU_phone() != $uPhone) {
+                    return Utils::returnMsg(0, "uPhoneError");
                 }
             }
-            
         }
-        if (Param::get("pNo") == "" || Param::get("pName") == "" || Param::get("depId") == "" || Param::get("posId") == "") {
+        if (Param::get("uPhone") == "" || Param::get("pId") == "" || Param::get("powerNo") == "") {
             return Utils::returnMsg(0, "nullError");
         }
         return Utils::returnCode(1);

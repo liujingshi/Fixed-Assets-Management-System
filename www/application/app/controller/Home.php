@@ -8,11 +8,15 @@ use app\app\model\Constant;
 class Home extends Controller {
 
     public function index() {
-        if (Utils::userAlreadyLogin()) {
-            return view();
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
+            return view('index', Utils::getUserinfo());
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
         }
+    }
+
+    private function powerTrue() {
+        return true;
     }
 
     public function logout() {

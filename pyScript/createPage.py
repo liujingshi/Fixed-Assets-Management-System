@@ -11,15 +11,20 @@ namespace app\\app\\controller;
 use think\\Controller;
 use app\\app\\model\\Utils;
 use app\\app\\model\\Constant;
+use app\\common\\model\\Param;
 
 class {0} extends Controller {{
 
     public function index() {{
-        if (Utils::userAlreadyLogin()) {{
-            return view();
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {{
+            return view('index', Utils::getUserinfo());
         }} else {{
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
         }}
+    }}
+
+    private function powerTrue() {{
+        return true;
     }}
     
 }}
@@ -29,12 +34,19 @@ class {0} extends Controller {{
 
 def createViewFileContent(name):
     content = """{{[extend name="common@base" /]}}
-{{[block name="title"]}}{{[/block]}}
+{{[block name="title"]}} - {{[/block]}}
 {{[block name="css"]}}{{[/block]}}
 {{[block name="content"]}}{{[/block]}}
 {{[block name="js"]}}
 <script>
-    update_navs('{0}');
+    var pageName = "{0}";
+    var pageUrl = "/app/" + pageName + "/";
+    update_navs(pageName);
+    setLocal([], "");
+    var layer;
+    layui.use(['layer'], function () {{ // 加载layui
+        layer = layui.layer;
+    }});
 </script>
 {{[/block]}}
 
