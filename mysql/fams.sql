@@ -11,7 +11,7 @@
  Target Server Version : 100410
  File Encoding         : 65001
 
- Date: 04/04/2020 21:20:36
+ Date: 05/04/2020 16:08:34
 */
 
 SET NAMES utf8mb4;
@@ -112,17 +112,40 @@ CREATE TABLE `fams_user`  (
   `u_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键 自动增长',
   `p_id` int(11) NOT NULL COMMENT '人员表主键 与person表关联',
   `u_phone` varchar(16) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户电话 用于登录 短信验证码',
-  `u_type` int(11) NOT NULL DEFAULT 0 COMMENT '用户类型 与权限有关 默认0最高级系统管理员',
-  `u_password` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '用户密码 默认空字符串',
+  `u_openid` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '微信openid',
+  `power_no` varchar(16) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT 'VISIT' COMMENT '用户权限编号 与user_power表关联',
   `u_head` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '用户头像 默认空字符串',
   `u_money` int(11) NOT NULL DEFAULT 0 COMMENT '用户余额 默认0',
   PRIMARY KEY (`u_id`) USING BTREE,
-  UNIQUE INDEX `only`(`p_id`, `u_phone`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+  UNIQUE INDEX `only`(`u_phone`, `u_openid`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fams_user
 -- ----------------------------
-INSERT INTO `fams_user` VALUES (1, 1, '15541850199', 0, '', '', 0);
+INSERT INTO `fams_user` VALUES (1, 1, '15541850199', '', 'SVIP', 'las la-user-secret', 0);
+INSERT INTO `fams_user` VALUES (2, 4, '13456789100', '', 'USER', 'las la-user-graduate', 2);
+INSERT INTO `fams_user` VALUES (6, 10, '13842503687', '', 'VISIT', 'lab la-teamspeak', 666);
+INSERT INTO `fams_user` VALUES (4, 6, '19818809499', '', 'VIP', 'las la-user-ninja', 0);
+
+-- ----------------------------
+-- Table structure for fams_user_power
+-- ----------------------------
+DROP TABLE IF EXISTS `fams_user_power`;
+CREATE TABLE `fams_user_power`  (
+  `power_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '权限主键 自动增长',
+  `power_no` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '权限编号 唯一',
+  `power_name` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '权限名 唯一',
+  PRIMARY KEY (`power_id`) USING BTREE,
+  UNIQUE INDEX `only`(`power_no`, `power_name`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of fams_user_power
+-- ----------------------------
+INSERT INTO `fams_user_power` VALUES (1, 'SVIP', '系统管理员');
+INSERT INTO `fams_user_power` VALUES (2, 'VIP', '普通管理员');
+INSERT INTO `fams_user_power` VALUES (3, 'USER', '普通用户');
+INSERT INTO `fams_user_power` VALUES (4, 'VISIT', '游客');
 
 SET FOREIGN_KEY_CHECKS = 1;
