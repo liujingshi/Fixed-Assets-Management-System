@@ -7,6 +7,22 @@
     "up": "",
     "son": []
 }, {
+    "title": "资产管理",
+    "icon": "las la-desktop",
+    "pull": true,
+    "name": "assetmanage",
+    "active": false,
+    "up": "",
+    "son": [{
+        "title": "资产入库",
+        "icon": "las la-sign-in-alt",
+        "pull": false,
+        "name": "assetimport",
+        "active": false,
+        "up": "assetmanage",
+        "son": []
+    }]
+}, {
     "title": "系统管理",
     "icon": "lab la-windows",
     "pull": true,
@@ -50,6 +66,14 @@
         "icon": "las la-user",
         "pull": false,
         "name": "usermanage",
+        "active": false,
+        "up": "systemmanage",
+        "son": []
+    }, {
+        "title": "查看日志",
+        "icon": "las la-file-excel",
+        "pull": false,
+        "name": "syatemlog",
         "active": false,
         "up": "systemmanage",
         "son": []

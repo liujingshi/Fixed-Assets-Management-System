@@ -11,6 +11,7 @@ namespace app\\app\\controller;
 use think\\Controller;
 use app\\app\\model\\Utils;
 use app\\app\\model\\Constant;
+use app\\app\\model\\Logging;
 use app\\common\\model\\Param;
 
 class {0} extends Controller {{

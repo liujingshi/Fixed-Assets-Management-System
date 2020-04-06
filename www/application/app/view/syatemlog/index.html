@@ -1,0 +1,76 @@
+{[extend name="common@base" /]}
+{[block name="title"]}系统日志 - {[/block]}
+{[block name="css"]}{[/block]}
+{[block name="content"]}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="home-panel">
+                <div class="home-panel-header">
+                    <i class="las la-file-excel"></i>
+                    <span>系统日志</span>
+                </div>
+                <div class="home-panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table id="table" lay-filter="table"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{[/block]}
+{[block name="js"]}
+<script>
+    var pageName = "syatemlog";
+    var pageUrl = "/app/" + pageName + "/";
+    update_navs(pageName);
+    setLocal(["系统管理"], "系统日志");
+    var layer, table;
+    layui.use(['layer', 'table'], function () { // 加载layui
+        layer = layui.layer;
+        table = layui.table;
+
+        table.render({ // 创建表格
+            elem: '#table',
+            height: 'full-260',
+            url: pageUrl + 'selectLog',
+            page: true,
+            limit: 10,
+            cols: [
+                [ // 表头
+                    {
+                        field: 'log_action_name',
+                        title: '操作',
+                        width: "15%"
+                    }, {
+                        field: 'u_phone',
+                        title: '操作者手机号',
+                        width: "15%"
+                    }, {
+                        field: 'p_name',
+                        title: '操作者姓名',
+                        width: "15%"
+                    }, {
+                        field: 'log_datetime',
+                        title: '操作时间',
+                        width: "30%"
+                    }, {
+                        field: 'table_name',
+                        title: '影响的表',
+                        width: "15%"
+                    }, {
+                        field: 'common_id',
+                        title: '影响的主键',
+                        width: "10%"
+                    }
+                ]
+            ]
+        });
+    });
+</script>
+{[/block]}
+
+    

@@ -4,6 +4,7 @@ namespace app\app\controller;
 use think\Controller;
 use app\app\model\Utils;
 use app\app\model\Constant;
+use app\app\model\Logging;
 use app\common\model\Department;
 use app\common\model\Param;
 
@@ -120,7 +121,8 @@ class Departmentmanage extends Controller {
             if ($co['code'] == 0) {
                 return json_encode($co);
             }
-            Department::insert($this->getFields());
+            $commonId = Department::insert($this->getFields());
+            Logging::insertDep($commonId);
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -137,6 +139,8 @@ class Departmentmanage extends Controller {
                 return json_encode($co);
             }
             $dep = new Department(Param::get("depId"));
+            $commonId = Param::get("depId");
+            Logging::updateDep($commonId);
             $dep->update($this->getFields());
             return json_encode(Utils::returnCode(1));
         } else {
@@ -155,6 +159,8 @@ class Departmentmanage extends Controller {
             }
             $dep = new Department($depId);
             $dep->delete();
+            $commonId = $depId;
+            Logging::deleteDep($commonId);
             $this->deleteDepSon($depId);
             return json_encode(Utils::returnCode(1));
         } else {
@@ -170,6 +176,8 @@ class Departmentmanage extends Controller {
         foreach ($deps as $dep) {
             $d = new Department($dep['dep_id']);
             $d->delete();
+            $commonId = $dep['dep_id'];
+            Logging::deleteDep($commonId);
             $this->deleteDepSon($dep['dep_id']);
         }
     }

@@ -7,38 +7,47 @@ class User {
 
     public static $className = "user";
     public static $mainKey = "u_id";
+    public static $existKey = "u_exist";
     private $mainKeyValue = "";
 
     public static function getAll() {
+        return Db::name(self::$className)->where(self::$existKey, 1)->order(self::$mainKey)->select();
+    }
+
+    public static function getAllWhitNotExist() {
         return Db::name(self::$className)->order(self::$mainKey)->select();
     }
 
     public static function getAllText() {
         $sql = "select * from fams_user u, fams_user_power power, fams_person p ";
-        $sql .= "where u.power_no = power.power_no and u.p_id = p.p_id ";
+        $sql .= "where u.power_no = power.power_no and u.p_id = p.p_id and u.u_exist = 1 ";
         $sql .= "order by u.u_id";
         return Db::query($sql);
     }
 
     public static function getByPage($limit, $page) {
+        return Db::name(self::$className)->where(self::$existKey, 1)->order(self::$mainKey)->page($page, $limit)->select();
+    }
+
+    public static function getByPageWhitNotExist($limit, $page) {
         return Db::name(self::$className)->order(self::$mainKey)->page($page, $limit)->select();
     }
 
     public static function getByPageText($limit, $page) {
         $limitS = ($page-1)*$limit;
         $sql = "select * from fams_user u, fams_user_power power, fams_person p ";
-        $sql .= "where u.power_no = power.power_no and u.p_id = p.p_id ";
+        $sql .= "where u.power_no = power.power_no and u.p_id = p.p_id and u.u_exist = 1 ";
         $sql .= "order by u.u_id ";
         $sql .= "limit {$limitS}, {$limit}";
         return Db::query($sql);
     }
 
     public static function checkU_phone($uPhone) {
-        return Db::name(self::$className)->where("u_phone", $uPhone)->find();
+        return Db::name(self::$className)->where(["u_phone" => $uPhone, self::$existKey => 1])->find();
     }
 
     public static function getU_idByU_phone($uPhone) {
-        $rst = Db::name(self::$className)->where("u_phone", $uPhone)->select();
+        $rst = Db::name(self::$className)->where(["u_phone" => $uPhone, self::$existKey => 1])->select();
         if (count($rst) > 0) {
             return $rst[0]['u_id'];
         } else {
@@ -47,7 +56,7 @@ class User {
     }
 
     public static function insert($dic) {
-        Db::name(self::$className)->insert($dic);
+        return Db::name(self::$className)->insertGetId($dic);
     }
 
     public function __construct($mkl) {
@@ -64,7 +73,7 @@ class User {
     }
 
     public function delete() {
-        Db::name(User::$className)->delete($this->mainKeyValue);
+        Db::name(User::$className)->where(User::$mainKey, $this->mainKeyValue)->update([User::$existKey => 0]);
     }
 
     public function update($dic) {
@@ -153,6 +162,20 @@ class User {
 
     public function setU_money($value) {
         Db::name(User::$className)->where(User::$mainKey, $this->mainKeyValue)->update(["u_money" => $value]);
+    }
+
+
+    public function getU_exist() {
+        $res = Db::name(User::$className)->where(User::$mainKey, $this->mainKeyValue)->select();
+        try {
+            return $res[0]["u_exist"];
+        } catch (Exception $e) {
+            return "";
+        }
+    }
+
+    public function setU_exist($value) {
+        Db::name(User::$className)->where(User::$mainKey, $this->mainKeyValue)->update(["u_exist" => $value]);
     }
 
 

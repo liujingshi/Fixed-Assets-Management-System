@@ -18,7 +18,7 @@ class User_power {
     }
 
     public static function insert($dic) {
-        Db::name(self::$className)->insert($dic);
+        return Db::name(self::$className)->insertGetId($dic);
     }
 
     public function __construct($mkl) {

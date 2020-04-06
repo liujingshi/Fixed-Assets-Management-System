@@ -7,38 +7,47 @@ class Person {
 
     public static $className = "person";
     public static $mainKey = "p_id";
+    public static $existKey = "p_exist";
     private $mainKeyValue = "";
 
     public static function getAll() {
+        return Db::name(self::$className)->where(self::$existKey, 1)->order(self::$mainKey)->select();
+    }
+
+    public static function getAllWhitNotExist() {
         return Db::name(self::$className)->order(self::$mainKey)->select();
     }
 
     public static function getAllText() {
         $sql = "select * from fams_person p, fams_department dep, fams_position pos ";
-        $sql .= "where p.dep_id = dep.dep_id and p.pos_id = pos.pos_id ";
+        $sql .= "where p.dep_id = dep.dep_id and p.pos_id = pos.pos_id and p.p_exist = 1 ";
         $sql .= "order by p.p_id";
         return Db::query($sql);
     }
 
     public static function getByPage($limit, $page) {
-        return Db::name(self::$className)->order(self::$mainKey)->page($page, $limit)->select();
+        return Db::name(self::$className)->where(self::$existKey, 1)->order(self::$mainKey)->page($page, $limit)->select();
     }
 
     public static function getByPageText($limit, $page) {
         $limitS = ($page-1)*$limit;
         $sql = "select * from fams_person p, fams_department dep, fams_position pos ";
-        $sql .= "where p.dep_id = dep.dep_id and p.pos_id = pos.pos_id ";
+        $sql .= "where p.dep_id = dep.dep_id and p.pos_id = pos.pos_id and p.p_exist = 1 ";
         $sql .= "order by p.p_id ";
         $sql .= "limit {$limitS}, {$limit}";
         return Db::query($sql);
     }
 
     public static function checkP_no($pNo) {
-        return Db::name(self::$className)->where("p_no", $pNo)->find();
+        return Db::name(self::$className)->where(["p_no" => $pNo, self::$existKey => 1])->find();
+    }
+
+    public static function getByPageWhitNotExist($limit, $page) {
+        return Db::name(self::$className)->order(self::$mainKey)->page($page, $limit)->select();
     }
 
     public static function insert($dic) {
-        Db::name(self::$className)->insert($dic);
+        return Db::name(self::$className)->insertGetId($dic);
     }
 
     public function __construct($mkl) {
@@ -55,7 +64,7 @@ class Person {
     }
 
     public function delete() {
-        Db::name(Person::$className)->delete($this->mainKeyValue);
+        Db::name(Person::$className)->where(Person::$mainKey, $this->mainKeyValue)->update([Person::$existKey => 0]);
     }
 
     public function update($dic) {
@@ -133,20 +142,6 @@ class Person {
     }
 
 
-    public function getP_birthday() {
-        $res = Db::name(Person::$className)->where(Person::$mainKey, $this->mainKeyValue)->select();
-        try {
-            return $res[0]["p_birthday"];
-        } catch (Exception $e) {
-            return "";
-        }
-    }
-
-    public function setP_birthday($value) {
-        Db::name(Person::$className)->where(Person::$mainKey, $this->mainKeyValue)->update(["p_birthday" => $value]);
-    }
-
-
     public function getP_ic() {
         $res = Db::name(Person::$className)->where(Person::$mainKey, $this->mainKeyValue)->select();
         try {
@@ -172,6 +167,20 @@ class Person {
 
     public function setP_email($value) {
         Db::name(Person::$className)->where(Person::$mainKey, $this->mainKeyValue)->update(["p_email" => $value]);
+    }
+
+
+    public function getP_exist() {
+        $res = Db::name(Person::$className)->where(Person::$mainKey, $this->mainKeyValue)->select();
+        try {
+            return $res[0]["p_exist"];
+        } catch (Exception $e) {
+            return "";
+        }
+    }
+
+    public function setP_exist($value) {
+        Db::name(Person::$className)->where(Person::$mainKey, $this->mainKeyValue)->update(["p_exist" => $value]);
     }
 
 

@@ -27,4 +27,9 @@ class Constant {
     // 主页面path
     public const HOMEPATH = "/app/home/index";
 
+    /**
+     * 数据库操作类namespace
+     */
+    public const DBNAMESPACE = "app\\common\\model\\";
+
 }

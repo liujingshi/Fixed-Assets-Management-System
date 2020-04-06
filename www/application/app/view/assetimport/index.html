@@ -1,0 +1,18 @@
+{[extend name="common@base" /]}
+{[block name="title"]}资产入库 - {[/block]}
+{[block name="css"]}{[/block]}
+{[block name="content"]}{[/block]}
+{[block name="js"]}
+<script>
+    var pageName = "assetimport";
+    var pageUrl = "/app/" + pageName + "/";
+    update_navs(pageName);
+    setLocal(["资产管理"], "资产入库");
+    var layer;
+    layui.use(['layer'], function () { // 加载layui
+        layer = layui.layer;
+    });
+</script>
+{[/block]}
+
+    

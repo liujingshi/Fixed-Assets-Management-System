@@ -4,6 +4,7 @@ namespace app\app\controller;
 use think\Controller;
 use app\app\model\Utils;
 use app\app\model\Constant;
+use app\app\model\Logging;
 use app\common\model\Param;
 use app\common\model\User;
 use app\common\model\User_power;
@@ -67,7 +68,8 @@ class Usermanage extends Controller {
             if ($co['code'] == 0) {
                 return json_encode($co);
             }
-            User::insert($this->getFields());
+            $commonId = User::insert($this->getFields());
+            Logging::insertU($commonId);
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -85,6 +87,8 @@ class Usermanage extends Controller {
             }
             $u = new User(Param::get("uId"));
             $u->update($this->getFields());
+            $commonId = Param::get("uId");
+            Logging::updateU($commonId);
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -101,6 +105,8 @@ class Usermanage extends Controller {
                 if ($data['u_id'] != "" && $data['u_id'] > 1) {
                     $p = new User($data['u_id']);
                     $p->delete();
+                    $commonId = $data['u_id'];
+                    Logging::deleteU($commonId);
                 }
             }
             return json_encode(Utils::returnCode(1));
@@ -120,6 +126,8 @@ class Usermanage extends Controller {
             }
             $u = new User($uId);
             $u->delete();
+            $commonId = $uId;
+            Logging::deleteU($commonId);
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);

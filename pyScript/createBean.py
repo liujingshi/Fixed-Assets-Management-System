@@ -159,7 +159,7 @@ class SQLgo(object):
         return result
 
 
-def createStaticContent(name, field, getterAndSetter):
+def createStaticContent(name, field, exist, getterAndSetter):
     nameCap = name.capitalize()
     staticContent = '''<?php
 namespace app\\common\\model;
@@ -170,18 +170,27 @@ class {0} {{
 
     public static $className = "{1}";
     public static $mainKey = "{2}";
+    public static $existKey = "{4}";
     private $mainKeyValue = "";
 
     public static function getAll() {{
+        return Db::name(self::$className)->where(self::$existKey, 1)->order(self::$mainKey)->select();
+    }}
+
+    public static function getAllWhitNotExist() {{
         return Db::name(self::$className)->order(self::$mainKey)->select();
     }}
 
     public static function getByPage($limit, $page) {{
+        return Db::name(self::$className)->where(self::$existKey, 1)->order(self::$mainKey)->page($page, $limit)->select();
+    }}
+
+    public static function getByPageWhitNotExist($limit, $page) {{
         return Db::name(self::$className)->order(self::$mainKey)->page($page, $limit)->select();
     }}
 
     public static function insert($dic) {{
-        Db::name(self::$className)->insert($dic);
+        return Db::name(self::$className)->insertGetId($dic);
     }}
 
     public function __construct($mkl) {{
@@ -198,7 +207,7 @@ class {0} {{
     }}
 
     public function delete() {{
-        Db::name({0}::$className)->delete($this->mainKeyValue);
+        Db::name({0}::$className)->where({0}::$mainKey, $this->mainKeyValue)->update([{0}::$existKey => 0]);
     }}
 
     public function update($dic) {{
@@ -207,7 +216,7 @@ class {0} {{
 
     {3}
 }}
-'''.format(nameCap, name, field, getterAndSetter)
+'''.format(nameCap, name, field, getterAndSetter, exist)
     return staticContent
 
 
@@ -262,7 +271,7 @@ def main():
             except Exception as e:
                 print(e)
             getterAndSetter = createGetterAndSetter(field, classNameCap)
-            fileContent = createStaticContent(className, field[0]['Field'], getterAndSetter)
+            fileContent = createStaticContent(className, field[0]['Field'], field[::-1][0]['Field'], getterAndSetter)
             nF = open(fileName, 'w', encoding='UTF-8')
             nF.write(fileContent)
             nF.close()

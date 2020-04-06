@@ -4,6 +4,7 @@ namespace app\app\controller;
 use think\Controller;
 use app\app\model\Utils;
 use app\app\model\Constant;
+use app\app\model\Logging;
 use app\common\model\Param;
 use app\common\model\Position;
 
@@ -66,7 +67,8 @@ class Positionmanage extends Controller {
             if ($co['code'] == 0) {
                 return json_encode($co);
             }
-            Position::insert($this->getFields());
+            $commonId = Position::insert($this->getFields());
+            Logging::insertPos($commonId);
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -84,6 +86,8 @@ class Positionmanage extends Controller {
             }
             $pos = new Position(Param::get("posId"));
             $pos->update($this->getFields());
+            $commonId = Param::get("posId");
+            Logging::updatePos($commonId);
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -100,6 +104,8 @@ class Positionmanage extends Controller {
                 if ($data['pos_id'] != "" && $data['pos_id'] > 1) {
                     $pos = new Position($data['pos_id']);
                     $pos->delete();
+                    $commonId = $data['pos_id'];
+                    Logging::deletePos($commonId);
                 }
             }
             return json_encode(Utils::returnCode(1));
@@ -119,6 +125,8 @@ class Positionmanage extends Controller {
             }
             $pos = new Position($posId);
             $pos->delete();
+            $commonId = $posId;
+            Logging::deletePos($commonId);
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);

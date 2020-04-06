@@ -4,6 +4,7 @@ namespace app\app\controller;
 use think\Controller;
 use app\app\model\Utils;
 use app\app\model\Constant;
+use app\app\model\Logging;
 use app\common\model\Param;
 use app\common\model\Person;
 
@@ -66,7 +67,8 @@ class Personmanage extends Controller {
             if ($co['code'] == 0) {
                 return json_encode($co);
             }
-            Person::insert($this->getFields());
+            $commonId = Person::insert($this->getFields());
+            Logging::insertP($commonId);
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -84,6 +86,8 @@ class Personmanage extends Controller {
             }
             $p = new Person(Param::get("pId"));
             $p->update($this->getFields());
+            $commonId = Param::get("pId");
+            Logging::updateP($commonId);
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -100,6 +104,8 @@ class Personmanage extends Controller {
                 if ($data['p_id'] != "" && $data['p_id'] > 1) {
                     $p = new Person($data['p_id']);
                     $p->delete();
+                    $commonId = $data['p_id'];
+                    Logging::deleteP($commonId);
                 }
             }
             return json_encode(Utils::returnCode(1));
@@ -119,6 +125,8 @@ class Personmanage extends Controller {
             }
             $p = new Person($pId);
             $p->delete();
+            $commonId = $pId;
+            Logging::deleteP($commonId);
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
