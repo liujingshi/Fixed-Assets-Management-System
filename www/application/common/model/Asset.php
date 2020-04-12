@@ -26,6 +26,10 @@ class Asset {
         return Db::name(self::$className)->order(self::$mainKey)->page($page, $limit)->select();
     }
 
+    public static function checkAs_no($asNo) {
+        return Db::name(self::$className)->where(["as_no" => $asNo, self::$existKey => 1])->find();
+    }
+
     public static function insert($dic) {
         return Db::name(self::$className)->insertGetId($dic);
     }

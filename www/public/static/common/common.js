@@ -50,6 +50,11 @@ function alertError(msg) {  // 错误提醒
             icon: 2,
             title: "错误"
         });
+    } else if (msg == "cateNoError") {
+        layer.alert("分类编号已存在", {
+            icon: 2,
+            title: "错误"
+        });
     } else if (msg == "pRootError") {
         layer.alert("超级管理员不可修改或删除", {
             icon: 2,

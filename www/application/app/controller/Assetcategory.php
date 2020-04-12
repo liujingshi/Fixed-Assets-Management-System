@@ -4,11 +4,11 @@ namespace app\app\controller;
 use think\Controller;
 use app\app\model\Utils;
 use app\app\model\Constant;
+use app\app\model\Logging;
 use app\common\model\Param;
-use app\commom\model\Asset;
-use app\common\model\Status;
+use app\common\model\Category;
 
-class Assetimport extends Controller {
+class Assetcategory extends Controller {
 
     public function index() {
         if (Utils::userAlreadyLogin() && $this->powerTrue()) {
@@ -31,15 +31,15 @@ class Assetimport extends Controller {
     /**
      * table接口
      */
-    public function selectAs() {
+    public function selectCate() {
         if (Utils::userAlreadyLogin() && $this->powerTrue()) {
-            $assets = Asset::getAll();
-            $assetsByPage = Asset::getByPageText(Param::get("limit"), Param::get("page"));
+            $categorys = Category::getAll();
+            $categorysByPage = Category::getByPage(Param::get("limit"), Param::get("page"));
             $result = [
                 "code" => 0,
                 "msg" => "",
-                "count" => count($assets),
-                "data" => $assetsByPage
+                "count" => count($categorys),
+                "data" => $categorysByPage
             ];
             return $result;
         } else {
@@ -48,41 +48,27 @@ class Assetimport extends Controller {
     }
 
     /**
-     * 得到所有状态
+     * 得到所有分类
      */
-    public function statusesData() {
+    public function categorysData() {
         if (Utils::userAlreadyLogin() && $this->powerTrue()) {
-            return json_encode(Status::getAll());
+            return json_encode(Category::getAll());
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
         }
     }
 
     /**
-     * 批量添加资产
+     * 添加分类
      */
-    public function insertAses() {
-        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
-            $num = Param::get("num");
-            $commonId = Asset::insert($this->getFields());
-            Logging::insertAs($commonId);
-            return json_encode(Utils::returnCode(1));
-        } else {
-            $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
-        }
-    }
-
-    /**
-     * 添加资产
-     */
-    public function insertAs() {
+    public function insertCate() {
         if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $co = $this->checkOnlyAndNull();
             if ($co['code'] == 0) {
                 return json_encode($co);
             }
-            $commonId = Asset::insert($this->getFields());
-            Logging::insertAs($commonId);
+            $commonId = Category::insert($this->getFields());
+            Logging::insertCate($commonId);
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -90,18 +76,18 @@ class Assetimport extends Controller {
     }
 
     /**
-     * 修改资产
+     * 修改分类
      */
-    public function updateAs() {
+    public function updateCate() {
         if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $co = $this->checkOnlyAndNull();
             if ($co['code'] == 0) {
                 return json_encode($co);
             }
-            $u = new User(Param::get("asId"));
-            $u->update($this->getFields());
-            $commonId = Param::get("asId");
-            Logging::updateAs($commonId);
+            $cate = new Category(Param::get("cateId"));
+            $cate->update($this->getFields());
+            $commonId = Param::get("cateId");
+            Logging::updateCate($commonId);
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -109,17 +95,17 @@ class Assetimport extends Controller {
     }
 
     /**
-     * 批量删除资产
+     * 批量删除分类
      */
-    public function deleteAses() {
+    public function deleteCates() {
         if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $datas = json_decode(Param::get("data"), true);
             foreach ($datas as $data) {
-                if ($data['as_id'] != "") {
-                    $as = new User($data['as_id']);
-                    $as->delete();
-                    $commonId = $data['as_id'];
-                    Logging::deleteAs($commonId);
+                if ($data['cate_id'] != "") {
+                    $cate = new Category($data['cate_id']);
+                    $cate->delete();
+                    $commonId = $data['cate_id'];
+                    Logging::deleteCate($commonId);
                 }
             }
             return json_encode(Utils::returnCode(1));
@@ -129,15 +115,15 @@ class Assetimport extends Controller {
     }
 
     /**
-     * 删除资产
+     * 删除分类
      */
-    public function deleteAs() {
+    public function deleteCate() {
         if (Utils::userAlreadyLogin() && $this->powerTrue()) {
-            $asId = Param::get("asId");
-            $as = new User($asId);
-            $as->delete();
-            $commonId = $asId;
-            Logging::deleteAs($commonId);
+            $cateId = Param::get("cateId");
+            $cate = new Category($cateId);
+            $cate->delete();
+            $commonId = $cateId;
+            Logging::deleteCate($commonId);
             return json_encode(Utils::returnCode(1));
         } else {
             $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
@@ -149,8 +135,8 @@ class Assetimport extends Controller {
      */
     private function getFields() {
         $result = [
-            "as_no" => Param::get("asNo"),
-            "as_name" => Param::get("asName")
+            "cate_no" => Param::get("cateNo"),
+            "cate_name" => Param::get("cateName")
         ];
         return $result;
     }
@@ -159,19 +145,20 @@ class Assetimport extends Controller {
      * 检查唯一字段
      */
     private function checkOnlyAndNull() {
-        $asNo = Param::get("asNo");
-        $asId = Param::get("asId");
-        if (Asset::checkAs_no($asNo)) {
-            if ($asId == "") {
-                return Utils::returnMsg(0, "asNoError");
+        $cateNo = Param::get("cateNo");
+        $cateId = Param::get("cateId");
+        if (Category::checkCate_no($cateNo)) {
+            if ($cateId == "") {
+                return Utils::returnMsg(0, "cateNoError");
             } else {
-                $as = new User($asId);
-                if ($as->getU_phone() != $asNo) {
-                    return Utils::returnMsg(0, "asNoError");
+                $cate = new Category($cateId);
+                if ($cate->getCate_no() != $cateNo) {
+                    return Utils::returnMsg(0, "cateNoError");
                 }
             }
+            
         }
-        if (Param::get("asNo") == "" || Param::get("asName") == "" || Param::get("cateId") || Param::get("powerNo") == "") {
+        if (Param::get("cateNo") == "" || Param::get("cateName") == "") {
             return Utils::returnMsg(0, "nullError");
         }
         return Utils::returnCode(1);

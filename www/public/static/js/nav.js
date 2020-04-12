@@ -21,6 +21,22 @@ var nav_left_data = [{
         "active": false,
         "up": "assetmanage",
         "son": []
+    }, {
+        "title": "设置",
+        "icon": "las la-cog",
+        "pull": true,
+        "name": "assetsetting",
+        "active": false,
+        "up": "assetmanage",
+        "son": [{
+            "title": "资产分类",
+            "icon": "las la-th-list",
+            "pull": false,
+            "name": "assetcategory",
+            "active": false,
+            "up": "assetsetting",
+            "son": []
+        }]
     }]
 }, {
     "title": "系统管理",

@@ -13942,3 +13942,52 @@
 [ sql ] [ SQL ] SHOW COLUMNS FROM `fams_log` [ RunTime:0.014306s ]
 [ sql ] [ SQL ] SELECT * FROM `fams_log` WHERE  `log_exist` = 1 ORDER BY `log_id` [ RunTime:0.001042s ]
 [ sql ] [ SQL ] select * from fams_log log, fams_log_category cate, fams_log_action act, fams_user u, fams_person p where log.log_category_no = 'SYSTEM' and log.log_category_no = cate.log_category_no and log.log_action_no = act.log_action_no and log.u_id = u.u_id and u.p_id = p.p_id and log.log_exist = 1 order by log.log_datetime desc limit 0, 10 [ RunTime:0.002377s ]
+---------------------------------------------------------------
+[ 2020-04-06T16:54:32+08:00 ] 0.0.0.0 GET www.ljs.com/app/syatemlog/selectLog?page=1&limit=60
+[运行时间：0.099761s] [吞吐率：10.02req/s] [内存消耗：250.62kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'syatemlog',
+    2 => 'selectLog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/syatemlog',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=7qo3slnr7a82m35kff9n8dfc2f',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '60',
+)
+[ info ] [ RUN ] app\app\controller\Syatemlog->selectLog[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Syatemlog.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011732s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.014928s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000939s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000710s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.014313s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000811s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000721s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000714s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_log` [ RunTime:0.013521s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_log` WHERE  `log_exist` = 1 ORDER BY `log_id` [ RunTime:0.000890s ]
+[ sql ] [ SQL ] select * from fams_log log, fams_log_category cate, fams_log_action act, fams_user u, fams_person p where log.log_category_no = 'SYSTEM' and log.log_category_no = cate.log_category_no and log.log_action_no = act.log_action_no and log.u_id = u.u_id and u.p_id = p.p_id and log.log_exist = 1 order by log.log_datetime desc limit 0, 60 [ RunTime:0.002247s ]

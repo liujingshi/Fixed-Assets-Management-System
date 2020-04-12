@@ -26,6 +26,10 @@ class Category {
         return Db::name(self::$className)->order(self::$mainKey)->page($page, $limit)->select();
     }
 
+    public static function checkCate_no($cateNo) {
+        return Db::name(self::$className)->where(["cate_no" => $cateNo, self::$existKey => 1])->find();
+    }
+
     public static function insert($dic) {
         return Db::name(self::$className)->insertGetId($dic);
     }

@@ -1,0 +1,234 @@
+{[extend name="common@base" /]}
+{[block name="title"]}资产分类管理 - {[/block]}
+{[block name="css"]}{[/block]}
+{[block name="content"]}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="home-panel">
+                <div class="home-panel-header">
+                    <i class="las la-th-list"></i>
+                    <span>资产分类管理</span>
+                </div>
+                <div class="home-panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table id="table" lay-filter="table"></table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-warning alert-dismissible fade show" style="display: none;" role="alert">
+                                <strong>小提示：</strong> 双击数据行进行编辑
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup" style="display: none;">
+    <form id="category_details_form" onsubmit="return false">
+        <input type="hidden" v-model="cateId">
+        <div class="form-group">
+            <label>分类编号<b style="color: red;">*</b></label>
+            <input type="text" class="form-control" v-model="cateNo">
+            <small class="form-text text-muted">分类编号是分类的唯一标识，可以使用英文和数字的结合，也可以使纯英文和存数字，当然，下划线也是可以的，但是尽量不要使用中文。</small>
+        </div>
+        <div class="form-group">
+            <label>分类名称<b style="color: red;">*</b></label>
+            <input type="text" class="form-control" v-model="cateName">
+            <small class="form-text text-muted">分类名称就是分类的名字，这里就可以使用中文了。</small>
+        </div>
+        <button class="btn btn-success" @click="updateCate" v-show="editCate">保存修改</button>
+        <button class="btn btn-danger" @click="deleteCate" v-show="editCate">删除该分类</button>
+        <button class="btn btn-primary" @click="insertCate" v-show="addCate">确认添加</button>
+    </form>
+</div>
+{[/block]}
+{[block name="js"]}
+<script type="text/html" id="tableToolbar">
+    <div class="layui-btn-container">
+        <button class="layui-btn btn btn-info" lay-event="insertCate">添加新分类</button>
+        <button class="layui-btn btn btn-danger" lay-event="deleteCates">删除选中分类</button>
+    </div>
+</script>
+<script>
+    var pageName = "assetcategory";
+    var pageUrl = "/app/" + pageName + "/";
+    update_navs(pageName);
+    setLocal(["资产管理", "设置"], "资产分类管理");
+    var layer, table, popupObj;
+    var firstClick = true;
+    layui.use(['layer', 'table'], function () { // 加载layui
+        layer = layui.layer;
+        table = layui.table;
+
+        table.render({ // 创建表格
+            elem: '#table',
+            height: 'full-260',
+            url: pageUrl + 'selectCate',
+            page: true,
+            toolbar: '#tableToolbar',
+            limit: 10,
+            cols: [
+                [ // 表头
+                    {
+                        type: "checkbox",
+                        width: "5%"
+                    },
+                    {
+                        field: 'cate_no',
+                        title: '分类编号',
+                        width: "45%"
+                    }, {
+                        field: 'cate_name',
+                        title: '分类名称',
+                        width: "50%"
+                    }
+                ]
+            ]
+        });
+
+        table.on('toolbar(table)', function (obj) { // 表头事件监听
+            var checkStatus = table.checkStatus(obj.config.id);
+            switch (obj.event) {
+                case 'insertCate':
+                    clearFormData();
+                    categoryDetailsFormVueObj.addCate = true;
+                    ljspopup({
+                        el: "#popup",
+                        title: "分类管理"
+                    });
+                    break;
+                case 'deleteCates':
+                    var checkStatus = table.checkStatus('table')
+                        ,data = checkStatus.data;
+                    layer.confirm('确定要删除选中的这'+data.length+'个分类吗？', {
+                        title: "提醒",
+                        btn: ['确定', '取消'],
+                    }, function (index) {
+                        cateRequest("deleteCates", {data: JSON.stringify(data)}, "分类删除成功");
+                        layer.close(index);
+                    }, function (index) {
+                        layer.close(index);
+                    });
+                    break;
+            };
+        });
+
+        table.on('row(table)', function (obj) { //监听行单击事件
+            if (firstClick) {
+                firstClick = false;
+                $('.alert').attr("style", "");
+            }
+        });
+
+        table.on('rowDouble(table)', function (obj) { //监听行双击事件
+            var data = obj.data;
+            clearFormData();
+            categoryDetailsFormVueObj.cateId = data.cate_id;
+            categoryDetailsFormVueObj.cateNo = data.cate_no;
+            categoryDetailsFormVueObj.cateName = data.cate_name;
+            categoryDetailsFormVueObj.editCate = true;
+            popupObj = ljspopup({
+                el: "#popup",
+                title: "分类管理"
+            });
+        });
+    });
+
+    var categoryDetailsFormVueObj = new Vue({ // vue对象创建
+        el: "#category_details_form",
+        data: {
+            cateId: "",
+            cateNo: "",
+            cateName: "",
+            editCate: true,
+            addCate: true,
+        },
+        methods: {
+            insertCate: function (event) { // 添加分类
+                var data = getFormData();
+                if (data.cateNo == "" || data.cateName == "") {
+                    alertError("nullError");
+                } else {
+                    cateRequest("insertCate", data, "分类添加成功");
+                }
+            },
+            updateCate: function (event) { // 修改分类
+                var data = getFormData();
+                if (data.cateNo == "" || data.cateName == "") {
+                    alertError("nullError");
+                } else {
+                    cateRequest("updateCate", data, "分类修改成功");
+                }
+            },
+            deleteCate: function (event) { // 删除分类
+                layer.confirm('确定要删除该分类吗？', {
+                    title: "提醒",
+                    btn: ['确定', '取消'],
+                }, function (index) {
+                    var cateId = categoryDetailsFormVueObj.cateId;
+                    if (cateId == "") {
+                        alertError("Error");
+                    } else {
+                        cateRequest("deleteCate", {
+                            cateId: cateId
+                        }, "分类删除成功");
+                    }
+                    layer.close(index);
+                }, function (index) {
+                    layer.close(index);
+                });
+            }
+        }
+    });
+
+    function cateRequest(path, data, msg) { // 通用request请求
+        axios
+            .post(pageUrl + path, data)
+            .then(function (response) {
+                var resData = response.data;
+                if (resData.code == 1) {
+                    layer.alert(msg, {
+                        icon: 1,
+                        title: "成功"
+                    });
+                    table.reload("table");
+                    if (path == "deleteCate") {
+                        closeLjspopup(popupObj);
+                    }
+                } else {
+                    alertError(resData.msg);
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
+    function getFormData() { // 获取表单数据
+        var data = {
+            cateId: categoryDetailsFormVueObj.cateId,
+            cateNo: categoryDetailsFormVueObj.cateNo,
+            cateName: categoryDetailsFormVueObj.cateName
+        };
+        return data;
+    }
+
+    function clearFormData() { // 清空表单数据
+        categoryDetailsFormVueObj.cateId = "";
+        categoryDetailsFormVueObj.cateNo = "";
+        categoryDetailsFormVueObj.cateName = "";
+        categoryDetailsFormVueObj.editCate = false;
+        categoryDetailsFormVueObj.addCate = false;
+    }
+</script>
+{[/block]}
+
+    
