@@ -155,7 +155,7 @@ class Personmanage extends Controller {
     private function checkOnlyAndNull() {
         $pNo = Param::get("pNo");
         $pId = Param::get("pId");
-        if ($pId != "" && $pId < 2) {
+        if ($pId != "" && $pId < 3) {
             return Utils::returnMsg(0, "pRootError");
         }
         if (Param::get("depId") < 2) {

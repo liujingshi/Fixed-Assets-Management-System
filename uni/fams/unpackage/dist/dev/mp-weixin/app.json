@@ -1,0 +1,18 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/func/func",
+        "pages/check/check",
+        "pages/mine/mine",
+        "pages/scan/scan"
+    ],
+    "subPackages": [],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "uni-app",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8"
+    },
+    "usingComponents": {},
+    "sitemapLocation": "sitemap43.json"
+}

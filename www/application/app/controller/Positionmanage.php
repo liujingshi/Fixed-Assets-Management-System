@@ -151,7 +151,7 @@ class Positionmanage extends Controller {
     private function checkOnlyAndNull() {
         $posNo = Param::get("posNo");
         $posId = Param::get("posId");
-        if ($posId != "" && $posId < 2) {
+        if ($posId != "" && $posId < 3) {
             return Utils::returnMsg(0, "posRootError");
         }
         if (Position::checkPos_no($posNo)) {

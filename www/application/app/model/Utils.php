@@ -39,11 +39,23 @@ class Utils {
             $uName = $person->getP_name();
         }
         $userinfo = [
+            "uId" => Session::get(Constant::USERID),
             "uName" => $uName,
             "uHead" => $user->getU_head(),
             "powerNo" => $user->getPower_no()
         ];
         return $userinfo;
+    }
+
+    /**
+     * 生成二维码
+     */
+    public static function createQrcode($value) {
+        vendor('phpqrcode');
+        $errorCorrectionLevel = 'L';
+        $matrixPointSize = 5;
+        $filename = 'qrcode/'.$value.'.png';
+        \QRcode::png($value, $filename, $errorCorrectionLevel, $matrixPointSize, 2);
     }
 
     public static function returnCode($code) {

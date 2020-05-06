@@ -1,0 +1,46 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path" : "pages/home/home",
+			"style" : {
+				"navigationBarTitleText": "首页"
+			}
+		}
+        ,{
+            "path" : "pages/func/func",
+            "style" : {
+				"navigationBarTitleText": "功能"
+			}
+        }
+        ,{
+            "path" : "pages/check/check",
+            "style" : {
+				"navigationBarTitleText": "盘点"
+			}
+        }
+        ,{
+            "path" : "pages/mine/mine",
+            "style" : {
+				"navigationBarTitleText": "我的"
+			}
+        }
+        ,{
+            "path" : "pages/scan/scan",
+            "style" : {
+				"navigationBarTitleText": "资产信息"
+			}
+        }
+        ,{
+            "path" : "pages/func/assetimport",
+            "style" : {
+				"navigationBarTitleText": "资产入库"
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

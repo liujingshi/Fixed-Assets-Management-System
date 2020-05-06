@@ -30,6 +30,11 @@ class Home extends Controller {
         $this->success("登出成功", Constant::LOGINPATH);
     }
 
+    public function getMyUserInfo() {
+        $userinfo = Utils::getUserinfo();
+        return json_encode($userinfo);
+    }
+
 }
 
     

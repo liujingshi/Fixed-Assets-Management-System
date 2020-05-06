@@ -22,6 +22,14 @@ var nav_left_data = [{
         "up": "assetmanage",
         "son": []
     }, {
+        "title": "领用&退库",
+        "icon": "las la-plus-square",
+        "pull": false,
+        "name": "assetborrowlend",
+        "active": false,
+        "up": "assetmanage",
+        "son": []
+    }, {
         "title": "设置",
         "icon": "las la-cog",
         "pull": true,

@@ -26,8 +26,29 @@ class Asset {
         return Db::name(self::$className)->order(self::$mainKey)->page($page, $limit)->select();
     }
 
+    public static function getByPageText($limit, $page) {
+        $limitS = ($page-1)*$limit;
+        $sql = "select * from fams_asset ass, fams_status sta, fams_category cate, fams_local local ";
+        $sql .= "where ass.sta_no = sta.sta_no and ass.as_local_id = local.local_id and ass.cate_id = cate.cate_id and ass.as_exist = 1 ";
+        $sql .= "order by ass.as_import_time desc ";
+        $sql .= "limit {$limitS}, {$limit}";
+        return Db::query($sql);
+    }
+
+    public static function getXZ() {
+        $sql = "select * from fams_asset ass, fams_status sta, fams_category cate, fams_local local ";
+        $sql .= "where ass.sta_no = sta.sta_no and ass.as_local_id = local.local_id and ass.cate_id = cate.cate_id and ass.sta_no = 'XZ' and ass.as_exist = 1 ";
+        $sql .= "order by ass.as_import_time desc";
+        return Db::query($sql);
+    }
+
     public static function checkAs_no($asNo) {
         return Db::name(self::$className)->where(["as_no" => $asNo, self::$existKey => 1])->find();
+    }
+
+    public static function newByAs_no($asNo) {
+        $asset = Db::name(self::$className)->where(["as_no" => $asNo, self::$existKey => 1])->select();
+        return new Asset($asset[0]['as_id']);
     }
 
     public static function insert($dic) {

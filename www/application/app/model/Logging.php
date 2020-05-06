@@ -16,6 +16,7 @@ class Logging {
     private static $assetCategoryName = "ASSET";
     private static $assetTableName = "asset";
     private static $categoryTableName = "category";
+    private static $borrowlendTableName = "borrowlend";
 
     /**
      * 写入日志
@@ -98,6 +99,16 @@ class Logging {
     }
     public static function deleteCate($commonId) {
         self::write("DELETECATE", self::$assetCategoryName, self::$categoryTableName, $commonId);
+    }
+
+    public static function insertBL($commonId) {
+        self::write("INSERTBL", self::$assetCategoryName, self::$borrowlendTableName, $commonId);
+    }
+    public static function updateBL($commonId) {
+        self::write("UPDATEBL", self::$assetCategoryName, self::$borrowlendTableName, $commonId);
+    }
+    public static function deleteBL($commonId) {
+        self::write("DELETEBL", self::$assetCategoryName, self::$borrowlendTableName, $commonId);
     }
 
 }

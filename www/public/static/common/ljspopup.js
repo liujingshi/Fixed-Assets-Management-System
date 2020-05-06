@@ -298,6 +298,8 @@ function ljspopup(data = {}) {
         $(ljs_panel).find(".ljs-panel-body").children().show();
         new_data.width = new_data.width < 0 ? $(ljs_panel).width() : new_data.width;
         new_data.height = new_data.height < 0 ? $(ljs_panel).height() : new_data.height;
+        new_data.width = new_data.width > $(window).width() ? $(window).width() : new_data.width;
+        new_data.height = new_data.height > $(window).height() ? $(window).height() : new_data.height;
         popup_data.push(new_data);
         return panel_show(new_data);
     } else {
