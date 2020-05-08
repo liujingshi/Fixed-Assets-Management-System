@@ -21,6 +21,7 @@ class MainSocketHandler(tornado.websocket.WebSocketHandler):
     def open(self):  # WebSocket建立时调用
         self.vcode = 0
         self.userid = 0
+        self.power = "VISIT"
         MainSocketHandler.guests.add(self)
         logging.info("One guest user connected")
 
@@ -43,9 +44,10 @@ class MainSocketHandler(tornado.websocket.WebSocketHandler):
         if action == "nothing":  # 测试命令
             Utils.sendMsg(self, "nothing", "Hello Socket")
         elif action == "login":  # 用户登录
-            userid, openid, code = Utils.login(self, obj)
+            userid, openid, code, power = Utils.login(self, obj)
             if userid > 0:
                 self.userid = userid
+                self.power = power
                 MainSocketHandler.clients[userid] = self
                 logging.info("User {0} login".format(userid))
                 Utils.sendMsg(self, "loginSuccess", {"loginCode": code})
@@ -73,6 +75,10 @@ class MainSocketHandler(tornado.websocket.WebSocketHandler):
             Utils.assetImport(self, obj)
         elif action == "isMe":  # 是我的资产
             Utils.isMe(self, obj)
+        elif action == "assetBorrow":  # 资产领用
+            Utils.assetBorrow(self, obj)
+        elif action == "assetLend":  # 资产归还
+            Utils.assetLend(self, obj)
         
 
 

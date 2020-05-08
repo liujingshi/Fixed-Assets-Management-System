@@ -18,6 +18,13 @@ class Asset {
         return Db::name(self::$className)->order(self::$mainKey)->select();
     }
 
+    public static function getAllSP() {
+        return Db::name(self::$className)->where([
+            self::$existKey => 1,
+            "sta_no" => "SPZ"
+        ])->order(self::$mainKey)->select();
+    }
+
     public static function getByPage($limit, $page) {
         return Db::name(self::$className)->where(self::$existKey, 1)->order(self::$mainKey)->page($page, $limit)->select();
     }

@@ -47,10 +47,10 @@
 		<view v-if="canAction" class="ls-card margin-top">
 			<view class="grid col-5 padding-sm">
 				<view class="margin-tb-sm text-center" v-if="assetInfo.sta_no == 'XZ'">
-					<button class="cu-btn round bg-blue shadow">领用</button>
+					<button class="cu-btn round bg-blue shadow" @tap="borrow">领用</button>
 				</view>
 				<view class="margin-tb-sm text-center" v-if="isMe">
-					<button class="cu-btn round bg-orange shadow">退库</button>
+					<button class="cu-btn round bg-orange shadow" @tap="lend">归还</button>
 				</view>
 			</view>
 		</view>
@@ -86,7 +86,25 @@
 					this.assetInfo = obj
 				} else if (msg == "isMe") {
 					this.isMe = true
+				} else if (msg == "borrowSuccess") {
+					uni.showToast({
+						icon: "success",
+						title: "领用成功"
+					})
+					this.canAction = false
+				} else if (msg == "lendSuccess") {
+					uni.showToast({
+						icon: "success",
+						title: "归还成功"
+					})
+					this.canAction = false
 				}
+			},
+			borrow: function () {
+				getApp().sendSocket("assetBorrow", {as_no: this.assetInfo.as_no})
+			},
+			lend: function () {
+				getApp().sendSocket("assetLend", {as_no: this.assetInfo.as_no})
 			}
 		}
 	}

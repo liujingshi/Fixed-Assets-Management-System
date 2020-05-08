@@ -1,0 +1,183 @@
+{[extend name="common@base" /]}
+{[block name="title"]}领用归还审批 - {[/block]}
+{[block name="css"]}{[/block]}
+{[block name="content"]}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="home-panel">
+                <div class="home-panel-header">
+                    <i class="las la-th-list"></i>
+                    <span>领用归还审批</span>
+                </div>
+                <div class="home-panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table id="table" lay-filter="table"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{[/block]}
+{[block name="js"]}
+<script type="text/html" id="tableToolbar">
+    <div class="layui-btn-container">
+        <button class="layui-btn btn btn-success" lay-event="passes">通过选中项目</button>
+        <button class="layui-btn btn btn-danger" lay-event="notpasses">不通过选中项目</button>
+    </div>
+</script>
+<script type="text/html" id="tableBar">
+    <a class="layui-btn btn btn-success btn-sm cw" lay-event="pass">通过</a>
+    <a class="layui-btn btn btn-danger btn-sm cw" lay-event="notpass">不通过</a>
+</script>
+<script>
+    var pageName = "blapprove";
+    var pageUrl = "/app/" + pageName + "/";
+    update_navs(pageName);
+    setLocal(["我的审批"], "领用归还");
+    /* ============================================================================================================================= */
+    /* ============================================================================================================================= */
+    /* ============================================================================================================================= */
+    /* ============================================================================================================================= */
+    /* ============================================================================================================================= */
+    var layer, table;
+    /*
+     * layui开始
+     */
+    layui.use(['layer', 'table', 'laydate'], function () {
+        layer = layui.layer;
+        table = layui.table;
+
+        table.render({ // 创建表格
+            elem: '#table',
+            height: 'full-260',
+            url: pageUrl + 'select',
+            page: true,
+            toolbar: '#tableToolbar',
+            limit: 10,
+            cols: [
+                [ // 表头
+                    {
+                        type: "checkbox",
+                        width: "5%"
+                    },
+                    {
+                        field: 'p_name',
+                        title: '领用人',
+                        width: "10%"
+                    }, {
+                        field: 'as_name',
+                        title: '领用资产',
+                        width: "15%"
+                    }, {
+                        field: 'local_name',
+                        title: '资产地点',
+                        width: "10%"
+                    }, {
+                        field: 'cate_name',
+                        title: '资产分类',
+                        width: "10%"
+                    }, {
+                        field: 'sta_name',
+                        title: '资产状态',
+                        width: "10%"
+                    }, {
+                        field: 'b_time',
+                        title: '领用时间',
+                        width: "15%"
+                    }, {
+                        field: 'l_time',
+                        title: '归还时间',
+                        width: "15%"
+                    }, {
+                        fixed: 'right',
+                        width: "10%",
+                        align: 'center',
+                        toolbar: '#tableBar',
+                        title: '操作',
+                    }
+                ]
+            ]
+        });
+
+        table.on('tool(table)', function (obj) {  // 表内时间监听
+            var data = obj.data;
+            var layEvent = obj.event;
+            var tr = obj.tr;
+
+            if (layEvent === 'pass') {
+                commonRequest("pass", {"bl_id": data.bl_id}, "通过");
+            } else if (layEvent === 'notpass') {
+                commonRequest("notpass", {"bl_id": data.bl_id}, "不通过");
+            }
+        });
+
+        table.on('toolbar(table)', function (obj) { // 表头事件监听
+            var checkStatus = table.checkStatus(obj.config.id);
+            switch (obj.event) {
+                case 'passes':
+                    var checkStatus = table.checkStatus('table'),
+                        data = checkStatus.data;
+                    layer.confirm('确定要通过选中的这' + data.length + '个项目吗？', {
+                        title: "提醒",
+                        btn: ['确定', '取消'],
+                    }, function (index) {
+                        commonRequest("passes", {
+                            data: JSON.stringify(data)
+                        }, "批量通过成功");
+                        layer.close(index);
+                    }, function (index) {
+                        layer.close(index);
+                    });
+                    break;
+                case 'notpasses':
+                    var checkStatus = table.checkStatus('table'),
+                        data = checkStatus.data;
+                    layer.confirm('确定要不通过选中的这' + data.length + '个项目吗？', {
+                        title: "提醒",
+                        btn: ['确定', '取消'],
+                    }, function (index) {
+                        commonRequest("notpasses", {
+                            data: JSON.stringify(data)
+                        }, "批量不通过成功");
+                        layer.close(index);
+                    }, function (index) {
+                        layer.close(index);
+                    });
+                    break;
+            };
+        });
+
+    });
+    /*
+     * layui结束
+     */
+     function commonRequest(path, data, msg) { // 通用request请求
+        var loading = layer.load(1, {
+            shade: [0.1, '#000']
+        });
+        axios
+            .post(pageUrl + path, data)
+            .then(function (response) {
+                layer.close(loading);
+                var resData = response.data;
+                if (resData.code == 1) {
+                    layer.alert(msg, {
+                        icon: 1,
+                        title: "成功"
+                    });
+                    table.reload("table");
+                } else {
+                    alertError(resData.msg);
+                }
+            })
+            .catch(function (error) {
+                layer.close(loading);
+                console.log(error);
+            });
+    }
+</script>
+{[/block]}

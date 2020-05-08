@@ -112,14 +112,15 @@ class Assetborrowlend extends Controller {
         if (Utils::userAlreadyLogin() && $this->powerTrue()) {
             $userinfo = Utils::getUserinfo();
             $power = $userinfo['powerNo'];
+            $objb = new Borrowlend(Param::get("blId"));
+            $objb->update(["l_time" => date("Y-m-d H:i:s")]);
             $obj = Asset::newByAs_no(Param::get("asNo"));
             if ($power == "USER") {
-                $obj->update(["sta_no" => "SPZ"]);
+                $obj->setSta_no("SPZ");
             } else {
-                $obj->update(["sta_no" => "XZ"]);
+                $obj->setSta_no("XZ");
+                $objb->setBl_ok(1);
             }
-            $obj = new Borrowlend(Param::get("blId"));
-            $obj->update(["l_time" => date("Y-m-d H:i:s")]);
             $commonId = Param::get("blId");
             Logging::updateBL($commonId);
             return json_encode(Utils::returnCode(1));
@@ -138,14 +139,15 @@ class Assetborrowlend extends Controller {
             $power = $userinfo['powerNo'];
             foreach ($datas as $data) {
                 if ($data['bl_id'] != "") {
+                    $objb = new Borrowlend($data["bl_id"]);
+                    $objb->update(["l_time" => date("Y-m-d H:i:s")]);
                     $obj = new Asset($data['as_id']);
                     if ($power == "USER") {
-                        $obj->update(["sta_no" => "SPZ"]);
+                        $obj->setSta_no("SPZ");
                     } else {
-                        $obj->update(["sta_no" => "XZ"]);
+                        $obj->setSta_no("XZ");
+                        $objb->setBl_ok(1);
                     }
-                    $obj = new Borrowlend($data["bl_id"]);
-                    $obj->update(["l_time" => date("Y-m-d H:i:s")]);
                     $commonId = $data['bl_id'];
                     Logging::updateBL($commonId);
                 }

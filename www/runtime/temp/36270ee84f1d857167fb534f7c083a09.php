@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:104:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetborrowlend\index.html";i:1588775161;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:104:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetborrowlend\index.html";i:1588948338;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>领用&退库 - 高校固定资产管理系统</title>
+    <title>领用&归还 - 高校固定资产管理系统</title>
 
     <link rel="stylesheet" href="/static/line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="/static/layui/css/layui.css">
@@ -77,7 +77,7 @@
             <div class="home-panel">
                 <div class="home-panel-header">
                     <i class="las la-th-list"></i>
-                    <span>领用&退库</span>
+                    <span>领用&归还</span>
                 </div>
                 <div class="home-panel-body">
                     <div class="row">
@@ -169,7 +169,7 @@
 <script type="text/html" id="tableToolbar">
     <div class="layui-btn-container">
         <button class="layui-btn btn btn-info" lay-event="add">添加项目</button>
-        <button class="layui-btn btn btn-danger" v-if="canDel" lay-event="del">删除选中项目</button>
+        <button class="layui-btn btn btn-danger" lay-event="del">删除选中项目</button>
         <button class="layui-btn btn btn-primary" lay-event="edits">批量归还</button>
     </div>
 </script>
@@ -177,7 +177,7 @@
     var pageName = "assetborrowlend";
     var pageUrl = "/app/" + pageName + "/";
     update_navs(pageName);
-    setLocal(["资产管理"], "领用&退库");
+    setLocal(["资产管理"], "领用&归还");
     /* ============================================================================================================================= */
     /* ============================================================================================================================= */
     /* ============================================================================================================================= */
@@ -275,23 +275,27 @@
                     $("#btime").removeAttr("readonly")
                     ljspopup({
                         el: "#popup",
-                        title: "领用退库"
+                        title: "领用归还"
                     });
                     break;
                 case 'del':
-                    var checkStatus = table.checkStatus('table'),
+                    if (vueObj.canDel) {
+                        var checkStatus = table.checkStatus('table'),
                         data = checkStatus.data;
-                    layer.confirm('确定要删除选中的这' + data.length + '个项目吗？', {
-                        title: "提醒",
-                        btn: ['确定', '取消'],
-                    }, function (index) {
-                        commonRequest("deletes", {
-                            data: JSON.stringify(data)
-                        }, "批量删除成功");
-                        layer.close(index);
-                    }, function (index) {
-                        layer.close(index);
-                    });
+                        layer.confirm('确定要删除选中的这' + data.length + '个项目吗？', {
+                            title: "提醒",
+                            btn: ['确定', '取消'],
+                        }, function (index) {
+                            commonRequest("deletes", {
+                                data: JSON.stringify(data)
+                            }, "批量删除成功");
+                            layer.close(index);
+                        }, function (index) {
+                            layer.close(index);
+                        });
+                    } else {
+                        layer.msg("权限不足");
+                    }
                     break;
                 case 'edits':
                     var checkStatus = table.checkStatus('table'),
@@ -335,7 +339,7 @@
             }
             popupObj = ljspopup({
                 el: "#popup",
-                title: "领用退库"
+                title: "领用归还"
             });
         });
     });

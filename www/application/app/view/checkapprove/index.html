@@ -1,0 +1,18 @@
+{[extend name="common@base" /]}
+{[block name="title"]} - {[/block]}
+{[block name="css"]}{[/block]}
+{[block name="content"]}{[/block]}
+{[block name="js"]}
+<script>
+    var pageName = "checkapprove";
+    var pageUrl = "/app/" + pageName + "/";
+    update_navs(pageName);
+    setLocal([], "");
+    var layer;
+    layui.use(['layer'], function () { // 加载layui
+        layer = layui.layer;
+    });
+</script>
+{[/block]}
+
+    

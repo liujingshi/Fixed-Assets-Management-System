@@ -52,16 +52,19 @@ def login(tornadoSelf, obj):
     code = obj['code']
     openid = code
     loginCode = code
+    power = "VISIT"
     if code[-1:] == "=":
         user = Ljsmysql.table("fams_user").where("u_login_code", code).select()
         if len(user) > 0:
             userid = user[0]['u_id']
+            power = user[0]['power_no']
     elif len(code) == 11:
         if tornadoSelf.vcode == obj['vcode']:
             if not Ljsmysql.table("fams_user").where("u_phone", code).find():
                 reg(code)
             user = Ljsmysql.table("fams_user").where("u_phone", code).select()
             userid = user[0]['u_id']
+            power = user[0]['power_no']
             loginCode = setLoginCode(user[0]['u_phone'])
     elif len(code) > 11:
         openid = getOpenidByCode(code)
@@ -70,10 +73,11 @@ def login(tornadoSelf, obj):
         user = Ljsmysql.table("fams_user").where("u_openid", openid).select()
         if len(user) > 0:
             userid = user[0]['u_id']
+            power = user[0]['power_no']
             loginCode = setLoginCode(user[0]['u_phone'])
         else:
             userid = -1
-    return userid, openid, loginCode
+    return userid, openid, loginCode, power
 
 
 # 设置登录码
@@ -187,4 +191,41 @@ def isMe(tornadoSelf, obj):
 
 # 领用
 def assetBorrow(tornadoSelf, obj):
-    pass
+    Ljsmysql.table("fams_borrowlend").insert({
+        "as_no": obj["as_no"],
+        "u_id": tornadoSelf.userid,
+        "b_time": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    })
+    if tornadoSelf.power == "VIP" or tornadoSelf.power == "SVIP":
+        Ljsmysql.table("fams_asset").where("as_no", obj['as_no']).update({"sta_no": "ZY"})
+    elif tornadoSelf.power == "USER":
+        Ljsmysql.table("fams_asset").where("as_no", obj['as_no']).update({"sta_no": "SPZ"})
+    sendMsg(tornadoSelf, "borrowSuccess")
+
+
+# 归还
+def assetLend(tornadoSelf, obj):
+    if Ljsmysql.table("fams_borrowlend").where({
+        "u_id": tornadoSelf.userid,
+        "as_no": obj['as_no'],
+        "l_time": "0000-00-00 00:00:00"
+    }).find():
+        Ljsmysql.table("fams_borrowlend").where({
+            "u_id": tornadoSelf.userid,
+            "as_no": obj['as_no'],
+            "l_time": "0000-00-00 00:00:00"
+        }).update({
+            "l_time": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        })
+        if tornadoSelf.power == "VIP" or tornadoSelf.power == "SVIP":
+            Ljsmysql.table("fams_asset").where("as_no", obj['as_no']).update({"sta_no": "XZ"})
+            Ljsmysql.table("fams_borrowlend").where({
+                "u_id": tornadoSelf.userid,
+                "as_no": obj['as_no'],
+                "l_time": "0000-00-00 00:00:00"
+            }).update({
+                "bl_ok": 1
+            })
+        elif tornadoSelf.power == "USER":
+            Ljsmysql.table("fams_asset").where("as_no", obj['as_no']).update({"sta_no": "SPZ"})
+        sendMsg(tornadoSelf, "lendSuccess")

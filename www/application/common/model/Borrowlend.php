@@ -13,13 +13,17 @@ class Borrowlend {
     private $mainKeyValue = "";
 
     public static function getAll() {
-        return Db::name(self::$className)->where(self::$existKey, 1)->order(self::$mainKey)->select();
+        return Db::name(self::$className)->where([
+            self::$existKey => 1,
+            "bl_ok" => 0
+        ])->order(self::$mainKey)->select();
     }
 
     public static function getAllMe() {
         return Db::name(self::$className)->where([
             self::$existKey => 1,
-            "u_id" => Session::get(Constant::USERID)
+            "u_id" => Session::get(Constant::USERID),
+            "bl_ok" => 0
         ])->order(self::$mainKey)->select();
     }
 
@@ -39,7 +43,7 @@ class Borrowlend {
         $limitS = ($page-1)*$limit;
         $uId = Session::get(Constant::USERID);
         $sql = "select * from fams_borrowlend bl, fams_asset ass, fams_status sta, fams_user u, fams_person p ";
-        $sql .= "where bl.as_no = ass.as_no and bl.u_id = u.u_id and u.p_id = p.p_id and ass.sta_no = sta.sta_no and bl.bl_exist = 1 ";
+        $sql .= "where bl.as_no = ass.as_no and bl.u_id = u.u_id and u.p_id = p.p_id and ass.sta_no = sta.sta_no and bl.bl_exist = 1 and bl.bl_ok = 0 ";
         $sql .= "order by bl.b_time desc ";
         $sql .= "limit {$limitS}, {$limit}";
         return Db::query($sql);
@@ -49,7 +53,16 @@ class Borrowlend {
         $limitS = ($page-1)*$limit;
         $uId = Session::get(Constant::USERID);
         $sql = "select * from fams_borrowlend bl, fams_asset ass, fams_status sta, fams_user u, fams_person p ";
-        $sql .= "where bl.as_no = ass.as_no and bl.u_id = u.u_id and u.p_id = p.p_id and ass.sta_no = sta.sta_no and bl.bl_exist = 1 and bl.u_id = {$uId} ";
+        $sql .= "where bl.as_no = ass.as_no and bl.u_id = u.u_id and u.p_id = p.p_id and ass.sta_no = sta.sta_no and bl.bl_exist = 1 and bl.bl_ok = 0 and bl.u_id = {$uId} ";
+        $sql .= "order by bl.b_time desc ";
+        $sql .= "limit {$limitS}, {$limit}";
+        return Db::query($sql);
+    }
+
+    public static function getByPageTextSP($limit, $page) {
+        $limitS = ($page-1)*$limit;
+        $sql = "select * from fams_asset ass, fams_status sta, fams_category cate, fams_local local, fams_borrowlend bl, fams_user u, fams_person p ";
+        $sql .= "where ass.sta_no = 'SPZ' and bl.bl_exist = 1 and bl.bl_ok = 0 and ass.sta_no = sta.sta_no and ass.cate_id = cate.cate_id and ass.as_local_id = local.local_id and bl.u_id = u.u_id and u.p_id = p.p_id and ass.as_no = bl.as_no ";
         $sql .= "order by bl.b_time desc ";
         $sql .= "limit {$limitS}, {$limit}";
         return Db::query($sql);
@@ -136,6 +149,19 @@ class Borrowlend {
         Db::name(Borrowlend::$className)->where(Borrowlend::$mainKey, $this->mainKeyValue)->update(["l_time" => $value]);
     }
 
+
+    public function getBl_ok() {
+        $res = Db::name(Borrowlend::$className)->where(Borrowlend::$mainKey, $this->mainKeyValue)->select();
+        try {
+            return $res[0]["bl_ok"];
+        } catch (Exception $e) {
+            return "";
+        }
+    }
+
+    public function setBl_ok($value) {
+        Db::name(Borrowlend::$className)->where(Borrowlend::$mainKey, $this->mainKeyValue)->update(["bl_ok" => $value]);
+    }
 
     public function getBl_exist() {
         $res = Db::name(Borrowlend::$className)->where(Borrowlend::$mainKey, $this->mainKeyValue)->select();

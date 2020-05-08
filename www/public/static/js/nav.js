@@ -22,7 +22,7 @@ var nav_left_data = [{
         "up": "assetmanage",
         "son": []
     }, {
-        "title": "领用&退库",
+        "title": "领用&归还",
         "icon": "las la-plus-square",
         "pull": false,
         "name": "assetborrowlend",
@@ -45,6 +45,30 @@ var nav_left_data = [{
             "up": "assetsetting",
             "son": []
         }]
+    }]
+}, {
+    "title": "我的审批",
+    "icon": "las la-stamp",
+    "pull": true,
+    "name": "myapprove",
+    "active": false,
+    "up": "",
+    "son": [{
+        "title": "领用归还",
+        "icon": "las la-stamp",
+        "pull": false,
+        "name": "blapprove",
+        "active": false,
+        "up": "myapprove",
+        "son": []
+    }, {
+        "title": "盘点审批",
+        "icon": "las la-stamp",
+        "pull": false,
+        "name": "checkapprove",
+        "active": false,
+        "up": "myapprove",
+        "son": []
     }]
 }, {
     "title": "系统管理",
