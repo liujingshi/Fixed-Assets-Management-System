@@ -30,6 +30,14 @@ var nav_left_data = [{
         "up": "assetmanage",
         "son": []
     }, {
+        "title": "盘点管理",
+        "icon": "las la-check-square",
+        "pull": false,
+        "name": "assetcheck",
+        "active": false,
+        "up": "assetmanage",
+        "son": []
+    }, {
         "title": "设置",
         "icon": "las la-cog",
         "pull": true,

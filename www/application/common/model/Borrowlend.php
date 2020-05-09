@@ -27,6 +27,14 @@ class Borrowlend {
         ])->order(self::$mainKey)->select();
     }
 
+    public static function getAllByUId($uId) {
+        return Db::name(self::$className)->where([
+            self::$existKey => 1,
+            "u_id" => $uId,
+            "bl_ok" => 0
+        ])->order(self::$mainKey)->select();
+    }
+
     public static function getAllWhitNotExist() {
         return Db::name(self::$className)->order(self::$mainKey)->select();
     }

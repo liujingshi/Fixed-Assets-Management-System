@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:100:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetimport\index.html";i:1589032453;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:99:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetcheck\index.html";i:1589039033;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>资产入库 - 高校固定资产管理系统</title>
+    <title>资产盘点 - 高校固定资产管理系统</title>
 
     <link rel="stylesheet" href="/static/line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="/static/layui/css/layui.css">
@@ -18,12 +18,6 @@
     <link rel="stylesheet" href="/static/css/main.css">
 
     
-<style>
-    .form-image {
-        height: 100px;
-    }
-</style>
-
 
 </head>
 
@@ -82,8 +76,8 @@
         <div class="col-md-12">
             <div class="home-panel">
                 <div class="home-panel-header">
-                    <i class="las la-sign-in-alt"></i>
-                    <span>资产入库</span>
+                    <i class="las la-check-square"></i>
+                    <span>资产盘点</span>
                 </div>
                 <div class="home-panel-body">
                     <div class="row">
@@ -95,7 +89,7 @@
                         <div class="col-md-12">
                             <div class="alert alert-warning alert-dismissible fade show" style="display: none;"
                                 role="alert">
-                                <strong>小提示：</strong> 双击数据行进行编辑
+                                <strong>小提示：</strong> 双击数据行查看盘点单详情
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -109,65 +103,35 @@
 </div>
 <div id="popup" style="display: none;">
     <form id="vue_form" onsubmit="return false">
-        <input type="hidden" v-model="asId">
+        <input type="hidden" v-model="cId">
         <div class="form-group">
-            <label>资产编号</label>
-            <input readonly type="text" class="form-control" v-model="asNo">
-            <small class="form-text text-muted">资产编号是资产的唯一标识，由系统自动生成。无需手动填写。</small>
+            <label>盘点单名称<b style="color: red;">*</b></label>
+            <input type="text" class="form-control" v-model="cTitle">
         </div>
         <div class="form-group">
-            <label>资产名称<b style="color: red;">*</b></label>
-            <input type="text" class="form-control" v-model="asName">
-            <small class="form-text text-muted">资产名称。</small>
+            <label>盘点截止时间<b style="color: red;">*</b></label>
+            <input type="text" id="datetime" autocomplete="off" class="form-control" v-model="ceTime">
+            <small class="form-text text-muted">选择盘点结束最晚的时间。</small>
         </div>
         <div class="form-group">
-            <label>分类<b style="color: red;">*</b></label>
-            <select class="form-control" v-model="cateId">
-                <option v-for="item in cates" :value="item.cate_id" v-html="item.cate_name"></option>
+            <label>盘点人员</label>
+            <select class="form-control" v-model="uId">
+                <option v-for="item in users" :value="item.u_id" v-html="'('+item.p_no+')'+item.p_name"></option>
             </select>
-            <small class="form-text text-muted">资产分类，只可以在已有资产分类里面选择，资产分类管理在（资产管理->设置->资产分类）。</small>
+            <small class="form-text text-muted">可以指定盘点人员，除盘点人员外，所有管理员也可以进行盘点。</small>
         </div>
-        <div class="form-group">
-            <label>资产入库时间<b style="color: red;">*</b></label>
-            <input type="text" id="datetime" autocomplete="off" class="form-control" v-model="asImportTime">
-            <small class="form-text text-muted">选择资产入库的时间。</small>
+        <div class="form-group custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" v-model="checked" id="customCheck1">
+            <label class="custom-control-label" for="customCheck1">添加盘点人员领用的资产到盘点单。</label>
         </div>
-        <div class="form-group">
-            <label>资产价格</label>
-            <input type="text" class="form-control" v-model="asPrice">
-            <small class="form-text text-muted">资产的价格。</small>
-        </div>
-        <div class="form-group">
-            <label>资产地点</label>
-            <select class="form-control" v-model="asLocalId">
-                <option v-for="item in locals" :value="item.local_id" v-html="item.local_name"></option>
-            </select>
-            <small class="form-text text-muted">这个地点需要使用移动端GPS定位，也可以选择一个已有地点。</small>
-        </div>
-        <div class="form-group">
-            <label>资产图片</label>
-            <div class="form-row">
-                <div class="col">
-                    <input type="hidden" v-model="asImage">
-                    <input type="file" class="form-control-file" accept="image/jpeg, image/png" id="asImage">
-                </div>
-                <div class="col">
-                    <img :src="'/image/' + asImage" class="form-image">
-                </div>
-            </div>
-            <small class="form-text text-muted">可以上传也可以使用移动端拍照。</small>
-        </div>
-        <div class="form-group">
-            <label>资产二维码</label>
-            <div>
-                <img :src="'/qrcode/' + asQrcode" class="form-image">
-            </div>
-            <small class="form-text text-muted">系统自动生成，无需多虑。</small>
-        </div>
-        <button class="btn btn-success" @click="edit" v-show="editS">保存修改</button>
-        <button class="btn btn-danger" @click="del" v-show="editS">删除</button>
-        <button class="btn btn-primary" @click="add" v-show="addS">确认添加</button>
+        <button class="btn btn-primary" @click="add" v-show="addS">创建</button>
     </form>
+</div>
+<div id="sonpopup" style="display: none;">
+    <table id="sontable" lay-filter="sontable"></table>
+</div>
+<div id="assetpopup" style="display: none;">
+    <table id="assettable" lay-filter="assettable"></table>
 </div>
 
             </div>
@@ -200,23 +164,32 @@
 
 <script type="text/html" id="tableToolbar">
     <div class="layui-btn-container">
-        <button class="layui-btn btn btn-info" lay-event="add">添加项目</button>
-        <button class="layui-btn btn btn-danger" lay-event="del">删除选中项目</button>
-        <button class="layui-btn btn btn-primary" lay-event="adds">批量生成资产</button>
-        <button class="layui-btn btn btn-success" lay-event="downloadqrcode">下载选中资产的二维码</button>
+        <button class="layui-btn btn btn-info" lay-event="add">创建盘点单</button>
+        <button class="layui-btn btn btn-danger" lay-event="del">删除选中盘点单</button>
+    </div>
+</script>
+<script type="text/html" id="sontableToolbar">
+    <div class="layui-btn-container">
+        <button class="layui-btn btn btn-info" lay-event="add">添加资产</button>
+        <button class="layui-btn btn btn-danger" lay-event="del">删除选中资产</button>
+    </div>
+</script>
+<script type="text/html" id="assettableToolbar">
+    <div class="layui-btn-container">
+        <button class="layui-btn btn btn-info" lay-event="add">添加选中资产</button>
     </div>
 </script>
 <script>
-    var pageName = "assetimport";
+    var pageName = "assetcheck";
     var pageUrl = "/app/" + pageName + "/";
     update_navs(pageName);
-    setLocal(["资产管理"], "资产入库");
+    setLocal(["资产管理"], "盘点管理");
     /* ============================================================================================================================= */
     /* ============================================================================================================================= */
     /* ============================================================================================================================= */
     /* ============================================================================================================================= */
     /* ============================================================================================================================= */
-    var layer, table, laydate, popupObj;
+    var layer, table, laydate, popupObj, assetpopupObj;
     var firstClick = true;
     /*
      * layui开始
@@ -231,7 +204,7 @@
             type: 'datetime',
             format: 'yyyy-MM-dd HH:mm:ss',
             done: function (value, date, endDate) {
-                vueObj.asImportTime = value;
+                vueObj.ceTime = value;
             }
         });
 
@@ -249,33 +222,25 @@
                         width: "5%"
                     },
                     {
-                        field: 'as_no',
-                        title: '资产编号',
+                        field: 'c_title',
+                        title: '盘点单名称',
                         width: "20%"
                     }, {
-                        field: 'as_name',
-                        title: '资产名称',
+                        field: 'p_name',
+                        title: '盘点人员',
                         width: "15%"
                     }, {
-                        field: 'sta_name',
-                        title: '资产状态',
-                        width: "10%"
+                        field: 'c_time',
+                        title: '盘点单创建时间',
+                        width: "20%"
                     }, {
-                        field: 'cate_name',
-                        title: '资产分类',
-                        width: "10%"
+                        field: 'c_e_time',
+                        title: '盘点截止时间',
+                        width: "20%"
                     }, {
-                        field: 'as_price',
-                        title: '资产价格',
-                        width: "10%"
-                    }, {
-                        field: 'as_import_time',
-                        title: '资产入库时间',
-                        width: "15%"
-                    }, {
-                        field: 'local_name',
-                        title: '资产地点',
-                        width: "15%"
+                        field: 'c_sta_name',
+                        title: '盘点单状态',
+                        width: "20%"
                     }
                 ]
             ]
@@ -289,7 +254,7 @@
                     vueObj.addS = true;
                     ljspopup({
                         el: "#popup",
-                        title: "资产管理"
+                        title: "创建盘点单"
                     });
                     break;
                 case 'del':
@@ -307,26 +272,6 @@
                         layer.close(index);
                     });
                     break;
-                case 'adds':
-                    layer.prompt({
-                        title: '输入要生成资产的数量',
-                        formType: 0
-                    }, function (pass, index) {
-                        layer.close(index);
-                        commonRequest("inserts", {
-                            num: pass
-                        }, "批量生成成功")
-                    });
-                    break;
-                case 'downloadqrcode':
-                    var checkStatus = table.checkStatus('table'),
-                        data = checkStatus.data;
-                    $.post("/utils/download/qrcode", {
-                        data: JSON.stringify(data)
-                    }, function (data) {
-                        window.open(window.location.origin + data, '_blank');
-                    });
-                    break;
             };
         });
 
@@ -339,21 +284,148 @@
 
         table.on('rowDouble(table)', function (obj) { //监听行双击事件
             var data = obj.data;
-            clearFormData();
-            vueObj.asId = data.as_id;
-            vueObj.asNo = data.as_no;
-            vueObj.asName = data.as_name;
-            vueObj.cateId = data.cate_id;
-            vueObj.asPrice = data.as_price;
-            vueObj.asImportTime = data.as_import_time;
-            vueObj.asLocalId = data.as_local_id;
-            vueObj.asImage = data.as_image;
-            vueObj.asQrcode = data.as_qrcode;
-            vueObj.editS = true;
-            popupObj = ljspopup({
-                el: "#popup",
-                title: "资产管理"
+            vueObj.cId = data.c_id;
+            table.reload("sontable", {
+                url: pageUrl + 'selectcontent/id/' + vueObj.cId
+            })
+            ljspopup({
+                el: "#sonpopup",
+                title: "盘点单详情"
             });
+        });
+
+        table.render({ // 创建资产表格
+            elem: '#assettable',
+            width: 600,
+            height: 400,
+            url: '/app/assetimport/select',
+            page: true,
+            toolbar: '#assettableToolbar',
+            limit: 10,
+            cols: [
+                [ // 表头
+                    {
+                        type: "checkbox",
+                        width: 30
+                    },
+                    {
+                        field: 'as_no',
+                        title: '资产编号',
+                        width: 200
+                    }, {
+                        field: 'as_name',
+                        title: '资产名称',
+                        width: 200
+                    }, {
+                        field: 'sta_name',
+                        title: '资产状态',
+                        width: 150
+                    }, {
+                        field: 'cate_name',
+                        title: '资产分类',
+                        width: 150
+                    }, {
+                        field: 'as_price',
+                        title: '资产价格',
+                        width: 100
+                    }, {
+                        field: 'as_import_time',
+                        title: '资产入库时间',
+                        width: 200
+                    }, {
+                        field: 'local_name',
+                        title: '资产地点',
+                        width: 150
+                    }
+                ]
+            ]
+        });
+
+        table.on('toolbar(assettable)', function (obj) { // 资产表头事件监听
+            var checkStatus = table.checkStatus(obj.config.id);
+            switch (obj.event) {
+                case 'add':
+                    var checkStatus = table.checkStatus('assettable'),
+                        data = checkStatus.data;
+                    commonRequest("inserts/id/" + vueObj.cId, {
+                        data: JSON.stringify(data)
+                    }, "添加成功");
+                    break;
+            };
+        });
+
+        table.render({ // 创建盘点内容表格
+            elem: '#sontable',
+            width: 800,
+            height: 600,
+            url: pageUrl + 'selectcontent/id/0',
+            page: true,
+            toolbar: '#sontableToolbar',
+            limit: 10,
+            cols: [
+                [ // 表头
+                    {
+                        type: "checkbox",
+                        width: 30
+                    },
+                    {
+                        field: 'as_no',
+                        title: '资产编号',
+                        width: 200
+                    }, {
+                        field: 'as_name',
+                        title: '资产名称',
+                        width: 200
+                    }, {
+                        field: 'sta_name',
+                        title: '资产状态',
+                        width: 150
+                    }, {
+                        field: 'cate_name',
+                        title: '资产分类',
+                        width: 150
+                    }, {
+                        field: 'as_price',
+                        title: '资产价格',
+                        width: 100
+                    }, {
+                        field: 'as_import_time',
+                        title: '资产入库时间',
+                        width: 200
+                    }, {
+                        field: 'local_name',
+                        title: '资产地点',
+                        width: 150
+                    }
+                ]
+            ]
+        });
+
+        table.on('toolbar(sontable)', function (obj) { // 盘点单详情表头事件监听
+            var checkStatus = table.checkStatus(obj.config.id);
+            switch (obj.event) {
+                case 'add':
+                    assetpopupObj = ljspopup({
+                        el: "#assetpopup",
+                        title: "资产列表"
+                    });
+                    break;
+                case 'del':
+                    var checkStatus = table.checkStatus('sontable'),
+                        data = checkStatus.data;
+                    layer.confirm('确定要删除选中的这' + data.length + '个项目吗？', {
+                        title: "提醒",
+                        btn: ['确定', '取消'],
+                    }, function (index) {
+                        commonRequest("deletecontents", {
+                            data: JSON.stringify(data)
+                        }, "批量删除成功");
+                        layer.close(index);
+                    }, function (index) {
+                        layer.close(index);
+                    });
+                    break;
+            };
         });
     });
     /*
@@ -370,19 +442,13 @@
     var vueObj = new Vue({ // vue对象创建
         el: "#vue_form",
         data: {
-            asId: "",
-            asNo: "",
-            asName: "",
-            cateId: "",
-            asPrice: "",
-            asImportTime: "",
-            asLocalId: "",
-            asImage: "",
-            asQrcode: "",
-            editS: true,
+            cId: "",
+            cTitle: "",
+            uId: 0,
+            checked: false,
+            ceTime: "",
             addS: true,
-            cates: [],
-            locals: []
+            users: []
         },
         methods: {
             add: function (event) { // 添加
@@ -410,14 +476,8 @@
         },
         mounted() { // ajax请求数据 用于select框
             axios
-                .post("/app/Assetcategory/categorysData")
-                .then(response => (this.cates = response.data))
-                .catch(function (error) {
-                    console.log(error);
-                });
-            axios
-                .post("/app/Assetimport/localsData")
-                .then(response => (this.locals = response.data))
+                .post("/app/Assetborrowlend/usersData")
+                .then(response => (this.users = response.data))
                 .catch(function (error) {
                     console.log(error);
                 });
@@ -432,7 +492,9 @@
     /* ============================================================================================================================= */
     /* ============================================================================================================================= */
     function commonRequest(path, data, msg) { // 通用request请求
-        var loading = layer.load(1, {shade: [0.1,'#000']});
+        var loading = layer.load(1, {
+            shade: [0.1, '#000']
+        });
         axios
             .post(pageUrl + path, data)
             .then(function (response) {
@@ -443,9 +505,18 @@
                         icon: 1,
                         title: "成功"
                     });
-                    table.reload("table");
-                    if (path == "delete") {
-                        closeLjspopup(popupObj);
+                    if (path == "insert" || path == "deletes") {
+                        table.reload("table");
+                    } else if (path.indexOf("inserts") >= 0) {
+                        closeLjspopup(assetpopupObj);
+                        table.reload("sontable", {
+                            url: pageUrl + 'selectcontent/id/' + vueObj.cId
+                        })
+                        table.reload("assettable");
+                    } else if (path.indexOf("deletecontents") >= 0) {
+                        table.reload("sontable", {
+                            url: pageUrl + 'selectcontent/id/' + vueObj.cId
+                        })
                     }
                 } else {
                     alertError(resData.msg);
@@ -459,53 +530,23 @@
 
     function getFormData() { // 获取表单数据
         var data = {
-            asId: vueObj.asId,
-            asNo: vueObj.asNo,
-            asName: vueObj.asName,
-            cateId: vueObj.cateId,
-            asPrice: vueObj.asPrice,
-            asImportTime: vueObj.asImportTime,
-            asLocalId: vueObj.asLocalId,
-            asImage: vueObj.asImage
+            cId: vueObj.cId,
+            cTitle: vueObj.cTitle,
+            uId: vueObj.uId,
+            checked: vueObj.checked,
+            ceTime: vueObj.ceTime
         };
         return data;
     }
 
     function clearFormData() { // 清空表单数据
-        vueObj.asId = "";
-        vueObj.asNo = "";
-        vueObj.asName = "";
-        vueObj.cateId = "";
-        vueObj.asPrice = "";
-        vueObj.asImportTime = "";
-        vueObj.asLocalId = "";
-        vueObj.asImage = "";
-        vueObj.asQrcode = "";
-        vueObj.editS = false;
+        vueObj.cId = "";
+        vueObj.cTitle = "";
+        vueObj.uId = 0;
+        vueObj.checked = false;
+        vueObj.ceTime = "";
         vueObj.addS = false;
     }
-
-    $("#asImage").on('change', function () { // 监听文件选择并上传
-        var formData = new FormData();
-        formData.append("image", $("#asImage")[0].files[0]);
-        $.ajax({
-            url: '/utils/upload/image',
-            type: 'POST',
-            data: formData,
-            processData: false,
-            contentType: false,
-            success: function (response) {
-                if (response == "error") {
-                    layer.alert({
-                        icon: 2,
-                        title: "上传失败"
-                    });
-                } else {
-                    vueObj.asImage = response;
-                }
-            }
-        });
-    });
 </script>
 
 

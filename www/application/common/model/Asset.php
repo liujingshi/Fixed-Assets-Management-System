@@ -58,6 +58,54 @@ class Asset {
         return new Asset($asset[0]['as_id']);
     }
 
+    public static function chart($id) {
+        switch ($id) {
+            case 'xz':
+                $sql  = "select cate.cate_name name, count(ass.as_no) value, sum(ass.as_price) price ";
+                $sql .= "from fams_asset ass, fams_category cate ";
+                $sql .= "where ass.cate_id = cate.cate_id ";
+                $sql .= "and ass.sta_no = 'XZ' and ass.as_exist = 1 ";
+                $sql .= "group by ass.cate_id";
+                return Db::query($sql);
+                break;
+            case 'zy':
+                $sql  = "select cate.cate_name name, count(ass.as_no) value, sum(ass.as_price) price ";
+                $sql .= "from fams_asset ass, fams_category cate ";
+                $sql .= "where ass.cate_id = cate.cate_id ";
+                $sql .= "and ass.sta_no = 'ZY' and ass.as_exist = 1 ";
+                $sql .= "group by ass.cate_id";
+                return Db::query($sql);
+                break;
+            case 'zb':
+                $sql  = "select sta.sta_name name, count(ass.sta_no) value, ass.sta_no no ";
+                $sql .= "from fams_asset ass, fams_status sta ";
+                $sql .= "where ass.sta_no = sta.sta_no ";
+                $sql .= "and ass.as_exist = 1 ";
+                $sql .= "group by ass.sta_no";
+                return Db::query($sql);
+                break;
+            case 'catenum':
+                $sql  = "select cate.cate_name name, count(ass.as_no) value ";
+                $sql .= "from fams_asset ass, fams_category cate ";
+                $sql .= "where ass.cate_id = cate.cate_id ";
+                $sql .= "and ass.as_exist = 1 ";
+                $sql .= "group by ass.cate_id";
+                return Db::query($sql);
+                break;
+            case 'cateprice':
+                $sql  = "select cate.cate_name name, sum(ass.as_price) value ";
+                $sql .= "from fams_asset ass, fams_category cate ";
+                $sql .= "where ass.cate_id = cate.cate_id ";
+                $sql .= "and ass.as_exist = 1 ";
+                $sql .= "group by ass.cate_id";
+                return Db::query($sql);
+                break;
+            default:
+                # code...
+                break;
+        }
+    }
+
     public static function insert($dic) {
         return Db::name(self::$className)->insertGetId($dic);
     }

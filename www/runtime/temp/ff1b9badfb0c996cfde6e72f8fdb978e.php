@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:98:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\blapprove\index.html";i:1588948403;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:98:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\blapprove\index.html";i:1589032654;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -76,7 +76,7 @@
         <div class="col-md-12">
             <div class="home-panel">
                 <div class="home-panel-header">
-                    <i class="las la-th-list"></i>
+                    <i class="las la-stamp"></i>
                     <span>领用归还审批</span>
                 </div>
                 <div class="home-panel-body">

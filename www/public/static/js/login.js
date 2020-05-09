@@ -1,6 +1,11 @@
 var send_code = 0;
 var send_time = 9;
 
+var layer = null;
+layui.use("layer", function () {
+    layer = layui.layer;
+})
+
 var phone = new Vue({
     el: "#phone",
     methods: {
@@ -21,7 +26,9 @@ var phone = new Vue({
                                 send_code = 1;
                                 layer.msg("验证码发送成功 请注意查收");
                                 e.target.innerHTML = "重新发送(" + send_time + ")";
-                                // 发送验证码
+                                $.post("/login/home/sendcode", {phone: phone}, function (res) {
+                                    $("#code").val(res)
+                                })
                                 var tmp = send_time;
                                 var time_worker = setInterval(function () {
                                     tmp = tmp - 1;
@@ -46,7 +53,7 @@ var phone = new Vue({
             }
         },
         do_login: function () {
-            document.location.href = "/login/home/login/phone/" + $("#username").val();
+            document.location.href = "/login/home/login/phone/" + $("#username").val() + "/code/" + $("#code").val();
         }
     }
 });

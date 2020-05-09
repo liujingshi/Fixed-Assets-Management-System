@@ -4,6 +4,8 @@ namespace app\app\controller;
 use think\Controller;
 use app\app\model\Utils;
 use app\app\model\Constant;
+use app\common\model\Param;
+use app\common\model\Asset;
 
 class Home extends Controller {
 
@@ -31,8 +33,30 @@ class Home extends Controller {
     }
 
     public function getMyUserInfo() {
-        $userinfo = Utils::getUserinfo();
-        return json_encode($userinfo);
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
+            $userinfo = Utils::getUserinfo();
+            return json_encode($userinfo);
+        } else {
+            $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
+        }
+    }
+
+    public function chart($id) {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
+            return json_encode(Asset::chart($id));
+        } else {
+            $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
+        }
+    }
+
+    public function topnum() {
+        if (Utils::userAlreadyLogin() && $this->powerTrue()) {
+            return json_encode([
+                "spz" => count(Asset::getAllSP())
+            ]);
+        } else {
+            $this->error(Constant::PLEASELOGIN, Constant::LOGINPATH);
+        }
     }
 
 }

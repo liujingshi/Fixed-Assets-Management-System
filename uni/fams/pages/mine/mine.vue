@@ -51,7 +51,7 @@
 			</view>
 		</view>
 		<view v-if="alreadyLogin">
-
+			<!-- <button class="cu-btn bg-blue margin-tb-sm lg ls-card w100" @tap="logout">退出登录</button> -->
 		</view>
 	</view>
 </template>
@@ -149,6 +149,9 @@
 						}
 					}, 1000)
 				}
+			},
+			logout: function () {
+				// getApp().sendSocket("logout")
 			}
 		},
 		oauth(value) {

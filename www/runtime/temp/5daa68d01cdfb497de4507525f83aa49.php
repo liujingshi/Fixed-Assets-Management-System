@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\home\index.html";i:1585365126;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:95:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\home\index.html";i:1589000529;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 
@@ -87,7 +87,7 @@
 </body>
 
 <script src="/static/jquery/jquery-3.4.1.min.js"></script>
-<script src="/static/layer/layer.js"></script>
+<script src="/static/layui/layui.js"></script>
 <script src="/static/vue/vue.min.js"></script>
 <script src="/static/vue/axios.min.js"></script>
 <script src="/static/bootstrap/js/bootstrap.min.js"></script>
