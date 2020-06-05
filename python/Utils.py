@@ -6,6 +6,9 @@ from ljsmysql import Ljsmysql
 import time
 from common import JsonToDatetime
 import base64
+import rsa
+from Crypto.Cipher import AES
+
 
 Ljsmysql.connect()
 
@@ -143,9 +146,10 @@ def getFuncList(tornadoSelf):
 
 # 得到资产信息
 def getAssetInfo(tornadoSelf, obj):
+    no = qrDecode(obj['no'])
     sql = "select * from fams_asset ass, fams_category cate, fams_status sta, fams_local local where "
     sql += "ass.cate_id = cate.cate_id and ass.sta_no = sta.sta_no and ass.as_local_id = local.local_id and "
-    sql += "ass.as_no = '{0}'".format(obj['no'])
+    sql += "ass.as_no = '{0}'".format(no)
     assetInfo = Ljsmysql.query(sql)
     if len(assetInfo) > 0:
         assetInfo = assetInfo[0]
@@ -248,3 +252,63 @@ def getChecks(tornadoSelf):
             "u_id": tornadoSelf.userid
         }).select()
     sendMsg(tornadoSelf, "checks", dbData)
+
+
+# 读取密文数据
+def loadData(data):
+    jsonString = str(base64.b64decode(data))[2:-1]
+    jsonData = json.loads(jsonString)
+    n = jsonData['n']
+    q1 = str(base64.b64decode(jsonData['r1']))[2:-1]
+    q1 = base64.b64decode(jsonData['r1'])
+    q2 = str(base64.b64decode(jsonData['r2']))[2:-1]
+    return n, q1, q2
+
+
+# AES解密
+def aesDecode(data, aesM):
+    aes = AES.new(aesM, AES.MODE_ECB)
+    base64Dec = base64.decodebytes(data.encode(encoding='utf-8'))
+    rst = str(aes.decrypt(base64Dec), encoding='utf-8')
+    return rst
+
+
+# RSA解密
+def rsaDecode(data, rsaPublicKey):
+    tmp = """-----BEGIN RSA PUBLIC KEY-----
+    {0}
+    -----END RSA PUBLIC KEY-----""".format(rsaPublicKey)
+    # publicKey = rsa.PublicKey.load_pkcs1(tmp)
+    publicKey = rsa.PublicKey.load_pkcs1_openssl_pem(tmp)
+    content = rsa.decrypt(data, publicKey)
+    rst = content.decode("utf-8")
+    return rst
+
+
+# 二维码解密
+def qrcodeDecode(data):
+    result = "error"
+    resPublicKey = Ljsmysql.table("fams_cms").where("cms_key", "publicKey").select()[0]['cms_value']
+    n, q1, q2 = loadData(data)
+    if (isSS(n)):
+        aesM = rsaDecode(q1, resPublicKey)
+        result = aesDecode(q2, aesM)
+    return result
+
+def qrDecode(data):
+    url = "http://www.ljs.com/utils/qrcode/decode"
+    postData = {
+        "data": data
+    }
+    html = requests.post(url, postData)
+    result = html.text
+    return result
+
+
+# 是质数
+def isSS(n):
+    for i in range(2, n):
+       if (n % i) == 0:
+           return False
+    return True
+

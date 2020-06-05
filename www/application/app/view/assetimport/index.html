@@ -1,23 +1,38 @@
 {[extend name="common@base" /]}
 {[block name="title"]}资产入库 - {[/block]}
 {[block name="css"]}
+<link rel="stylesheet" href="__STATIC__/cropper/cropper.min.css">
 <style>
     .form-image {
         height: 100px;
     }
-    .crop-mask {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        right:0px;
-        background-color: #777;
-        filter:progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=25,finishOpacity=75);
-        opacity: 0.6;
+    #cropok {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+        color: green;
+        background: rgba(74, 211, 74, 0.8);
+        border-radius: 60px;
+        cursor: pointer;
+        margin-bottom: 20px;
     }
-    #cropimage {
-        position: absolute;
-        top: 0;
-        left: 0;
+    #cropok:hover {
+        background: rgba(74, 211, 74, 1);
+    }
+    .cropc {
+        /* width: 100px; */
+        display: flex;
+    }
+    .cropimg {
+        width: 600px;
+    }
+    #cropimgok {
+        width: 200px;
+        height: 200px;
     }
 </style>
 {[/block]}
@@ -105,7 +120,7 @@
         <div class="form-group">
             <label>资产二维码</label>
             <div>
-                <img :src="'/qrcode/' + asQrcode" class="form-image">
+                <img :src="'/qrcode/' + asQrcode">
             </div>
             <small class="form-text text-muted">系统自动生成，无需多虑。</small>
         </div>
@@ -114,12 +129,18 @@
         <button class="btn btn-primary" @click="add" v-show="addS">确认添加</button>
     </form>
 </div>
-<div id="crop" style="display: none;">
-    <div class="crop-mask"></div>
-    <img id="cropimage" src="">
+<div id="cropdiv" style="display: none;">
+    <div id="cropok">√</div>
+    <div class="cropc">
+        <div class="cropimg">
+            <img id="cropimg">
+        </div>
+        <div id="cropimgok"></div>
+    </div>
 </div>
 {[/block]}
 {[block name="js"]}
+<script src="__STATIC__/cropper/cropper.min.js"></script>
 <script type="text/html" id="tableToolbar">
     <div class="layui-btn-container">
         <button class="layui-btn btn btn-info" lay-event="add">添加项目</button>
@@ -354,7 +375,9 @@
     /* ============================================================================================================================= */
     /* ============================================================================================================================= */
     function commonRequest(path, data, msg) { // 通用request请求
-        var loading = layer.load(1, {shade: [0.1,'#000']});
+        var loading = layer.load(1, {
+            shade: [0.1, '#000']
+        });
         axios
             .post(pageUrl + path, data)
             .then(function (response) {
@@ -427,18 +450,49 @@
                         title: "上传失败"
                     });
                 } else {
-                    $("#cropimage").attr("src", "/image/" + response);
+                    var $img = $("#cropimg");
+                    $img.attr("src", "/image/" + response);
                     let croppopup = ljspopup({
-                        el: "#crop",
+                        el: "#cropdiv",
                         title: "截取图片",
-                        width: 300,
-                        height: 438,
+                        width: 900,
+                        height: 750,
                         min: false,
                         max: false,
                         mask: false,
                         move: false
                     });
-                    // vueObj.asImage = response;
+                    var cropx = 0, cropy = 0, cropw = 256, croph = 256;
+                    $img.cropper({
+                        aspectRatio: 1,
+                        viewMode: 1,
+                        dragMode: 'move',
+                        preview: '#cropimgok',
+                        minCropBoxWidth: 256,
+                        minCropBoxHeight: 256,
+                        minContainerWidth: 600,
+                        minContainerHeight: 600,
+                        minCanvasWidth: 500,
+                        minCanvasHeight: 500,
+                        crop: function (event) {
+                            cropx = event.detail.x;
+                            cropy = event.detail.y;
+                            cropw = event.detail.width;
+                            croph = event.detail.height;
+                        }
+                    })
+                    $("#cropok").click(event => {
+                        closeLjspopup(croppopup)
+                        $.post("/utils/upload/crop", {
+                            img: response,
+                            x: cropx,
+                            y: cropy,
+                            width: cropw,
+                            height: croph
+                        }, res => {
+                            vueObj.asImage = res
+                        })
+                    })
                 }
             }
         });

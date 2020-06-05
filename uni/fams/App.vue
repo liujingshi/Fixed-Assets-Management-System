@@ -99,9 +99,19 @@
 				uni.scanCode({
 					onlyFromCamera: true,
 					success: (res) => {
-						uni.navigateTo({
-							url: "/pages/scan/scan?no=" + res.result
-						})
+						// console.log(res)
+						// uni.showToast({
+						// 	title: res.result
+						// })
+						if (res.result.length < 100) {
+							uni.showToast({
+								title: "扫码失败请重试"
+							})
+						} else {
+							uni.navigateTo({
+								url: "/pages/scan/scan?no=" + res.result
+							})
+						}
 					}
 				})
 			},
