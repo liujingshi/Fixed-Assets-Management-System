@@ -23,7 +23,7 @@ class MainSocketHandler(tornado.websocket.WebSocketHandler):
         self.userid = 0
         self.power = "VISIT"
         MainSocketHandler.guests.add(self)
-        logging.info("One guest user connected")
+        logging.info("One guest user('{0}', '{1}', '{2}') connected".format(self.vcode, self.userid, self.power))
 
     def on_close(self):  # WebSocket断开连接时调用
         if self in MainSocketHandler.guests:
@@ -49,12 +49,16 @@ class MainSocketHandler(tornado.websocket.WebSocketHandler):
                 self.userid = userid
                 self.power = power
                 MainSocketHandler.clients[userid] = self
-                logging.info("User {0} login".format(userid))
+                logging.info("User {0}('{1}', '{2}', '{3}') login".format(userid, self.vcode, self.userid, self.power))
                 Utils.sendMsg(self, "loginSuccess", {"loginCode": code})
             elif userid < 0:
                 Utils.sendMsg(self, "bindPhone", {"openid": openid})
             else:
                 Utils.sendMsg(self, "loginError")
+        elif action == "logout":  # 退出
+            self.userid = 0
+            self.power = 'VISIT'
+            Utils.logout(self)
         elif action == "sendVcode":  # 发送验证码
             vcode = random.randint(100000, 999999)
             self.vcode = vcode
@@ -79,6 +83,8 @@ class MainSocketHandler(tornado.websocket.WebSocketHandler):
             Utils.assetBorrow(self, obj)
         elif action == "assetLend":  # 资产归还
             Utils.assetLend(self, obj)
+        elif action == "getChecks":  # 得到盘点单
+            Utils.getChecks(self)
         
 
 

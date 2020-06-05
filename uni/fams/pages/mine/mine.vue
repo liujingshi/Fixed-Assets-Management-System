@@ -51,7 +51,7 @@
 			</view>
 		</view>
 		<view v-if="alreadyLogin">
-			<!-- <button class="cu-btn bg-blue margin-tb-sm lg ls-card w100" @tap="logout">退出登录</button> -->
+			<button class="cu-btn bg-blue margin-tb-sm lg ls-card w100" @tap="logout">退出</button>
 		</view>
 	</view>
 </template>
@@ -72,6 +72,8 @@
 		onShow: function() {
 			if (getApp().getCode()) {
 				this.alreadyLogin = true
+			} else {
+				this.alreadyLogin = false
 			}
 			uni.onSocketMessage((res) => {
 				this.getMessage(JSON.parse(res.data))
@@ -104,7 +106,9 @@
 						title: '请绑定手机'
 					})
 				} else if (msg == "bindPhoneSuccess") {
-					getApp().sendSocket("login", {"code": getApp().globalData.openid})
+					getApp().sendSocket("login", {
+						"code": getApp().globalData.openid
+					})
 					uni.showToast({
 						icon: 'success',
 						title: '绑定成功'
@@ -121,7 +125,7 @@
 					getApp().barTo(name)
 				}
 			},
-			login: function () {
+			login: function() {
 				let phone = this.phone
 				let code = this.code
 				getApp().sendSocket("login", {
@@ -137,7 +141,9 @@
 			},
 			sendVcode: function(e) {
 				if (this.text == "发送验证码") {
-					getApp().sendSocket("sendVcode", {phone: this.phone})
+					getApp().sendSocket("sendVcode", {
+						phone: this.phone
+					})
 					var s = 60
 					this.text = `重新发送(${s})`
 					var reSendTip = setInterval(() => {
@@ -150,8 +156,9 @@
 					}, 1000)
 				}
 			},
-			logout: function () {
-				// getApp().sendSocket("logout")
+			logout: function() {
+				getApp().sendSocket("logout")
+				this.alreadyLogin = false
 			}
 		},
 		oauth(value) {
@@ -162,7 +169,9 @@
 						provider: value,
 						success: (infoRes) => {
 							let code = infoRes.code
-							getApp().sendSocket("login", {"code": code})
+							getApp().sendSocket("login", {
+								"code": code
+							})
 						},
 						fail() {
 							uni.showToast({

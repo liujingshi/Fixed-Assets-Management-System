@@ -21,6 +21,14 @@
 				</view>
 			</view>
 		</view>
+		<view class="cu-list menu sm-border  margin-top">
+			<view class="cu-item arrow" v-for="(item,index) in checks" :key="index" :data-cid="item.c_id">
+				<view class="content">
+					<text class="cuIcon-circlefill text-grey"></text>
+					<text class="text-grey">{{item.c_title}}</text>
+				</view>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -28,10 +36,28 @@
 	export default {
 		data() {
 			return {
-				
+				checks: null
 			}
 		},
+		onShow: function() {
+			uni.onSocketMessage((res) => {
+				this.getMessage(JSON.parse(res.data))
+			})
+			getApp().sendSocket("getChecks")
+		},
 		methods: {
+			getMessage: function(data) {
+				let msg = data.msg
+				let obj = data.obj
+				if (msg == "loginError") {
+					getApp().delCode()
+					uni.redirectTo({
+						url: "/pages/mine/mine"
+					})
+				} else if (msg == "checks") {
+					this.checks = obj
+				}
+			},
 			barTo: function(e) {
 				let name = e.currentTarget.dataset.name
 				if (name == "scan") {

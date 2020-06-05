@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:104:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetborrowlend\index.html";i:1589032412;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:104:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetborrowlend\index.html";i:1589080881;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 

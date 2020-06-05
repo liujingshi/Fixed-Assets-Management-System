@@ -1029,6 +1029,49 @@ var render = function() {
           )
         ],
         1
+      ),
+      _c(
+        "v-uni-view",
+        { staticClass: _vm._$g(14, "sc"), attrs: { _i: 14 } },
+        _vm._l(_vm._$g(15, "f"), function(item, index, $20, $30) {
+          return _c(
+            "v-uni-view",
+            {
+              key: item,
+              staticClass: _vm._$g("15-" + $30, "sc"),
+              attrs: {
+                "data-cid": _vm._$g("15-" + $30, "a-data-cid"),
+                _i: "15-" + $30
+              }
+            },
+            [
+              _c(
+                "v-uni-view",
+                {
+                  staticClass: _vm._$g("16-" + $30, "sc"),
+                  attrs: { _i: "16-" + $30 }
+                },
+                [
+                  _c("v-uni-text", {
+                    staticClass: _vm._$g("17-" + $30, "sc"),
+                    attrs: { _i: "17-" + $30 }
+                  }),
+                  _c(
+                    "v-uni-text",
+                    {
+                      staticClass: _vm._$g("18-" + $30, "sc"),
+                      attrs: { _i: "18-" + $30 }
+                    },
+                    [_vm._v(_vm._$g("18-" + $30, "t0-0"))]
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        }),
+        1
       )
     ],
     1
@@ -1444,7 +1487,28 @@ var render = function() {
             1
           )
         : _vm._e(),
-      _vm._$g(31, "i") ? _c("v-uni-view", { attrs: { _i: 31 } }) : _vm._e()
+      _vm._$g(31, "i")
+        ? _c(
+            "v-uni-view",
+            { attrs: { _i: 31 } },
+            [
+              _c(
+                "v-uni-button",
+                {
+                  staticClass: _vm._$g(32, "sc"),
+                  attrs: { _i: 32 },
+                  on: {
+                    click: function($event) {
+                      return _vm.$handleViewEvent($event)
+                    }
+                  }
+                },
+                [_vm._v("退出")]
+              )
+            ],
+            1
+          )
+        : _vm._e()
     ],
     1
   )
@@ -1739,7 +1803,67 @@ var render = function() {
           )
         ],
         1
-      )
+      ),
+      _vm._$g(30, "i")
+        ? _c(
+            "v-uni-view",
+            { staticClass: _vm._$g(30, "sc"), attrs: { _i: 30 } },
+            [
+              _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(31, "sc"), attrs: { _i: 31 } },
+                [
+                  _vm._$g(32, "i")
+                    ? _c(
+                        "v-uni-view",
+                        { staticClass: _vm._$g(32, "sc"), attrs: { _i: 32 } },
+                        [
+                          _c(
+                            "v-uni-button",
+                            {
+                              staticClass: _vm._$g(33, "sc"),
+                              attrs: { _i: 33 },
+                              on: {
+                                click: function($event) {
+                                  return _vm.$handleViewEvent($event)
+                                }
+                              }
+                            },
+                            [_vm._v("领用")]
+                          )
+                        ],
+                        1
+                      )
+                    : _vm._e(),
+                  _vm._$g(34, "i")
+                    ? _c(
+                        "v-uni-view",
+                        { staticClass: _vm._$g(34, "sc"), attrs: { _i: 34 } },
+                        [
+                          _c(
+                            "v-uni-button",
+                            {
+                              staticClass: _vm._$g(35, "sc"),
+                              attrs: { _i: 35 },
+                              on: {
+                                click: function($event) {
+                                  return _vm.$handleViewEvent($event)
+                                }
+                              }
+                            },
+                            [_vm._v("归还")]
+                          )
+                        ],
+                        1
+                      )
+                    : _vm._e()
+                ],
+                1
+              )
+            ],
+            1
+          )
+        : _vm._e()
     ],
     1
   )
@@ -1904,7 +2028,7 @@ var render = function() {
                 attrs: {
                   name: "input",
                   value: _vm._$g(7, "a-value"),
-                  "data-value": "as_no",
+                  "data-value": "as_name",
                   _i: 7
                 },
                 on: {
@@ -1954,7 +2078,6 @@ var render = function() {
                 "v-uni-picker",
                 {
                   attrs: {
-                    "data-value": "cate_id",
                     value: _vm._$g(13, "a-value"),
                     range: _vm._$g(13, "a-range"),
                     "range-key": "cate_name",
@@ -2031,9 +2154,9 @@ var render = function() {
                 "v-uni-picker",
                 {
                   attrs: {
-                    "data-value": "as_local_id",
                     value: _vm._$g(23, "a-value"),
                     range: _vm._$g(23, "a-range"),
+                    "range-key": "local_name",
                     _i: 23
                   },
                   on: {
@@ -2134,6 +2257,26 @@ var render = function() {
                     : _vm._e()
                 ],
                 1
+              )
+            ],
+            1
+          ),
+          _c(
+            "v-uni-view",
+            { staticClass: _vm._$g(35, "sc"), attrs: { _i: 35 } },
+            [
+              _c(
+                "v-uni-button",
+                {
+                  staticClass: _vm._$g(36, "sc"),
+                  attrs: { _i: 36 },
+                  on: {
+                    click: function($event) {
+                      return _vm.$handleViewEvent($event)
+                    }
+                  }
+                },
+                [_vm._v("保存")]
               )
             ],
             1

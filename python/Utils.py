@@ -46,6 +46,11 @@ def getOpenidByCode(code):
         return "noopenid"
 
 
+# 退出
+def logout(tornadoSelf):
+    Ljsmysql.table("fams_user").where("u_id", tornadoSelf.userid).update({"u_login_code": ""})
+
+
 # 用户登录
 def login(tornadoSelf, obj):
     userid = 0
@@ -117,24 +122,22 @@ def getMineInfo(tornadoSelf):
 # 得到功能列表
 def getFuncList(tornadoSelf):
     funcList = []
-    user = Ljsmysql.table("fams_user").where("u_id", tornadoSelf.userid).select()
-    if len(user) > 0:
-        if user[0]['power_no'] == "VIP" or user[0]['power_no'] == "SVIP":
-            funcList += [{
-                'cuIcon': 'deliver',
-                'color': 'blue',
-                'badge': 0,
-                'name': '资产入库',
-                'action': 'assetImport'
-            }]
-        if user[0]['power_no'] == "VIP" or user[0]['power_no'] == "SVIP" or user[0]['power_no'] == "USER":
-            funcList += [{
-                'cuIcon': 'roundadd',
-                'color': 'green',
-                'badge': 0,
-                'name': '领用&退库',
-                'action': 'borrowlend'
-            }]
+    if tornadoSelf.power == "VIP" or tornadoSelf.power == "SVIP":
+        funcList += [{
+            'cuIcon': 'deliver',
+            'color': 'blue',
+            'badge': 0,
+            'name': '资产入库',
+            'action': 'assetImport'
+        }]
+    if tornadoSelf.power == "VIP" or tornadoSelf.power == "SVIP" or tornadoSelf.power == "USER":
+        funcList += [{
+            'cuIcon': 'roundadd',
+            'color': 'green',
+            'badge': 0,
+            'name': '领用&退库',
+            'action': 'borrowlend'
+        }]
     sendMsg(tornadoSelf, "funcList", funcList)
 
 
@@ -229,3 +232,19 @@ def assetLend(tornadoSelf, obj):
         elif tornadoSelf.power == "USER":
             Ljsmysql.table("fams_asset").where("as_no", obj['as_no']).update({"sta_no": "SPZ"})
         sendMsg(tornadoSelf, "lendSuccess")
+
+
+# 获得盘点单
+def getChecks(tornadoSelf):
+    if tornadoSelf.power == "VIP" or tornadoSelf.power == "SVIP":
+        dbData = Ljsmysql.table("fams_check").where({
+            "c_exist": 1,
+            "c_sta_no": "JXZ"
+        }).select()
+    else:
+        dbData = Ljsmysql.table("fams_check").where({
+            "c_exist": 1,
+            "c_sta_no": "JXZ",
+            "u_id": tornadoSelf.userid
+        }).select()
+    sendMsg(tornadoSelf, "checks", dbData)

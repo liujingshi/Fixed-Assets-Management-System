@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:100:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetimport\index.html";i:1589032453;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:100:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetimport\index.html";i:1590812303;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -21,6 +21,20 @@
 <style>
     .form-image {
         height: 100px;
+    }
+    .crop-mask {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right:0px;
+        background-color: #777;
+        filter:progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=25,finishOpacity=75);
+        opacity: 0.6;
+    }
+    #cropimage {
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 </style>
 
@@ -168,6 +182,10 @@
         <button class="btn btn-danger" @click="del" v-show="editS">删除</button>
         <button class="btn btn-primary" @click="add" v-show="addS">确认添加</button>
     </form>
+</div>
+<div id="crop" style="display: none;">
+    <div class="crop-mask"></div>
+    <img id="cropimage" src="">
 </div>
 
             </div>
@@ -485,6 +503,10 @@
         vueObj.addS = false;
     }
 
+    function croppingImage() { // 截取图片
+
+    }
+
     $("#asImage").on('change', function () { // 监听文件选择并上传
         var formData = new FormData();
         formData.append("image", $("#asImage")[0].files[0]);
@@ -501,7 +523,18 @@
                         title: "上传失败"
                     });
                 } else {
-                    vueObj.asImage = response;
+                    $("#cropimage").attr("src", "/image/" + response);
+                    let croppopup = ljspopup({
+                        el: "#crop",
+                        title: "截取图片",
+                        width: 300,
+                        height: 438,
+                        min: false,
+                        max: false,
+                        mask: false,
+                        move: false
+                    });
+                    // vueObj.asImage = response;
                 }
             }
         });

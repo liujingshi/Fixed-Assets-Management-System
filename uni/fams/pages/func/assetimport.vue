@@ -89,7 +89,12 @@
 			getMessage: function(data) {
 				let msg = data.msg
 				let obj = data.obj
-				if (msg == "assetInfo") {
+				if (msg == "loginError") {
+					getApp().delCode()
+					uni.redirectTo({
+						url: "/pages/mine/mine"
+					})
+				} else if (msg == "assetInfo") {
 					this.assetInfo = obj
 					this.setLocalIndex()
 					this.setCateIndex()

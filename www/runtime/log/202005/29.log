@@ -1,0 +1,3952 @@
+---------------------------------------------------------------
+[ 2020-05-29T00:14:57+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetimport
+[运行时间：0.075541s] [吞吐率：13.24req/s] [内存消耗：231.73kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetimport',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/assetimport',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetimport->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetimport.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetimport\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002544s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.017888s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001095s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001213s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012348s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000768s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000694s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000657s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000643s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000640s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000630s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000635s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000631s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:14:57+08:00 ] 0.0.0.0 POST www.ljs.com/app/Assetcategory/categorysData
+[运行时间：0.087077s] [吞吐率：11.48req/s] [内存消耗：211.15kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Assetcategory',
+    2 => 'categorysData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetimport',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetcategory->categorysData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetcategory.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002623s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.014966s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000859s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000786s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.013399s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000761s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000738s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000657s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_category` [ RunTime:0.012259s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_category` WHERE  `cate_exist` = '1' ORDER BY `cate_id` [ RunTime:0.000735s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:14:57+08:00 ] 0.0.0.0 POST www.ljs.com/app/Assetimport/localsData
+[运行时间：0.141814s] [吞吐率：7.05req/s] [内存消耗：211.78kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Assetimport',
+    2 => 'localsData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetimport',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetimport->localsData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetimport.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001916s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012067s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000860s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000761s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012496s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000887s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000864s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000706s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_local` [ RunTime:0.012287s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_local` WHERE  `local_exist` = 1 ORDER BY `local_id` [ RunTime:0.001176s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:14:57+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetimport/select?page=1&limit=10
+[运行时间：0.102466s] [吞吐率：9.76req/s] [内存消耗：224.82kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetimport',
+    2 => 'select',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/assetimport',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ RUN ] app\app\controller\Assetimport->select[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetimport.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012546s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.014039s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000746s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000660s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012236s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000819s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000755s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000930s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_asset` [ RunTime:0.017869s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_asset` WHERE  `as_exist` = 1 ORDER BY `as_id` [ RunTime:0.001931s ]
+[ sql ] [ SQL ] select * from fams_asset ass, fams_status sta, fams_category cate, fams_local local where ass.sta_no = sta.sta_no and ass.as_local_id = local.local_id and ass.cate_id = cate.cate_id and ass.as_exist = 1 order by ass.as_import_time desc limit 0, 10 [ RunTime:0.003529s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:38:28+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetimport
+[运行时间：0.082036s] [吞吐率：12.19req/s] [内存消耗：296.56kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetimport',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetimport->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetimport.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetimport\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010882s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013376s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000871s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000769s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012211s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000739s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000772s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000805s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000648s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000720s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000634s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:42:01+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetborrowlend
+[运行时间：0.108907s] [吞吐率：9.18req/s] [内存消耗：233.09kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetborrowlend',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/assetimport',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetborrowlend->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetborrowlend.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetborrowlend\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011604s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.017791s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001734s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001198s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.017595s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.001403s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000946s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000900s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000872s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001220s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000811s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000663s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000610s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:42:02+08:00 ] 0.0.0.0 POST www.ljs.com/app/Home/getMyUserInfo
+[运行时间：0.062417s] [吞吐率：16.02req/s] [内存消耗：213.00kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Home',
+    2 => 'getMyUserInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Home->getMyUserInfo[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002255s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013903s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000841s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001130s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012619s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.001386s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000805s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000884s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000755s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001094s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000825s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000904s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000680s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:42:02+08:00 ] 0.0.0.0 POST www.ljs.com/app/Assetborrowlend/usersData
+[运行时间：0.072488s] [吞吐率：13.80req/s] [内存消耗：213.00kb] [文件加载：50]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Assetborrowlend',
+    2 => 'usersData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetborrowlend->usersData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetborrowlend.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002601s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013103s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000884s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000740s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012228s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000845s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000806s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000722s ]
+[ sql ] [ SQL ] select * from fams_user u, fams_user_power power, fams_person p where u.power_no = power.power_no and u.p_id = p.p_id and u.u_exist = 1 order by u.u_id [ RunTime:0.001296s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:42:02+08:00 ] 0.0.0.0 POST www.ljs.com/app/Assetborrowlend/xzData
+[运行时间：0.115115s] [吞吐率：8.69req/s] [内存消耗：224.15kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Assetborrowlend',
+    2 => 'xzData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetborrowlend->xzData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetborrowlend.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002070s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012213s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000851s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000825s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012440s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000667s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000730s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000659s ]
+[ sql ] [ SQL ] select * from fams_asset ass, fams_status sta, fams_category cate, fams_local local where ass.sta_no = sta.sta_no and ass.as_local_id = local.local_id and ass.cate_id = cate.cate_id and ass.sta_no = 'XZ' and ass.as_exist = 1 order by ass.as_import_time desc [ RunTime:0.001594s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:42:02+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetborrowlend/select?page=1&limit=10
+[运行时间：0.082756s] [吞吐率：12.08req/s] [内存消耗：237.84kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetborrowlend',
+    2 => 'select',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ RUN ] app\app\controller\Assetborrowlend->select[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetborrowlend.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002204s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012742s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000805s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000648s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.011909s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000715s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000693s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000633s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000860s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000838s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000841s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_borrowlend` [ RunTime:0.015630s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_borrowlend` WHERE  `bl_exist` = 1  AND `bl_ok` = 0 ORDER BY `bl_id` [ RunTime:0.001871s ]
+[ sql ] [ SQL ] select * from fams_borrowlend bl, fams_asset ass, fams_status sta, fams_user u, fams_person p where bl.as_no = ass.as_no and bl.u_id = u.u_id and u.p_id = p.p_id and ass.sta_no = sta.sta_no and bl.bl_exist = 1 and bl.bl_ok = 0 order by bl.b_time desc limit 0, 10 [ RunTime:0.003865s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:50:55+08:00 ] 0.0.0.0 GET www.ljs.com/app/usermanage
+[运行时间：0.107117s] [吞吐率：9.34req/s] [内存消耗：217.10kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'usermanage',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Usermanage->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Usermanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\usermanage\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012174s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013961s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000889s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000786s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.015307s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000892s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000848s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001210s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001022s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000959s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000933s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000944s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000942s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:50:56+08:00 ] 0.0.0.0 POST www.ljs.com/app/personManage/personsData
+[运行时间：0.071202s] [吞吐率：14.04req/s] [内存消耗：211.73kb] [文件加载：50]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'personManage',
+    2 => 'personsData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/usermanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Personmanage->personsData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Personmanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011424s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013340s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000975s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000873s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.015882s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.001033s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000896s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000826s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_exist` = 1 ORDER BY `p_id` [ RunTime:0.000841s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:50:56+08:00 ] 0.0.0.0 POST www.ljs.com/app/userManage/powersData
+[运行时间：0.148175s] [吞吐率：6.75req/s] [内存消耗：209.28kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'userManage',
+    2 => 'powersData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/usermanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Usermanage->powersData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Usermanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011669s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013014s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000924s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000781s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012965s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000870s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000770s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000767s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user_power` [ RunTime:0.014989s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user_power` ORDER BY `power_id` [ RunTime:0.000949s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:50:56+08:00 ] 0.0.0.0 GET www.ljs.com/app/usermanage/selectU?page=1&limit=10
+[运行时间：0.097440s] [吞吐率：10.26req/s] [内存消耗：216.29kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'usermanage',
+    2 => 'selectU',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/usermanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ RUN ] app\app\controller\Usermanage->selectU[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Usermanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010951s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012686s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001095s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000764s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012549s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000878s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000957s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000875s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_exist` = 1 ORDER BY `u_id` [ RunTime:0.000786s ]
+[ sql ] [ SQL ] select * from fams_user u, fams_user_power power, fams_person p where u.power_no = power.power_no and u.p_id = p.p_id and u.u_exist = 1 order by u.u_id limit 0, 10 [ RunTime:0.001166s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:51:03+08:00 ] 0.0.0.0 GET www.ljs.com/app/home/logout
+[运行时间：0.018628s] [吞吐率：53.68req/s] [内存消耗：87.90kb] [文件加载：43]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'home',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/usermanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Home->logout[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\tpl\dispatch_success_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-29T00:51:04+08:00 ] 0.0.0.0 GET www.ljs.com/login/home/index
+[运行时间：0.013882s] [吞吐率：72.03req/s] [内存消耗：86.17kb] [文件加载：42]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'home',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/home/logout',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Home->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Home.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\home\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-29T00:51:04+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.018467s] [吞吐率：54.15req/s] [内存消耗：74.01kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-29T00:51:04+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.017632s] [吞吐率：56.72req/s] [内存消耗：74.15kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-29T00:51:16+08:00 ] 0.0.0.0 POST www.ljs.com/login/home/checkCaptcha
+[运行时间：0.018870s] [吞吐率：52.99req/s] [内存消耗：86.38kb] [文件加载：42]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'home',
+    2 => 'checkCaptcha',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/login/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'captcha' => 'j2ukw',
+)
+[ info ] [ RUN ] app\login\controller\Home->checkCaptcha[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-29T00:51:16+08:00 ] 0.0.0.0 POST www.ljs.com/login/home/sendcode
+[运行时间：0.015453s] [吞吐率：64.71req/s] [内存消耗：86.26kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'home',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '17',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/login/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13842500001',
+)
+[ info ] [ RUN ] app\login\controller\Home->sendcode[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-29T00:51:19+08:00 ] 0.0.0.0 GET www.ljs.com/login/home/login/phone/13842500001/code/851786
+[运行时间：0.040738s] [吞吐率：24.55req/s] [内存消耗：205.84kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'home',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/login/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '13842500001',
+  'code' => '851786',
+)
+[ info ] [ RUN ] app\login\controller\Home->login[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\tpl\dispatch_success_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002188s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013113s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_phone` = '13842500001'  AND `u_exist` = 1 [ RunTime:0.001048s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000829s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:51:20+08:00 ] 0.0.0.0 GET www.ljs.com/app/home/index
+[运行时间：0.068372s] [吞吐率：14.63req/s] [内存消耗：231.91kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'home',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/login/home/login/phone/13842500001/code/851786',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Home->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\home\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011165s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012870s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000975s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000893s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012541s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.000901s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000810s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000798s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000789s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000779s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.000781s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000776s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000794s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:51:21+08:00 ] 0.0.0.0 POST www.ljs.com/app/home/chart/id/zy
+[运行时间：0.053516s] [吞吐率：18.69req/s] [内存消耗：209.05kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'home',
+    2 => 'chart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'zy',
+)
+[ info ] [ RUN ] app\app\controller\Home->chart[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002060s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012771s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000952s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000869s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012429s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.000925s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000815s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000755s ]
+[ sql ] [ SQL ] select cate.cate_name name, count(ass.as_no) value, sum(ass.as_price) price from fams_asset ass, fams_category cate where ass.cate_id = cate.cate_id and ass.sta_no = 'ZY' and ass.as_exist = 1 group by ass.cate_id [ RunTime:0.001301s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:51:21+08:00 ] 0.0.0.0 POST www.ljs.com/app/home/chart/id/xz
+[运行时间：0.096001s] [吞吐率：10.42req/s] [内存消耗：209.17kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'home',
+    2 => 'chart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'xz',
+)
+[ info ] [ RUN ] app\app\controller\Home->chart[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002115s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012845s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000979s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000738s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012098s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.000987s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000870s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000809s ]
+[ sql ] [ SQL ] select cate.cate_name name, count(ass.as_no) value, sum(ass.as_price) price from fams_asset ass, fams_category cate where ass.cate_id = cate.cate_id and ass.sta_no = 'XZ' and ass.as_exist = 1 group by ass.cate_id [ RunTime:0.001231s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:51:21+08:00 ] 0.0.0.0 POST www.ljs.com/app/home/chart/id/zb
+[运行时间：0.140332s] [吞吐率：7.13req/s] [内存消耗：208.44kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'home',
+    2 => 'chart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'zb',
+)
+[ info ] [ RUN ] app\app\controller\Home->chart[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002509s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012618s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000926s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000909s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012867s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.000899s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000801s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000733s ]
+[ sql ] [ SQL ] select sta.sta_name name, count(ass.sta_no) value, ass.sta_no no from fams_asset ass, fams_status sta where ass.sta_no = sta.sta_no and ass.as_exist = 1 group by ass.sta_no [ RunTime:0.001156s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:51:21+08:00 ] 0.0.0.0 POST www.ljs.com/app/home/chart/id/catenum
+[运行时间：0.188282s] [吞吐率：5.31req/s] [内存消耗：208.70kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'home',
+    2 => 'chart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'catenum',
+)
+[ info ] [ RUN ] app\app\controller\Home->chart[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002070s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013598s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000864s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000656s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.014312s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.000901s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000875s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000792s ]
+[ sql ] [ SQL ] select cate.cate_name name, count(ass.as_no) value from fams_asset ass, fams_category cate where ass.cate_id = cate.cate_id and ass.as_exist = 1 group by ass.cate_id [ RunTime:0.001534s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:51:21+08:00 ] 0.0.0.0 POST www.ljs.com/app/home/topnum
+[运行时间：0.118324s] [吞吐率：8.45req/s] [内存消耗：215.27kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'home',
+    2 => 'topnum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Home->topnum[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002021s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013277s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000764s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012265s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.000811s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000784s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000821s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_asset` [ RunTime:0.012776s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_asset` WHERE  `as_exist` = 1  AND `sta_no` = 'SPZ' ORDER BY `as_id` [ RunTime:0.000957s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:51:25+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetborrowlend
+[运行时间：0.077139s] [吞吐率：12.96req/s] [内存消耗：231.78kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetborrowlend',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetborrowlend->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetborrowlend.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetborrowlend\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002034s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.016652s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.001774s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.001420s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.014807s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.001058s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.001016s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000957s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.001076s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.001209s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.001134s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.001114s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:51:26+08:00 ] 0.0.0.0 POST www.ljs.com/app/Home/getMyUserInfo
+[运行时间：0.069153s] [吞吐率：14.46req/s] [内存消耗：212.95kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Home',
+    2 => 'getMyUserInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Home->getMyUserInfo[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012433s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013082s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000889s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000771s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.013548s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.000885s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000749s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000697s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000741s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.000733s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000925s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000851s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:51:26+08:00 ] 0.0.0.0 POST www.ljs.com/app/Assetborrowlend/usersData
+[运行时间：0.084578s] [吞吐率：11.82req/s] [内存消耗：212.92kb] [文件加载：50]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Assetborrowlend',
+    2 => 'usersData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetborrowlend->usersData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetborrowlend.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001915s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012927s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000887s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000782s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012718s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.000827s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000762s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000753s ]
+[ sql ] [ SQL ] select * from fams_user u, fams_user_power power, fams_person p where u.power_no = power.power_no and u.p_id = p.p_id and u.u_exist = 1 order by u.u_id [ RunTime:0.001210s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:51:26+08:00 ] 0.0.0.0 POST www.ljs.com/app/Assetborrowlend/xzData
+[运行时间：0.128559s] [吞吐率：7.78req/s] [内存消耗：224.15kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Assetborrowlend',
+    2 => 'xzData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetborrowlend->xzData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetborrowlend.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002070s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012487s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.001126s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000965s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012961s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.000787s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000653s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000731s ]
+[ sql ] [ SQL ] select * from fams_asset ass, fams_status sta, fams_category cate, fams_local local where ass.sta_no = sta.sta_no and ass.as_local_id = local.local_id and ass.cate_id = cate.cate_id and ass.sta_no = 'XZ' and ass.as_exist = 1 order by ass.as_import_time desc [ RunTime:0.001486s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:51:26+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetborrowlend/select?page=1&limit=10
+[运行时间：0.113254s] [吞吐率：8.83req/s] [内存消耗：226.47kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetborrowlend',
+    2 => 'select',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ RUN ] app\app\controller\Assetborrowlend->select[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetborrowlend.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012756s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012604s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000741s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000624s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012566s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.000724s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000637s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000601s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000590s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000583s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 5 [ RunTime:0.000585s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000626s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 14 [ RunTime:0.000632s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_borrowlend` [ RunTime:0.012190s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_borrowlend` WHERE  `bl_exist` = 1  AND `bl_ok` = 0 ORDER BY `bl_id` [ RunTime:0.000758s ]
+[ sql ] [ SQL ] select * from fams_borrowlend bl, fams_asset ass, fams_status sta, fams_user u, fams_person p where bl.as_no = ass.as_no and bl.u_id = u.u_id and u.p_id = p.p_id and ass.sta_no = sta.sta_no and bl.bl_exist = 1 and bl.bl_ok = 0 order by bl.b_time desc limit 0, 10 [ RunTime:0.003108s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_borrowlend` WHERE  `bl_exist` = 1  AND `u_id` = 14  AND `bl_ok` = 0 ORDER BY `bl_id` [ RunTime:0.000815s ]
+[ sql ] [ SQL ] select * from fams_borrowlend bl, fams_asset ass, fams_status sta, fams_user u, fams_person p where bl.as_no = ass.as_no and bl.u_id = u.u_id and u.p_id = p.p_id and ass.sta_no = sta.sta_no and bl.bl_exist = 1 and bl.bl_ok = 0 and bl.u_id = 14 order by bl.b_time desc limit 0, 10 [ RunTime:0.001565s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:53:09+08:00 ] 0.0.0.0 GET www.ljs.com/app/home/logout
+[运行时间：0.019833s] [吞吐率：50.42req/s] [内存消耗：88.02kb] [文件加载：43]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'home',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Home->logout[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\tpl\dispatch_success_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-29T00:53:10+08:00 ] 0.0.0.0 GET www.ljs.com/login/home/index
+[运行时间：0.013802s] [吞吐率：72.45req/s] [内存消耗：86.17kb] [文件加载：42]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'home',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/home/logout',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Home->index[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Home.php ]
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/login\view\home\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-29T00:53:10+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.019199s] [吞吐率：52.09req/s] [内存消耗：74.01kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-29T00:53:13+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.042141s] [吞吐率：23.73req/s] [内存消耗：74.15kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-29T00:53:14+08:00 ] 0.0.0.0 GET www.ljs.com/captcha.html
+[运行时间：0.031826s] [吞吐率：31.42req/s] [内存消耗：74.15kb] [文件加载：34]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.ljs.com/login/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ E:\code\git\Fixed-Assets-Management-System\www\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-29T00:53:19+08:00 ] 0.0.0.0 POST www.ljs.com/login/home/checkCaptcha
+[运行时间：0.016733s] [吞吐率：59.76req/s] [内存消耗：86.38kb] [文件加载：42]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'home',
+    2 => 'checkCaptcha',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/login/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'captcha' => 'xx7hp',
+)
+[ info ] [ RUN ] app\login\controller\Home->checkCaptcha[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-29T00:53:19+08:00 ] 0.0.0.0 POST www.ljs.com/login/home/sendcode
+[运行时间：0.012011s] [吞吐率：83.26req/s] [内存消耗：86.26kb] [文件加载：40]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'home',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '17',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/login/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '15541850199',
+)
+[ info ] [ RUN ] app\login\controller\Home->sendcode[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-05-29T00:53:20+08:00 ] 0.0.0.0 GET www.ljs.com/login/home/login/phone/15541850199/code/357078
+[运行时间：0.046920s] [吞吐率：21.31req/s] [内存消耗：205.88kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'home',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/login/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'phone' => '15541850199',
+  'code' => '357078',
+)
+[ info ] [ RUN ] app\login\controller\Home->login[ E:\code\git\Fixed-Assets-Management-System\www\application\login\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\tpl\dispatch_success_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012615s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012908s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_phone` = '15541850199'  AND `u_exist` = 1 [ RunTime:0.000947s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000920s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:53:21+08:00 ] 0.0.0.0 GET www.ljs.com/app/home/index
+[运行时间：0.072616s] [吞吐率：13.77req/s] [内存消耗：231.96kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'home',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/login/home/login/phone/15541850199/code/357078',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Home->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\home\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012107s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.015177s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000900s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000902s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.013018s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000827s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000876s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000920s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000860s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000811s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000852s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000861s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000893s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:53:21+08:00 ] 0.0.0.0 POST www.ljs.com/app/home/chart/id/zy
+[运行时间：0.064598s] [吞吐率：15.48req/s] [内存消耗：209.05kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'home',
+    2 => 'chart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'zy',
+)
+[ info ] [ RUN ] app\app\controller\Home->chart[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012689s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013010s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000983s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000916s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012789s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000748s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000724s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000770s ]
+[ sql ] [ SQL ] select cate.cate_name name, count(ass.as_no) value, sum(ass.as_price) price from fams_asset ass, fams_category cate where ass.cate_id = cate.cate_id and ass.sta_no = 'ZY' and ass.as_exist = 1 group by ass.cate_id [ RunTime:0.001249s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:53:21+08:00 ] 0.0.0.0 POST www.ljs.com/app/home/chart/id/xz
+[运行时间：0.107786s] [吞吐率：9.28req/s] [内存消耗：209.17kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'home',
+    2 => 'chart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'xz',
+)
+[ info ] [ RUN ] app\app\controller\Home->chart[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002134s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012634s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000921s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000779s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012761s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000953s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000877s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000836s ]
+[ sql ] [ SQL ] select cate.cate_name name, count(ass.as_no) value, sum(ass.as_price) price from fams_asset ass, fams_category cate where ass.cate_id = cate.cate_id and ass.sta_no = 'XZ' and ass.as_exist = 1 group by ass.cate_id [ RunTime:0.001322s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:53:21+08:00 ] 0.0.0.0 POST www.ljs.com/app/home/chart/id/zb
+[运行时间：0.162043s] [吞吐率：6.17req/s] [内存消耗：208.44kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'home',
+    2 => 'chart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'zb',
+)
+[ info ] [ RUN ] app\app\controller\Home->chart[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011959s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012754s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000759s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000816s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.014295s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000908s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000743s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000656s ]
+[ sql ] [ SQL ] select sta.sta_name name, count(ass.sta_no) value, ass.sta_no no from fams_asset ass, fams_status sta where ass.sta_no = sta.sta_no and ass.as_exist = 1 group by ass.sta_no [ RunTime:0.001103s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:53:21+08:00 ] 0.0.0.0 POST www.ljs.com/app/home/chart/id/catenum
+[运行时间：0.220505s] [吞吐率：4.54req/s] [内存消耗：208.70kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'home',
+    2 => 'chart',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'id' => 'catenum',
+)
+[ info ] [ RUN ] app\app\controller\Home->chart[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012019s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013394s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000959s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000849s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012951s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000715s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000745s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000717s ]
+[ sql ] [ SQL ] select cate.cate_name name, count(ass.as_no) value from fams_asset ass, fams_category cate where ass.cate_id = cate.cate_id and ass.as_exist = 1 group by ass.cate_id [ RunTime:0.001459s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:53:21+08:00 ] 0.0.0.0 POST www.ljs.com/app/home/topnum
+[运行时间：0.157236s] [吞吐率：6.36req/s] [内存消耗：215.27kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'home',
+    2 => 'topnum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Home->topnum[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001997s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012836s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000866s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000660s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012815s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000796s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000660s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000616s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_asset` [ RunTime:0.012295s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_asset` WHERE  `as_exist` = 1  AND `sta_no` = 'SPZ' ORDER BY `as_id` [ RunTime:0.001031s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:53:23+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetborrowlend
+[运行时间：0.071398s] [吞吐率：14.01req/s] [内存消耗：231.84kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetborrowlend',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/home/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetborrowlend->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetborrowlend.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetborrowlend\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002206s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.014595s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000867s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000782s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012368s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000820s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000795s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000781s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000784s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000777s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000769s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000798s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000773s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:53:24+08:00 ] 0.0.0.0 POST www.ljs.com/app/Home/getMyUserInfo
+[运行时间：0.070826s] [吞吐率：14.12req/s] [内存消耗：213.00kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Home',
+    2 => 'getMyUserInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Home->getMyUserInfo[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Home.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012448s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013480s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000857s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000805s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012483s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000951s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000825s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000913s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000870s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001157s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000841s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000874s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000806s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:53:24+08:00 ] 0.0.0.0 POST www.ljs.com/app/Assetborrowlend/usersData
+[运行时间：0.088787s] [吞吐率：11.26req/s] [内存消耗：212.92kb] [文件加载：50]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Assetborrowlend',
+    2 => 'usersData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetborrowlend->usersData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetborrowlend.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001970s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000891s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000904s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012332s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000839s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000735s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000680s ]
+[ sql ] [ SQL ] select * from fams_user u, fams_user_power power, fams_person p where u.power_no = power.power_no and u.p_id = p.p_id and u.u_exist = 1 order by u.u_id [ RunTime:0.001149s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:53:24+08:00 ] 0.0.0.0 POST www.ljs.com/app/Assetborrowlend/xzData
+[运行时间：0.131280s] [吞吐率：7.62req/s] [内存消耗：224.15kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Assetborrowlend',
+    2 => 'xzData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetborrowlend->xzData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetborrowlend.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001989s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012546s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000851s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000783s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012830s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000849s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000683s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000649s ]
+[ sql ] [ SQL ] select * from fams_asset ass, fams_status sta, fams_category cate, fams_local local where ass.sta_no = sta.sta_no and ass.as_local_id = local.local_id and ass.cate_id = cate.cate_id and ass.sta_no = 'XZ' and ass.as_exist = 1 order by ass.as_import_time desc [ RunTime:0.001707s ]
+---------------------------------------------------------------
+[ 2020-05-29T00:53:24+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetborrowlend/select?page=1&limit=10
+[运行时间：0.099018s] [吞吐率：10.10req/s] [内存消耗：236.73kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetborrowlend',
+    2 => 'select',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ RUN ] app\app\controller\Assetborrowlend->select[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetborrowlend.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002004s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.014181s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000895s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.015015s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000941s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000855s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000770s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000800s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000751s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000785s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000730s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000687s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_borrowlend` [ RunTime:0.013926s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_borrowlend` WHERE  `bl_exist` = 1  AND `bl_ok` = 0 ORDER BY `bl_id` [ RunTime:0.001045s ]
+[ sql ] [ SQL ] select * from fams_borrowlend bl, fams_asset ass, fams_status sta, fams_user u, fams_person p where bl.as_no = ass.as_no and bl.u_id = u.u_id and u.p_id = p.p_id and ass.sta_no = sta.sta_no and bl.bl_exist = 1 and bl.bl_ok = 0 order by bl.b_time desc limit 0, 10 [ RunTime:0.003346s ]
+---------------------------------------------------------------
+[ 2020-05-29T01:17:17+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetcheck
+[运行时间：0.105517s] [吞吐率：9.48req/s] [内存消耗：233.10kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetcheck',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/assetborrowlend',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetcheck->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetcheck.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetcheck\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012636s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.014803s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000870s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000764s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012615s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000788s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000851s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000801s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000771s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000659s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000641s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000641s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000917s ]
+---------------------------------------------------------------
+[ 2020-05-29T01:17:18+08:00 ] 0.0.0.0 POST www.ljs.com/app/Assetborrowlend/usersData
+[运行时间：0.058207s] [吞吐率：17.18req/s] [内存消耗：212.92kb] [文件加载：50]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Assetborrowlend',
+    2 => 'usersData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetcheck',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetborrowlend->usersData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetborrowlend.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003128s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.014447s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000931s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000762s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012858s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000794s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000767s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000703s ]
+[ sql ] [ SQL ] select * from fams_user u, fams_user_power power, fams_person p where u.power_no = power.power_no and u.p_id = p.p_id and u.u_exist = 1 order by u.u_id [ RunTime:0.001250s ]
+---------------------------------------------------------------
+[ 2020-05-29T01:17:18+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetcheck/select?page=1&limit=10
+[运行时间：0.077609s] [吞吐率：12.89req/s] [内存消耗：217.02kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetcheck',
+    2 => 'select',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/assetcheck',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ RUN ] app\app\controller\Assetcheck->select[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetcheck.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002196s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.015491s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000851s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000753s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012347s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.001026s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000910s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000817s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_check` [ RunTime:0.012241s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_check` WHERE  `c_exist` = 1 ORDER BY `c_id` [ RunTime:0.001085s ]
+[ sql ] [ SQL ] select * from fams_check c, fams_check_status c_sta where c.c_sta_no = c_sta.c_sta_no and c.c_exist = 1 and c.u_id = 0 order by c.c_time desc limit 0, 10 [ RunTime:0.001313s ]
+[ sql ] [ SQL ] select * from fams_check c, fams_check_status c_sta, fams_user u, fams_person p where c.c_sta_no = c_sta.c_sta_no and c.u_id = u.u_id and u.p_id = p.p_id and c.c_exist = 1 order by c.c_time desc limit 0, 10 [ RunTime:0.001683s ]
+---------------------------------------------------------------
+[ 2020-05-29T01:17:18+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetimport/select?page=1&limit=10
+[运行时间：0.134601s] [吞吐率：7.43req/s] [内存消耗：224.82kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetimport',
+    2 => 'select',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/assetcheck',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ RUN ] app\app\controller\Assetimport->select[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetimport.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010977s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012910s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000868s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000820s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.013433s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000835s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000794s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000862s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_asset` [ RunTime:0.012169s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_asset` WHERE  `as_exist` = 1 ORDER BY `as_id` [ RunTime:0.001469s ]
+[ sql ] [ SQL ] select * from fams_asset ass, fams_status sta, fams_category cate, fams_local local where ass.sta_no = sta.sta_no and ass.as_local_id = local.local_id and ass.cate_id = cate.cate_id and ass.as_exist = 1 order by ass.as_import_time desc limit 0, 10 [ RunTime:0.002200s ]
+---------------------------------------------------------------
+[ 2020-05-29T01:17:18+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetcheck/selectcontent/id/0?page=1&limit=10
+[运行时间：0.234835s] [吞吐率：4.26req/s] [内存消耗：216.56kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetcheck',
+    2 => 'selectcontent',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/assetcheck',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+  'id' => '0',
+)
+[ info ] [ RUN ] app\app\controller\Assetcheck->selectcontent[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetcheck.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012122s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.016720s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000886s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000664s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012669s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.001087s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000860s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001157s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_check_content` [ RunTime:0.014518s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_check_content` WHERE  `c_c_exist` = 1  AND `c_id` = 0 ORDER BY `c_c_id` [ RunTime:0.001852s ]
+[ sql ] [ SQL ] select * from fams_check_content c_c, fams_asset ass, fams_status sta, fams_category cate, fams_local local where c_c.as_no = ass.as_no and ass.sta_no = sta.sta_no and ass.as_local_id = local.local_id and ass.cate_id = cate.cate_id and c_c.c_c_exist = 1 and c_id = 0 order by c_c.c_c_id desc limit 0, 10 [ RunTime:0.001574s ]
+---------------------------------------------------------------
+[ 2020-05-29T01:21:41+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetcheck/selectcontent/id/3?page=1&limit=10
+[运行时间：0.102467s] [吞吐率：9.76req/s] [内存消耗：218.93kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetcheck',
+    2 => 'selectcontent',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/assetcheck',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+  'id' => '3',
+)
+[ info ] [ RUN ] app\app\controller\Assetcheck->selectcontent[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetcheck.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012933s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.020368s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001058s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000967s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012718s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.001280s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000901s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000893s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_check_content` [ RunTime:0.012960s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_check_content` WHERE  `c_c_exist` = 1  AND `c_id` = 3 ORDER BY `c_c_id` [ RunTime:0.000999s ]
+[ sql ] [ SQL ] select * from fams_check_content c_c, fams_asset ass, fams_status sta, fams_category cate, fams_local local where c_c.as_no = ass.as_no and ass.sta_no = sta.sta_no and ass.as_local_id = local.local_id and ass.cate_id = cate.cate_id and c_c.c_c_exist = 1 and c_id = 3 order by c_c.c_c_id desc limit 0, 10 [ RunTime:0.001589s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:00:09+08:00 ] 0.0.0.0 GET www.ljs.com/app/blapprove
+[运行时间：0.080912s] [吞吐率：12.36req/s] [内存消耗：216.93kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'blapprove',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/assetcheck',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Blapprove->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Blapprove.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\blapprove\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002306s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012900s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001384s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001054s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.015348s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000958s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000920s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000822s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000860s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000736s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000696s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000909s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001062s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:00:09+08:00 ] 0.0.0.0 GET www.ljs.com/app/blapprove/select?page=1&limit=10
+[运行时间：0.075980s] [吞吐率：13.16req/s] [内存消耗：222.39kb] [文件加载：54]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'blapprove',
+    2 => 'select',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/blapprove',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ RUN ] app\app\controller\Blapprove->select[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Blapprove.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002472s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.015394s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001207s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001073s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.015264s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000884s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000666s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000649s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_asset` [ RunTime:0.012032s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_asset` WHERE  `as_exist` = 1  AND `sta_no` = 'SPZ' ORDER BY `as_id` [ RunTime:0.000993s ]
+[ sql ] [ SQL ] select * from fams_asset ass, fams_status sta, fams_category cate, fams_local local, fams_borrowlend bl, fams_user u, fams_person p where ass.sta_no = 'SPZ' and bl.bl_exist = 1 and bl.bl_ok = 0 and ass.sta_no = sta.sta_no and ass.cate_id = cate.cate_id and ass.as_local_id = local.local_id and bl.u_id = u.u_id and u.p_id = p.p_id and ass.as_no = bl.as_no order by bl.b_time desc limit 0, 10 [ RunTime:0.002029s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:32:52+08:00 ] 0.0.0.0 GET www.ljs.com/app/departmentmanage
+[运行时间：0.104915s] [吞吐率：9.53req/s] [内存消耗：217.10kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'departmentmanage',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/blapprove',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Departmentmanage->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Departmentmanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\departmentmanage\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002573s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.016413s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001031s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001087s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.015243s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000918s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000789s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000774s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000783s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000747s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000659s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000717s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000688s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:32:53+08:00 ] 0.0.0.0 GET www.ljs.com/app/departmentmanage/departmentsJsonData
+[运行时间：0.111098s] [吞吐率：9.00req/s] [内存消耗：243.61kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'departmentmanage',
+    2 => 'departmentsJsonData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/departmentmanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Departmentmanage->departmentsJsonData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Departmentmanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012138s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013117s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001034s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000835s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012761s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000728s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000779s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000937s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_department` [ RunTime:0.012882s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 1  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.001187s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 2  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000707s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 3  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000672s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 7  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000677s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 5  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 16  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000671s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 17  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000649s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 23  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 33  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000636s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 18  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000640s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 34  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000631s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 35  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000633s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 25  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000838s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 36  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000785s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 37  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000671s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 26  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 38  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 39  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000659s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 27  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000657s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 40  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 41  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000644s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 28  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000656s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 29  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 30  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000757s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 31  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000776s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 32  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000871s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `up_dep_id` = 42  AND `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000736s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:32:53+08:00 ] 0.0.0.0 POST www.ljs.com/app/departmentmanage/departmentsData
+[运行时间：0.142259s] [吞吐率：7.03req/s] [内存消耗：216.13kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'departmentmanage',
+    2 => 'departmentsData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/departmentmanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Departmentmanage->departmentsData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Departmentmanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002045s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012623s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000714s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000618s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012406s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000735s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000758s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000726s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_department` [ RunTime:0.012051s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000792s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:38:58+08:00 ] 0.0.0.0 GET www.ljs.com/app/positionmanage
+[运行时间：0.099728s] [吞吐率：10.03req/s] [内存消耗：217.15kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'positionmanage',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/departmentmanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Positionmanage->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Positionmanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\positionmanage\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002382s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.014956s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000962s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000818s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.016961s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000891s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000785s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001033s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001139s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001073s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000668s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:38:59+08:00 ] 0.0.0.0 GET www.ljs.com/app/positionmanage/selectPos?page=1&limit=10
+[运行时间：0.083365s] [吞吐率：12.00req/s] [内存消耗：216.22kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'positionmanage',
+    2 => 'selectPos',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/positionmanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ RUN ] app\app\controller\Positionmanage->selectPos[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Positionmanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002059s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012700s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001150s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001061s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.011899s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.001087s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000930s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001230s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_position` [ RunTime:0.012205s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_position` WHERE  `pos_exist` = 1 ORDER BY `pos_id` [ RunTime:0.001697s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_position` WHERE  `pos_exist` = 1 ORDER BY `pos_id` LIMIT 0,10 [ RunTime:0.000863s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:39:33+08:00 ] 0.0.0.0 GET www.ljs.com/app/personmanage
+[运行时间：0.080250s] [吞吐率：12.46req/s] [内存消耗：216.34kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'personmanage',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/positionmanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Personmanage->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Personmanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\personmanage\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011182s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012616s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000855s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000781s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012209s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000771s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000767s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000802s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000889s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000835s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000836s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000794s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000740s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:39:33+08:00 ] 0.0.0.0 POST www.ljs.com/app/departmentManage/departmentsData
+[运行时间：0.071906s] [吞吐率：13.91req/s] [内存消耗：216.13kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'departmentManage',
+    2 => 'departmentsData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/personmanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Departmentmanage->departmentsData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Departmentmanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002097s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012518s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000876s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000740s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.014206s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000968s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000771s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000706s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_department` [ RunTime:0.013082s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_department` WHERE  `dep_exist` = 1 ORDER BY `dep_id` [ RunTime:0.000845s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:39:33+08:00 ] 0.0.0.0 POST www.ljs.com/app/positionManage/positionsData
+[运行时间：0.135938s] [吞吐率：7.36req/s] [内存消耗：212.73kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'positionManage',
+    2 => 'positionsData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/personmanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Positionmanage->positionsData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Positionmanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012078s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012442s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000941s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000895s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012391s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000852s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000779s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000844s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_position` [ RunTime:0.013170s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_position` WHERE  `pos_exist` = 1 ORDER BY `pos_id` [ RunTime:0.000967s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:39:33+08:00 ] 0.0.0.0 GET www.ljs.com/app/personmanage/selectP?page=1&limit=10
+[运行时间：0.079230s] [吞吐率：12.62req/s] [内存消耗：216.82kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'personmanage',
+    2 => 'selectP',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/personmanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ RUN ] app\app\controller\Personmanage->selectP[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Personmanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002061s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012263s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000995s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000856s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012535s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000924s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000943s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001189s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_exist` = 1 ORDER BY `p_id` [ RunTime:0.001410s ]
+[ sql ] [ SQL ] select * from fams_person p, fams_department dep, fams_position pos where p.dep_id = dep.dep_id and p.pos_id = pos.pos_id and p.p_exist = 1 order by p.p_id limit 0, 10 [ RunTime:0.001292s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:41:32+08:00 ] 0.0.0.0 GET www.ljs.com/app/usermanage
+[运行时间：0.064111s] [吞吐率：15.60req/s] [内存消耗：215.73kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'usermanage',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/personmanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Usermanage->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Usermanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\usermanage\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002390s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013193s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000981s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000877s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012486s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000922s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000914s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000900s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000899s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000856s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000696s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000682s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000679s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:41:32+08:00 ] 0.0.0.0 POST www.ljs.com/app/personManage/personsData
+[运行时间：0.064149s] [吞吐率：15.59req/s] [内存消耗：210.61kb] [文件加载：50]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'personManage',
+    2 => 'personsData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/usermanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Personmanage->personsData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Personmanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002359s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.015133s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000995s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000832s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.014741s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000882s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000834s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000841s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_exist` = 1 ORDER BY `p_id` [ RunTime:0.000797s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:41:32+08:00 ] 0.0.0.0 POST www.ljs.com/app/userManage/powersData
+[运行时间：0.120628s] [吞吐率：8.29req/s] [内存消耗：208.17kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'userManage',
+    2 => 'powersData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/usermanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Usermanage->powersData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Usermanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002095s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012832s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000935s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000824s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012660s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000829s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000866s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000819s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user_power` [ RunTime:0.012529s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user_power` ORDER BY `power_id` [ RunTime:0.000922s ]
+---------------------------------------------------------------
+[ 2020-05-29T02:41:33+08:00 ] 0.0.0.0 GET www.ljs.com/app/usermanage/selectU?page=1&limit=10
+[运行时间：0.070099s] [吞吐率：14.27req/s] [内存消耗：216.29kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'usermanage',
+    2 => 'selectU',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/usermanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ RUN ] app\app\controller\Usermanage->selectU[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Usermanage.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012583s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012963s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001074s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000885s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012686s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.001002s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000775s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000907s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_exist` = 1 ORDER BY `u_id` [ RunTime:0.001033s ]
+[ sql ] [ SQL ] select * from fams_user u, fams_user_power power, fams_person p where u.power_no = power.power_no and u.p_id = p.p_id and u.u_exist = 1 order by u.u_id limit 0, 10 [ RunTime:0.001353s ]
+---------------------------------------------------------------
+[ 2020-05-29T03:15:16+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetimport
+[运行时间：0.079647s] [吞吐率：12.56req/s] [内存消耗：231.73kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetimport',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/usermanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetimport->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetimport.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetimport\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002911s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.017754s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000972s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000781s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012366s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000798s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000780s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000909s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000844s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001166s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.001028s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000945s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000863s ]
+---------------------------------------------------------------
+[ 2020-05-29T03:15:17+08:00 ] 0.0.0.0 POST www.ljs.com/app/Assetcategory/categorysData
+[运行时间：0.078312s] [吞吐率：12.77req/s] [内存消耗：211.15kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Assetcategory',
+    2 => 'categorysData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetimport',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetcategory->categorysData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetcategory.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002109s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.013558s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001027s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000937s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.013107s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000836s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000819s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000795s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_category` [ RunTime:0.012167s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_category` WHERE  `cate_exist` = '1' ORDER BY `cate_id` [ RunTime:0.000886s ]
+---------------------------------------------------------------
+[ 2020-05-29T03:15:17+08:00 ] 0.0.0.0 POST www.ljs.com/app/Assetimport/localsData
+[运行时间：0.135020s] [吞吐率：7.41req/s] [内存消耗：211.78kb] [文件加载：51]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Assetimport',
+    2 => 'localsData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetimport',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetimport->localsData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetimport.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002053s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012365s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000897s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000777s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012417s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000852s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000849s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000746s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_local` [ RunTime:0.012539s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_local` WHERE  `local_exist` = 1 ORDER BY `local_id` [ RunTime:0.001221s ]
+---------------------------------------------------------------
+[ 2020-05-29T03:15:17+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetimport/select?page=1&limit=10
+[运行时间：0.087623s] [吞吐率：11.41req/s] [内存消耗：224.82kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetimport',
+    2 => 'select',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/assetimport',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ RUN ] app\app\controller\Assetimport->select[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetimport.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002020s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.014304s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000798s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012246s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000872s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000747s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_asset` [ RunTime:0.012571s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_asset` WHERE  `as_exist` = 1 ORDER BY `as_id` [ RunTime:0.001344s ]
+[ sql ] [ SQL ] select * from fams_asset ass, fams_status sta, fams_category cate, fams_local local where ass.sta_no = sta.sta_no and ass.as_local_id = local.local_id and ass.cate_id = cate.cate_id and ass.as_exist = 1 order by ass.as_import_time desc limit 0, 10 [ RunTime:0.002280s ]
+---------------------------------------------------------------
+[ 2020-05-29T03:20:39+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetcheck
+[运行时间：0.105158s] [吞吐率：9.51req/s] [内存消耗：231.73kb] [文件加载：52]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetcheck',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'referer' => 'http://www.ljs.com/app/assetimport',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetcheck->index[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetcheck.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetcheck\index.html [ array (
+  0 => 'uId',
+  1 => 'uName',
+  2 => 'uHead',
+  3 => 'powerNo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013151s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.019525s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001292s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000897s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.019605s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.001489s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001192s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001190s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001029s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001292s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.001123s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001249s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001393s ]
+---------------------------------------------------------------
+[ 2020-05-29T03:20:39+08:00 ] 0.0.0.0 POST www.ljs.com/app/Assetborrowlend/usersData
+[运行时间：0.064361s] [吞吐率：15.54req/s] [内存消耗：212.92kb] [文件加载：50]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'Assetborrowlend',
+    2 => 'usersData',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/plain, */*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'origin' => 'http://www.ljs.com',
+  'referer' => 'http://www.ljs.com/app/assetcheck',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\app\controller\Assetborrowlend->usersData[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetborrowlend.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012652s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012722s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000950s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000901s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012993s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000819s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000756s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000798s ]
+[ sql ] [ SQL ] select * from fams_user u, fams_user_power power, fams_person p where u.power_no = power.power_no and u.p_id = p.p_id and u.u_exist = 1 order by u.u_id [ RunTime:0.001279s ]
+---------------------------------------------------------------
+[ 2020-05-29T03:20:40+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetcheck/select?page=1&limit=10
+[运行时间：0.074129s] [吞吐率：13.49req/s] [内存消耗：215.91kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetcheck',
+    2 => 'select',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/assetcheck',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ RUN ] app\app\controller\Assetcheck->select[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetcheck.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002046s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012838s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001125s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000894s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.013262s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000914s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000808s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000854s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_check` [ RunTime:0.015880s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_check` WHERE  `c_exist` = 1 ORDER BY `c_id` [ RunTime:0.000978s ]
+[ sql ] [ SQL ] select * from fams_check c, fams_check_status c_sta where c.c_sta_no = c_sta.c_sta_no and c.c_exist = 1 and c.u_id = 0 order by c.c_time desc limit 0, 10 [ RunTime:0.001002s ]
+[ sql ] [ SQL ] select * from fams_check c, fams_check_status c_sta, fams_user u, fams_person p where c.c_sta_no = c_sta.c_sta_no and c.u_id = u.u_id and u.p_id = p.p_id and c.c_exist = 1 order by c.c_time desc limit 0, 10 [ RunTime:0.001274s ]
+---------------------------------------------------------------
+[ 2020-05-29T03:20:40+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetimport/select?page=1&limit=10
+[运行时间：0.137260s] [吞吐率：7.29req/s] [内存消耗：224.82kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetimport',
+    2 => 'select',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/assetcheck',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+)
+[ info ] [ RUN ] app\app\controller\Assetimport->select[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetimport.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011958s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.014783s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000872s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.014893s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000887s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000772s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000750s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_asset` [ RunTime:0.014622s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_asset` WHERE  `as_exist` = 1 ORDER BY `as_id` [ RunTime:0.001916s ]
+[ sql ] [ SQL ] select * from fams_asset ass, fams_status sta, fams_category cate, fams_local local where ass.sta_no = sta.sta_no and ass.as_local_id = local.local_id and ass.cate_id = cate.cate_id and ass.as_exist = 1 order by ass.as_import_time desc limit 0, 10 [ RunTime:0.002084s ]
+---------------------------------------------------------------
+[ 2020-05-29T03:20:40+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetcheck/selectcontent/id/0?page=1&limit=10
+[运行时间：0.203930s] [吞吐率：4.90req/s] [内存消耗：215.44kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetcheck',
+    2 => 'selectcontent',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/assetcheck',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+  'id' => '0',
+)
+[ info ] [ RUN ] app\app\controller\Assetcheck->selectcontent[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetcheck.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012188s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.016166s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001336s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000886s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012269s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000928s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000889s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.001061s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_check_content` [ RunTime:0.012674s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_check_content` WHERE  `c_c_exist` = 1  AND `c_id` = 0 ORDER BY `c_c_id` [ RunTime:0.001143s ]
+[ sql ] [ SQL ] select * from fams_check_content c_c, fams_asset ass, fams_status sta, fams_category cate, fams_local local where c_c.as_no = ass.as_no and ass.sta_no = sta.sta_no and ass.as_local_id = local.local_id and ass.cate_id = cate.cate_id and c_c.c_c_exist = 1 and c_id = 0 order by c_c.c_c_id desc limit 0, 10 [ RunTime:0.001518s ]
+---------------------------------------------------------------
+[ 2020-05-29T03:20:41+08:00 ] 0.0.0.0 GET www.ljs.com/app/assetcheck/selectcontent/id/3?page=1&limit=10
+[运行时间：0.074911s] [吞吐率：13.35req/s] [内存消耗：218.93kb] [文件加载：53]
+[ info ] [ LANG ] E:\code\git\Fixed-Assets-Management-System\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'app',
+    1 => 'assetcheck',
+    2 => 'selectcontent',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ljs.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36',
+  'referer' => 'http://www.ljs.com/app/assetcheck',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'pgv_pvi=5757892608; PHPSESSID=nq6dm25jio7402go1t70cdbq5h',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'limit' => '10',
+  'id' => '3',
+)
+[ info ] [ RUN ] app\app\controller\Assetcheck->selectcontent[ E:\code\git\Fixed-Assets-Management-System\www\application\app\controller\Assetcheck.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002567s ] mysql:host=127.0.0.1;dbname=fams;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_user` [ RunTime:0.012693s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000973s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000844s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_person` [ RunTime:0.012987s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_person` WHERE  `p_id` = 1 [ RunTime:0.000895s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000784s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_user` WHERE  `u_id` = 1 [ RunTime:0.000707s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fams_check_content` [ RunTime:0.017683s ]
+[ sql ] [ SQL ] SELECT * FROM `fams_check_content` WHERE  `c_c_exist` = 1  AND `c_id` = 3 ORDER BY `c_c_id` [ RunTime:0.001156s ]
+[ sql ] [ SQL ] select * from fams_check_content c_c, fams_asset ass, fams_status sta, fams_category cate, fams_local local where c_c.as_no = ass.as_no and ass.sta_no = sta.sta_no and ass.as_local_id = local.local_id and ass.cate_id = cate.cate_id and c_c.c_c_exist = 1 and c_id = 3 order by c_c.c_c_id desc limit 0, 10 [ RunTime:0.002434s ]

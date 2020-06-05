@@ -1,24 +1,32 @@
 <script>
-	import Vue from 'vue'
 	export default {
 		onLaunch: function() {
 			this.connectWebSocket()
 			this.bindSocket()
 		},
-		onShow: function() {
-			console.log('App Show')
-		},
-		onHide: function() {
-			console.log('App Hide')
-		},
 		methods: {
 			connectWebSocket: function() {
+				uni.showLoading({
+					title: "正在连接服务器..."
+				})
+				uni.onSocketOpen(() => {
+					uni.hideLoading()
+					uni.showToast({
+						icon: "success",
+						title: "连接成功"
+					})
+					this.globalData.socketConnectStatus = true
+					this.loginSocket()
+				})
+				uni.onSocketError(() => {
+					uni.hideLoading()
+					uni.showToast({
+						icon: "none",
+						title: "连接失败"
+					})
+				})
 				uni.connectSocket({
-					url: this.globalData.socketUrl,
-					success: () => {
-						this.globalData.socketConnectStatus = true
-						this.loginSocket()
-					}
+					url: this.globalData.socketUrl
 				})
 			},
 			bindSocket: function() {
@@ -27,29 +35,42 @@
 				})
 			},
 			reConnectSocket: function(msg, obj) {
+				uni.showLoading({
+					title: "正在重新连接..."
+				})
+				uni.onSocketOpen(() => {
+					uni.hideLoading()
+					uni.showToast({
+						icon: "success",
+						title: "连接成功"
+					})
+					this.globalData.socketConnectStatus = true
+					this.loginSocket()
+					setTimeout(() => {
+						this.sendSocket(msg, obj)
+					}, 1000)
+				})
+				uni.onSocketError(() => {
+					uni.hideLoading()
+					uni.showToast({
+						icon: "none",
+						title: "连接失败"
+					})
+				})
 				uni.closeSocket({
 					complete: () => {
 						uni.connectSocket({
-							url: this.globalData.socketUrl,
-							success: () => {
-								this.globalData.socketConnectStatus = true
-								this.loginSocket()
-								setTimeout(() => {
-									this.sendSocket(msg, obj)
-								}, 1000)
-							}
+							url: this.globalData.socketUrl
 						})
 					}
 				})
 			},
 			loginSocket: function() {
-				setTimeout(() => {
-					if (this.getCode()) {
-						this.sendSocket("login", {
-							code: this.getCode()
-						})
-					}
-				}, 500)
+				if (this.getCode()) {
+					this.sendSocket("login", {
+						code: this.getCode()
+					})
+				}
 			},
 			sendSocket: function(msg, obj = "") {
 				if (this.globalData.socketConnectStatus) {
