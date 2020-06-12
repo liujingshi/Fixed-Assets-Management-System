@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "盘点单详情",
+  "usingComponents": {
+    "crop": "/components/crop"
+  }
+}

@@ -91,27 +91,35 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
 {
   onLaunch: function onLaunch() {
     this.connectWebSocket();
     this.bindSocket();
   },
-  onShow: function onShow() {
-    console.log('App Show');
-  },
-  onHide: function onHide() {
-    console.log('App Hide');
-  },
   methods: {
     connectWebSocket: function connectWebSocket() {var _this = this;
+      uni.showLoading({
+        title: "正在连接服务器..." });
+
+      uni.onSocketOpen(function () {
+        uni.hideLoading();
+        uni.showToast({
+          icon: "success",
+          title: "连接成功" });
+
+        _this.globalData.socketConnectStatus = true;
+        _this.loginSocket();
+      });
+      uni.onSocketError(function () {
+        uni.hideLoading();
+        uni.showToast({
+          icon: "none",
+          title: "连接失败" });
+
+      });
       uni.connectSocket({
-        url: this.globalData.socketUrl,
-        success: function success() {
-          _this.globalData.socketConnectStatus = true;
-          _this.loginSocket();
-        } });
+        url: this.globalData.socketUrl });
 
     },
     bindSocket: function bindSocket() {var _this2 = this;
@@ -120,42 +128,106 @@ var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _i
       });
     },
     reConnectSocket: function reConnectSocket(msg, obj) {var _this3 = this;
-      uni.closeSocket({
-        complete: function complete() {
-          uni.connectSocket({
-            url: _this3.globalData.socketUrl,
-            success: function success() {
-              _this3.globalData.socketConnectStatus = true;
-              _this3.loginSocket();
-              _this3.sendSocket(msg, obj);
-            } });
+      uni.showLoading({
+        title: "正在重新连接..." });
 
-        } });
+      uni.onSocketOpen(function () {
+        uni.hideLoading();
+        uni.showToast({
+          icon: "success",
+          title: "连接成功" });
+
+        _this3.globalData.socketConnectStatus = true;
+        _this3.loginSocket();
+        setTimeout(function () {
+          _this3.sendSocket(msg, obj);
+        }, 1000);
+      });
+      uni.onSocketError(function () {
+        uni.hideLoading();
+        uni.showToast({
+          icon: "none",
+          title: "连接失败" });
+
+      });
+      // uni.closeSocket({
+      // 	complete: () => {
+      // 		uni.connectSocket({
+      // 			url: this.globalData.socketUrl
+      // 		})
+      // 	}
+      // })
+      uni.connectSocket({
+        url: this.globalData.socketUrl });
 
     },
     loginSocket: function loginSocket() {
-      if (this.globalData.code) {
-        this.sendSocket("login", { code: this.globalData.code });
+      if (this.getCode()) {
+        this.sendSocket("login", {
+          code: this.getCode() });
+
       }
     },
     sendSocket: function sendSocket(msg) {var obj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
       if (this.globalData.socketConnectStatus) {
+        uni.showLoading({
+          title: "" });
+
+        var sendContent = JSON.stringify({
+          msg: msg,
+          obj: obj });
+
         uni.sendSocketMessage({
-          data: JSON.stringify({
-            msg: msg,
-            obj: obj }) });
+          data: sendContent });
 
-
+        // console.log("sendMessage:", sendContent)
       } else {
         this.reConnectSocket(msg, obj);
       }
     },
     setCode: function setCode(value) {
-      this.globalData.code = value;
       uni.setStorageSync("code", value);
     },
     getCode: function getCode() {
       return uni.getStorageSync("code");
+    },
+    delCode: function delCode() {
+      return uni.removeStorageSync("code");
+    },
+    scan: function scan() {
+      uni.scanCode({
+        onlyFromCamera: true,
+        success: function success(res) {
+          // console.log(res)
+          // uni.showToast({
+          // 	title: res.result
+          // })
+          if (res.result.length < 100) {
+            uni.showToast({
+              title: "扫码失败请重试" });
+
+          } else {
+            uni.navigateTo({
+              url: "/pages/scan/scan?no=" + res.result });
+
+          }
+        } });
+
+    },
+    barTo: function barTo(name) {
+      uni.redirectTo({
+        url: "/pages/" + name + "/" + name });
+
+    },
+    uploadF: function uploadF(path, back) {
+      uni.uploadFile({
+        url: this.globalData.requestUrl + "utils/upload/image",
+        filePath: path,
+        name: "image",
+        success: function success(res) {
+          back(res);
+        } });
+
     } },
 
   globalData: {
@@ -163,10 +235,11 @@ var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _i
     userInfoServer: null,
     openid: null,
     phone: null,
-    code: null,
     socketConnectStatus: false,
-    requestUrl: "http://www.ljs.com/",
-    socketUrl: "ws://127.0.0.1:8888" } };exports.default = _default;
+    // requestUrl: "http://www.ljs.com/",
+    // socketUrl: "ws://192.168.1.119:8888",
+    requestUrl: "https://fams.ljscode.com/",
+    socketUrl: "wss://wx.ljscode.com/wss" } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

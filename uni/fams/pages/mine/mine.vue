@@ -46,12 +46,14 @@
 					</view>
 				</form>
 				<view v-if="isWX">
-					<button class="cu-btn bg-green margin-tb-sm lg w100" open-type="getUserInfo" @getuserinfo="getUserInfo">授权登录</button>
+					<button class="cu-btn bg-green margin-tb-sm lg w100" @tap="oauth" open-type="getUserInfo" @getuserinfo="getUserInfo">授权登录</button>
 				</view>
 			</view>
 		</view>
 		<view v-if="alreadyLogin">
-			<button class="cu-btn bg-blue margin-tb-sm lg ls-card w100" @tap="logout">退出</button>
+			<view class="padding flex flex-direction">
+				<button class="cu-btn bg-blue lg" @tap="logout">退出登录</button>
+			</view>
 		</view>
 	</view>
 </template>
@@ -66,7 +68,8 @@
 				userInfoServer: null,
 				phone: "",
 				code: "",
-				text: "发送验证码"
+				text: "发送验证码",
+				bindP: false
 			}
 		},
 		onShow: function() {
@@ -82,6 +85,7 @@
 		},
 		methods: {
 			getMessage: function(data) {
+				uni.hideLoading()
 				let msg = data.msg
 				let obj = data.obj
 				if (msg == "loginSuccess") {
@@ -98,9 +102,17 @@
 						icon: 'none',
 						title: '登陆失败'
 					})
+				} else if (msg == "vcodeError") {
+					this.alreadyLogin = false
+					getApp().delCode()
+					uni.showToast({
+						icon: 'none',
+						title: '验证码错误'
+					})
 				} else if (msg == "bindPhone") {
 					getApp().globalData.openid = obj.openid
 					this.isWX = false
+					this.bindP = true
 					uni.showToast({
 						icon: 'none',
 						title: '请绑定手机'
@@ -128,10 +140,18 @@
 			login: function() {
 				let phone = this.phone
 				let code = this.code
-				getApp().sendSocket("login", {
-					"code": phone,
-					"vcode": code
-				})
+				if (this.bindP) {
+					getApp().sendSocket("bindPhone", {
+						"phone": phone,
+						"vcode": code,
+						"openid": getApp().globalData.openid
+					})
+				} else {
+					getApp().sendSocket("login", {
+						"code": phone,
+						"vcode": code
+					})
+				}
 			},
 			setPhone: function(e) {
 				this.phone = e.detail.value
@@ -156,49 +176,55 @@
 					}, 1000)
 				}
 			},
+			oauth() {
+				uni.login({
+					provider: 'weixin',
+					success: (res) => {
+						let code = res.code
+						getApp().sendSocket("login", {
+							"code": code
+						})
+						uni.getUserInfo({
+							provider: 'weixin',
+							success: (infoRes) => {
+								// console.log(infoRes)
+								// let code = infoRes.code
+								// getApp().sendSocket("login", {
+								// 	"code": code
+								// })
+							},
+							fail() {
+								uni.showToast({
+									icon: 'none',
+									title: '登陆失败'
+								})
+							}
+						});
+					},
+					fail: (err) => {
+						console.error('授权登录失败：' + JSON.stringify(err));
+					}
+				});
+			},
+			getUserInfo({
+				detail
+			}) {
+				if (detail.userInfo) {
+					this.userInfo = detail.userInfo
+					getApp().globalData.userInfo = detail.userInfo
+				} else {
+					uni.showToast({
+						icon: 'none',
+						title: '登陆失败'
+					});
+				}
+			},
 			logout: function() {
 				getApp().sendSocket("logout")
 				this.alreadyLogin = false
 			}
 		},
-		oauth(value) {
-			uni.login({
-				provider: value,
-				success: (res) => {
-					uni.getUserInfo({
-						provider: value,
-						success: (infoRes) => {
-							let code = infoRes.code
-							getApp().sendSocket("login", {
-								"code": code
-							})
-						},
-						fail() {
-							uni.showToast({
-								icon: 'none',
-								title: '登陆失败'
-							});
-						}
-					});
-				},
-				fail: (err) => {
-					console.error('授权登录失败：' + JSON.stringify(err));
-				}
-			});
-		},
-		getUserInfo({
-			detail
-		}) {
-			if (detail.userInfo) {
-				this.userInfo = detail.userInfo
-				getApp().globalData.userInfo = detail.userInfo
-			} else {
-				uni.showToast({
-					icon: 'none',
-					title: '登陆失败'
-				});
-			}
-		},
+
 	}
 </script>
 

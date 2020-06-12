@@ -98,7 +98,8 @@ class Assetimport extends Controller {
                     "as_local_id" => $localId,
                     "as_qrcode" => $no.".png"
                 ];
-                Utils::createQrcode($no);
+                $qrEncoding = Utils::qrcodeEncode($no);
+                Utils::createQrcode($qrEncoding, $no);
                 $commonId = Asset::insert($data);
                 Logging::insertAs($commonId);
             }

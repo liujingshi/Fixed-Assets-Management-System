@@ -4,7 +4,7 @@ import json
 import logging
 from ljsmysql import Ljsmysql
 import time
-from common import JsonToDatetime
+from common import JsonToDatetime, SameImage
 import base64
 import rsa
 from Crypto.Cipher import AES
@@ -20,7 +20,30 @@ def sendMsg(tornadoSelf, msg, obj = ""):
         "obj": obj
     }, cls=JsonToDatetime)
     tornadoSelf.write_message(message)
-    logging.info("Send message to {0}".format(message))
+    # logging.info("Send message to {0}".format(message))
+
+
+# request
+# def requestUrl():
+#     return "http://www.ljs.com/"
+
+
+
+# public
+# def publicPath():
+#     return "../www/public/"
+
+
+# request
+def requestUrl():
+    return "https://fams.ljscode.com/"
+
+
+
+# public
+def publicPath():
+    return "../../fams/public/"
+
 
 
 # appid
@@ -52,6 +75,7 @@ def getOpenidByCode(code):
 # 退出
 def logout(tornadoSelf):
     Ljsmysql.table("fams_user").where("u_id", tornadoSelf.userid).update({"u_login_code": ""})
+    sendMsg(tornadoSelf, "ok")
 
 
 # 用户登录
@@ -103,11 +127,14 @@ def setLoginCode(phone):
 def bindPhone(tornadoSelf, obj):
     phone = obj['phone']
     openid = obj['openid']
-    user = Ljsmysql.table("fams_user").where("u_phone", phone).select()
-    if len(user) == 0:
-        reg(phone)
-    Ljsmysql.table("fams_user").where("u_phone", phone).update({"u_openid": openid})
-    sendMsg(tornadoSelf, "bindPhoneSuccess")
+    if tornadoSelf.vcode == obj['vcode']:
+        user = Ljsmysql.table("fams_user").where("u_phone", phone).select()
+        if len(user) == 0:
+            reg(phone)
+        Ljsmysql.table("fams_user").where("u_phone", phone).update({"u_openid": openid})
+        sendMsg(tornadoSelf, "bindPhoneSuccess")
+    else:
+        sendMsg(tornadoSelf, "vcodeError")
 
 
 # 三无注册
@@ -124,7 +151,13 @@ def getMineInfo(tornadoSelf):
 
 # 得到功能列表
 def getFuncList(tornadoSelf):
-    funcList = []
+    funcList = [{
+            'cuIcon': 'edit',
+            'color': 'orange',
+            'badge': 0,
+            'name': '发布帖子',
+            'action': 'insertBBS'
+        }]
     if tornadoSelf.power == "VIP" or tornadoSelf.power == "SVIP":
         funcList += [{
             'cuIcon': 'deliver',
@@ -154,6 +187,8 @@ def getAssetInfo(tornadoSelf, obj):
     if len(assetInfo) > 0:
         assetInfo = assetInfo[0]
         sendMsg(tornadoSelf, "assetInfo", assetInfo)
+    else:
+        sendMsg(tornadoSelf, "error")
 
 
 # 得到分类
@@ -194,6 +229,8 @@ def isMe(tornadoSelf, obj):
         "l_time": "0000-00-00 00:00:00"
     }).find():
         sendMsg(tornadoSelf, "isMe")
+    else:
+        sendMsg(tornadoSelf, "error")
 
 
 # 领用
@@ -236,21 +273,23 @@ def assetLend(tornadoSelf, obj):
         elif tornadoSelf.power == "USER":
             Ljsmysql.table("fams_asset").where("as_no", obj['as_no']).update({"sta_no": "SPZ"})
         sendMsg(tornadoSelf, "lendSuccess")
+    else:
+        sendMsg(tornadoSelf, "error")
 
 
 # 获得盘点单
 def getChecks(tornadoSelf):
     if tornadoSelf.power == "VIP" or tornadoSelf.power == "SVIP":
-        dbData = Ljsmysql.table("fams_check").where({
-            "c_exist": 1,
-            "c_sta_no": "JXZ"
-        }).select()
+        dbData = Ljsmysql.table("fams_check").where([
+            ["c_exist", 1],
+            ["c_sta_no", "<>", "YWC"]
+        ]).select()
     else:
-        dbData = Ljsmysql.table("fams_check").where({
-            "c_exist": 1,
-            "c_sta_no": "JXZ",
-            "u_id": tornadoSelf.userid
-        }).select()
+        dbData = Ljsmysql.table("fams_check").where([
+            ["c_exist", 1],
+            ["c_sta_no", "<>", "YWC"],
+            ["u_id", tornadoSelf.userid]
+        ]).select()
     sendMsg(tornadoSelf, "checks", dbData)
 
 
@@ -296,7 +335,7 @@ def qrcodeDecode(data):
     return result
 
 def qrDecode(data):
-    url = "http://www.ljs.com/utils/qrcode/decode"
+    url = "{0}utils/qrcode/decode".format(requestUrl())
     postData = {
         "data": data
     }
@@ -312,3 +351,103 @@ def isSS(n):
            return False
     return True
 
+
+# 发布帖子
+def insertBBS(tornadoSelf, obj):
+    if tornadoSelf.userid and tornadoSelf.userid > 0:
+        obj['u_id'] = tornadoSelf.userid
+        obj['up_bbs_id'] = 0
+        obj['bbs_time'] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        Ljsmysql.table("fams_bbs").insert(obj)
+        sendMsg(tornadoSelf, "insertBBSSuccess")
+    else:
+        sendMsg(tornadoSelf, "error")
+
+
+# 回复帖子
+def recoveryBBS(tornadoSelf, obj):
+    if tornadoSelf.userid and tornadoSelf.userid > 0:
+        obj['u_id'] = tornadoSelf.userid
+        obj['bbs_time'] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        Ljsmysql.table("fams_bbs").insert(obj)
+        sendMsg(tornadoSelf, "recoveryBBSSuccess")
+    else:
+        sendMsg(tornadoSelf, "error")
+
+
+# 删除回复
+def deleteRecovery(tornadoSelf, obj):
+    if tornadoSelf.userid and tornadoSelf.userid > 0:
+        Ljsmysql.table("fams_bbs").where("bbs_id", obj['id']).update({'bbs_exist': 0})
+        sendMsg(tornadoSelf, "deleteRecoverySuccess")
+    else:
+        sendMsg(tornadoSelf, "error")
+
+
+# 删除帖子
+def deleteBBS(tornadoSelf, obj):
+    if tornadoSelf.userid and tornadoSelf.userid > 0:
+        Ljsmysql.table("fams_bbs").where("bbs_id", obj['id']).update({'bbs_exist': 0})
+        Ljsmysql.table("fams_bbs").where("up_bbs_id", obj['id']).update({'bbs_exist': 0})
+        sendMsg(tornadoSelf, "deleteBBSSuccess")
+    else:
+        sendMsg(tornadoSelf, "error")
+
+
+# 获取帖子
+def selectBBS(tornadoSelf):
+    if tornadoSelf.userid and tornadoSelf.userid > 0:
+        dbData = Ljsmysql.table("fams_bbs").where("up_bbs_id", '0').order("bbs_time desc").select()
+        sendMsg(tornadoSelf, "bbs", dbData)
+    else:
+        sendMsg(tornadoSelf, "error")
+
+
+# 获取回复
+def selectRecovery(tornadoSelf, obj):
+    if tornadoSelf.userid and tornadoSelf.userid > 0:
+        dbData = list(Ljsmysql.table("fams_bbs").where("bbs_id", obj['id']).order("bbs_time desc").select())
+        dbData += list(Ljsmysql.table("fams_bbs").where("up_bbs_id", obj['id']).order("bbs_time desc").select())
+        sendMsg(tornadoSelf, "recovery", dbData)
+    else:
+        sendMsg(tornadoSelf, "error")
+
+
+# 得到盘点单内容
+def getCheckList(tornadoSelf, obj):
+    if tornadoSelf.userid and tornadoSelf.userid > 0:
+        sql = "select * from fams_check_content cc, fams_check_content_status sta, fams_asset asset, "
+        sql += "fams_category cate, fams_status fsta, fams_local local where "
+        sql += "cc.c_c_sta_no = sta.c_c_sta_no and cc.as_no = asset.as_no and cc.c_c_exist = 1 and asset.as_exist = 1 and "
+        sql += "asset.cate_id = cate.cate_id and asset.as_local_id = local.local_id and asset.sta_no = fsta.sta_no and "
+        sql += "cc.c_id = {0}".format(obj['id'])
+        dbData = Ljsmysql.query(sql)
+        sendMsg(tornadoSelf, "checks", dbData)
+    else:
+        sendMsg(tornadoSelf, "error")
+
+
+# 资产盘点
+def checkAsset(tornadoSelf, obj):
+    if tornadoSelf.userid and tornadoSelf.userid > 0:
+        imagePath = "{0}image/{1}".format(publicPath(), obj['assetImage'])
+        newPath = "{0}image/{1}".format(publicPath(), obj['newImage'])
+        ccid = obj['ccid']
+        cid = obj['cid']
+        sImage = SameImage(imagePath, newPath)
+        if sImage.canPass():
+            Ljsmysql.table("fams_check_content").where("c_c_id", ccid).update({
+                "c_c_sta_no": "YWC",
+                "c_c_image": obj['newImage']
+            })
+        else:
+            Ljsmysql.table("fams_check_content").where("c_c_id", ccid).update({
+                "c_c_sta_no": "SHZ",
+                "c_c_image": obj['newImage']
+            })
+        Ljsmysql.table("fams_check").where("c_id", cid).update({
+                "c_sta_no": "SPZ"
+            })
+        sendMsg(tornadoSelf, "checkSuccess")
+    else:
+        sendMsg(tornadoSelf, "error")

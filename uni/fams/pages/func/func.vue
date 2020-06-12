@@ -51,6 +51,7 @@
 		},
 		methods: {
 			getMessage: function(data) {
+				uni.hideLoading()
 				let msg = data.msg
 				let obj = data.obj
 				if (msg == "loginError") {
@@ -81,6 +82,10 @@
 							})
 						}
 					})
+					// uni.navigateTo({
+						// url: "/pages/func/assetimport?no=" + res.result,
+						// url: "/pages/func/assetimport?no=eyJuIjo1LCJyMSI6ImNGcXEzOTFJOSt2TTRraGdhM2lTdk9JRG91XC9zWnJcL3ZhRHh4VVFsUk1lK3pQdnlsVlFWZ05JNHlvNmFUNkhaZUZIY1JVK1JVTkJcL2NxOTdiQWNTZVJHTDZwa1NDXC9PcnJXSlFVekxGMGptSXk4NVdjXC9PcFdoQnBkdkhcL1VXM2hUdnhWeGlybFF0ZWhzMFh1ZkxyUDRxSWJvbGswT2d4KzYxcVpDRk1rVnhcL1U9IiwicjIiOiJia3R1WkZGQlMwWnJlRVpLZDBwRWRtNUlTeTlyZUVOTVIxcFJRbWxyTjBaTFZFNU9kbmhuTXpseVJIbGpZVVpyTWpoMGQzaEhTbFp6WWtzd1pYWk9NQT09In0="
+					// })
 				} else if (name == "borrowlend") {
 					uni.scanCode({
 						onlyFromCamera: true,

@@ -57,12 +57,15 @@
 						title: "连接失败"
 					})
 				})
-				uni.closeSocket({
-					complete: () => {
-						uni.connectSocket({
-							url: this.globalData.socketUrl
-						})
-					}
+				// uni.closeSocket({
+				// 	complete: () => {
+				// 		uni.connectSocket({
+				// 			url: this.globalData.socketUrl
+				// 		})
+				// 	}
+				// })
+				uni.connectSocket({
+					url: this.globalData.socketUrl
 				})
 			},
 			loginSocket: function() {
@@ -74,6 +77,9 @@
 			},
 			sendSocket: function(msg, obj = "") {
 				if (this.globalData.socketConnectStatus) {
+					uni.showLoading({
+						title: ""
+					})
 					let sendContent = JSON.stringify({
 						msg: msg,
 						obj: obj
@@ -81,7 +87,7 @@
 					uni.sendSocketMessage({
 						data: sendContent
 					})
-					console.log("sendMessage:", sendContent)
+					// console.log("sendMessage:", sendContent)
 				} else {
 					this.reConnectSocket(msg, obj)
 				}
@@ -119,6 +125,16 @@
 				uni.redirectTo({
 					url: "/pages/" + name + "/" + name
 				})
+			},
+			uploadF: function (path, back) {
+				uni.uploadFile({
+					url: this.globalData.requestUrl + "utils/upload/image",
+					filePath: path,
+					name: "image",
+					success: res => {
+						back(res)
+					}
+				})
 			}
 		},
 		globalData: {
@@ -127,8 +143,10 @@
 			openid: null,
 			phone: null,
 			socketConnectStatus: false,
-			requestUrl: "http://www.ljs.com/",
-			socketUrl: "ws://192.168.1.119:8888"
+			// requestUrl: "http://www.ljs.com/",
+			// socketUrl: "ws://192.168.1.119:8888",
+			requestUrl: "https://fams.ljscode.com/",
+			socketUrl: "wss://wx.ljscode.com/wss"
 		}
 	}
 </script>
@@ -143,6 +161,7 @@
 		left: 0;
 		bottom: 0;
 		margin-bottom: 0;
+		z-index: 9999;
 	}
 
 	.w100 {

@@ -36,6 +36,24 @@
 				"navigationBarTitleText": "资产入库"
 			}
         }
+        ,{
+            "path" : "pages/func/insertBBS",
+            "style" : {
+				"navigationBarTitleText": "发布帖子"
+			}
+        }
+        ,{
+            "path" : "pages/home/bbsInfo",
+            "style" : {
+				"navigationBarTitleText": "帖子详情"
+			}
+        }
+        ,{
+            "path" : "pages/check/checkList",
+            "style" : {
+				"navigationBarTitleText": "盘点单详情"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

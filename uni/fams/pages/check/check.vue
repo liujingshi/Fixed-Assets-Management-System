@@ -22,7 +22,7 @@
 			</view>
 		</view>
 		<view class="cu-list menu sm-border  margin-top">
-			<view class="cu-item arrow" v-for="(item,index) in checks" :key="index" :data-cid="item.c_id">
+			<view class="cu-item arrow" v-for="(item,index) in checks" :key="index" :data-cid="item.c_id" @tap="intoCheck">
 				<view class="content">
 					<text class="cuIcon-circlefill text-grey"></text>
 					<text class="text-grey">{{item.c_title}}</text>
@@ -47,6 +47,7 @@
 		},
 		methods: {
 			getMessage: function(data) {
+				uni.hideLoading()
 				let msg = data.msg
 				let obj = data.obj
 				if (msg == "loginError") {
@@ -57,6 +58,12 @@
 				} else if (msg == "checks") {
 					this.checks = obj
 				}
+			},
+			intoCheck: function (e) {
+				let cid = e.currentTarget.dataset.cid
+				uni.navigateTo({
+					url: "/pages/check/checkList?id=" + cid
+				})
 			},
 			barTo: function(e) {
 				let name = e.currentTarget.dataset.name

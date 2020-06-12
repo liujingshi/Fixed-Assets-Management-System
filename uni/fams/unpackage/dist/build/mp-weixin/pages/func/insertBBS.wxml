@@ -1,0 +1,1 @@
+<view><form><view class="cu-form-group margin-top"><textarea maxlength="-1" placeholder="请输入帖子内容" data-event-opts="{{[['input',[['textareaAInput',['$event']]]]]}}" bindinput="__e"></textarea></view><view class="padding flex flex-direction"><button data-event-opts="{{[['tap',[['send',['$event']]]]]}}" class="cu-btn bg-green lg" bindtap="__e">发布帖子</button></view></form></view>

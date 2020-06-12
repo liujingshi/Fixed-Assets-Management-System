@@ -4,7 +4,11 @@
         "pages/func/func",
         "pages/check/check",
         "pages/mine/mine",
-        "pages/scan/scan"
+        "pages/scan/scan",
+        "pages/func/assetimport",
+        "pages/func/insertBBS",
+        "pages/home/bbsInfo",
+        "pages/check/checkList"
     ],
     "subPackages": [],
     "window": {
@@ -14,5 +18,5 @@
         "backgroundColor": "#F8F8F8"
     },
     "usingComponents": {},
-    "sitemapLocation": "sitemap43.json"
+    "sitemapLocation": "sitemap84.json"
 }

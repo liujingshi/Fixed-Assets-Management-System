@@ -49,7 +49,7 @@ class MainSocketHandler(tornado.websocket.WebSocketHandler):
                 self.userid = userid
                 self.power = power
                 MainSocketHandler.clients[userid] = self
-                logging.info("User {0}('{1}', '{2}', '{3}') login".format(userid, self.vcode, self.userid, self.power))
+                # logging.info("User {0}('{1}', '{2}', '{3}') login".format(userid, self.vcode, self.userid, self.power))
                 Utils.sendMsg(self, "loginSuccess", {"loginCode": code})
             elif userid < 0:
                 Utils.sendMsg(self, "bindPhone", {"openid": openid})
@@ -85,6 +85,22 @@ class MainSocketHandler(tornado.websocket.WebSocketHandler):
             Utils.assetLend(self, obj)
         elif action == "getChecks":  # 得到盘点单
             Utils.getChecks(self)
+        elif action == "insertBBS":  # 发布帖子
+            Utils.insertBBS(self, obj)
+        elif action == "recoveryBBS":  # 回复帖子
+            Utils.recoveryBBS(self, obj)
+        elif action == "selectBBS":  # 获取帖子
+            Utils.selectBBS(self)
+        elif action == "selectRecovery":  # 获取回复
+            Utils.selectRecovery(self, obj)
+        elif action == "deleteBBS":  # 删除帖子
+            Utils.deleteBBS(self, obj)
+        elif action == "deleteRecovery":  # 删除回复
+            Utils.deleteRecovery(self, obj)
+        elif action == "getCheckList":  # 得到盘点单详情
+            Utils.getCheckList(self, obj)
+        elif action == "checkAsset":  # 盘点
+            Utils.checkAsset(self, obj)
         
 
 

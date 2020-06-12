@@ -45,7 +45,8 @@
 			<view class="cu-form-group">
 				<view class="grid col-4 grid-square flex-sub">
 					<view class="bg-img" v-if="assetInfo.as_image!=''">
-					 <image :src="requestUrl + 'image/' + assetInfo.as_image" mode="aspectFill"></image>
+						<image :src="requestUrl + 'image/' + assetInfo.as_image" mode="aspectFill"></image>
+						<!-- <image :src="assetInfo.as_image" mode="aspectFill"></image> -->
 						<view class="cu-tag bg-red" @tap.stop="DelImg">
 							<text class='cuIcon-close'></text>
 						</view>
@@ -59,10 +60,14 @@
 				<button class="cu-btn bg-blue margin-tb-sm lg w100" @tap="save">保存</button>
 			</view>
 		</form>
+		<crop ref="crop" :pictureSrc="photoSrc" @uploadF="uploadF"></crop>
 	</view>
 </template>
 
 <script>
+	
+	import crop from '../../components/crop.vue'
+	
 	export default {
 		data() {
 			return {
@@ -71,11 +76,14 @@
 				local: null,
 				cate_index: 0,
 				local_index: 0,
-				requestUrl: null
+				requestUrl: null,
+				photoSrc: ""
 			}
 		},
 		onLoad: function(options) {
-			getApp().sendSocket("getAssetInfo", {no: options.no})
+			getApp().sendSocket("getAssetInfo", {
+				no: options.no
+			})
 			getApp().sendSocket("getCategory")
 			getApp().sendSocket("getLocal")
 			this.requestUrl = getApp().globalData.requestUrl
@@ -85,8 +93,18 @@
 				this.getMessage(JSON.parse(res.data))
 			})
 		},
+		// onBackPress: function () {
+		// 	if (this.$refs.crop.isShow) {
+		// 		this.$refs.crop.isShow = false
+		// 	}
+		// 	return true;
+		// },
+		components: {
+			crop
+		},
 		methods: {
 			getMessage: function(data) {
+				uni.hideLoading()
 				let msg = data.msg
 				let obj = data.obj
 				if (msg == "loginError") {
@@ -115,23 +133,33 @@
 				let name = e.currentTarget.dataset.value
 				this.assetInfo[name] = e.detail.value
 			},
-			DelImg: function (e) {
+			DelImg: function(e) {
 				this.assetInfo.as_image = ""
 			},
-			makeImage: function (e) {
-				
+			makeImage: function(e) {
+				uni.chooseImage({
+					count: 1,
+					sizeType: ["compressed"],
+					// sourceType: ['camera'],
+					success: res => {
+						let path = res.tempFilePaths[0]
+						this.photoSrc = path
+						this.$refs.crop.isShow = true
+						// this.assetInfo.as_image = path
+					}
+				})
 			},
-			setCate: function (e) {
+			setCate: function(e) {
 				let cate_index = e.detail.value
 				this.cate_index = cate_index
 				this.assetInfo.cate_id = this.category[cate_index].cate_id
 			},
-			setLocal: function (e) {
+			setLocal: function(e) {
 				let local_index = e.detail.value
 				this.local_index = local_index
 				this.assetInfo.as_local_id = this.local[local_index].local_id
 			},
-			setLocalIndex: function () {
+			setLocalIndex: function() {
 				if (this.assetInfo && this.local) {
 					for (let i in this.local) {
 						if (this.local[i].local_id == this.assetInfo.as_local_id) {
@@ -141,7 +169,7 @@
 					}
 				}
 			},
-			setCateIndex: function () {
+			setCateIndex: function() {
 				if (this.assetInfo && this.category) {
 					for (let i in this.category) {
 						if (this.category[i].cate_id == this.assetInfo.cate_id) {
@@ -151,8 +179,13 @@
 					}
 				}
 			},
-			save: function () {
+			save: function() {
 				getApp().sendSocket("assetImport", this.assetInfo)
+			},
+			uploadF: function (e) {
+				getApp().uploadF(e, res => {
+					this.assetInfo.as_image = res.data
+				})
 			}
 		}
 	}

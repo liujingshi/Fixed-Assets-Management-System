@@ -4603,6 +4603,7 @@ scroll-view.cu-steps .cu-item {
 	left: 0;
 	bottom: 0;
 	margin-bottom: 0;
+	z-index: 9999;
 }
 .w100 {
 	width: 100%;

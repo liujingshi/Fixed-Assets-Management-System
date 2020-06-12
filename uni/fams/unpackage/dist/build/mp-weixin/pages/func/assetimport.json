@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "资产入库",
+  "usingComponents": {
+    "crop": "/components/crop"
+  }
+}

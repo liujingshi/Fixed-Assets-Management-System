@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:100:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetimport\index.html";i:1591364362;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:100:"E:\code\git\Fixed-Assets-Management-System\www\public/../application/app\view\assetimport\index.html";i:1591520085;s:80:"E:\code\git\Fixed-Assets-Management-System\www\application\common\view\base.html";i:1586071758;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -547,6 +547,7 @@
                     });
                 } else {
                     var $img = $("#cropimg");
+                    $img.cropper('destroy');
                     $img.attr("src", "/image/" + response);
                     let croppopup = ljspopup({
                         el: "#cropdiv",

@@ -80,6 +80,7 @@
 		},
 		methods: {
 			getMessage: function(data) {
+				uni.hideLoading()
 				let msg = data.msg
 				let obj = data.obj
 				if (msg == "assetInfo") {
